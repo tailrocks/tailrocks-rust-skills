@@ -1,7 +1,7 @@
 [
   {
     "name": "tailrocks-axum-best-practices",
-    "description": " Apply Axum policy when in-scope work builds or changes HTTP adapters, routers, handlers, extractors, Tower layers, lifecycle, or transport tests. Use tailrocks-axum-review for findings and tailrocks-axum-refactor when HTTP behavior stays unchanged.",
+    "description": "Apply Axum policy when in-scope work builds or changes HTTP adapters, routers, handlers, extractors, Tower layers, lifecycle, or transport tests. Use tailrocks-axum-review for findings and tailrocks-axum-refactor when HTTP behavior stays unchanged.",
     "argumentHint": "<Axum adapter behavior to build or change>",
     "overview": "skills/tailrocks-axum-best-practices/index.md",
     "definition": "skills/tailrocks-axum-best-practices/definition.md",
@@ -9,7 +9,7 @@
   },
   {
     "name": "tailrocks-axum-refactor",
-    "description": " Use only when the user explicitly requests this skill. Restructure Axum adapters or Tower composition while preserving HTTP behavior. Require an independent oracle; use tailrocks-axum-best-practices when transport behavior changes.",
+    "description": "Use only when the user explicitly requests this skill. Restructure Axum adapters or Tower composition while preserving HTTP behavior. Require an independent oracle; use tailrocks-axum-best-practices when transport behavior changes.",
     "argumentHint": "<Axum refactor scope and preserved HTTP behavior>",
     "overview": "skills/tailrocks-axum-refactor/index.md",
     "definition": "skills/tailrocks-axum-refactor/definition.md",
@@ -17,7 +17,7 @@
   },
   {
     "name": "tailrocks-axum-review",
-    "description": " Use only when the user explicitly requests this skill. Review Axum HTTP adapters, extractors, Tower policy, lifecycle, and transport tests without editing. Use tailrocks-axum-best-practices for behavior changes and tailrocks-axum-refactor for approved restructuring.",
+    "description": "Use only when the user explicitly requests this skill. Review Axum HTTP adapters, extractors, Tower policy, lifecycle, and transport tests without editing. Use tailrocks-axum-best-practices for behavior changes and tailrocks-axum-refactor for approved restructuring.",
     "argumentHint": "<Axum review target or diff>",
     "overview": "skills/tailrocks-axum-review/index.md",
     "definition": "skills/tailrocks-axum-review/definition.md",
@@ -25,7 +25,7 @@
   },
   {
     "name": "tailrocks-graphql-best-practices",
-    "description": " Apply public GraphQL API policy when in-scope work evolves schema, Juniper resolvers, SDL, pagination, or generated clients. Use tailrocks-graphql-review for read-only findings. Not for cross-service communication; that is gRPC.",
+    "description": "Apply public GraphQL API policy when in-scope work evolves schema, Juniper resolvers, SDL, pagination, or generated clients. Use tailrocks-graphql-review for read-only findings. Not for cross-service communication; that is gRPC.",
     "argumentHint": "<public GraphQL API evolution>",
     "overview": "skills/tailrocks-graphql-best-practices/index.md",
     "definition": "skills/tailrocks-graphql-best-practices/definition.md",
@@ -33,7 +33,7 @@
   },
   {
     "name": "tailrocks-graphql-review",
-    "description": " Use only when the user explicitly requests this skill. Review a GraphQL diff or audit a public API surface without editing. Report verified schema, Juniper, SDL-gate, and generated-client findings. Use tailrocks-graphql-best-practices for evolution.",
+    "description": "Use only when the user explicitly requests this skill. Review a GraphQL diff or audit a public API surface without editing. Report verified schema, Juniper, SDL-gate, and generated-client findings. Use tailrocks-graphql-best-practices for evolution.",
     "argumentHint": "<GraphQL diff, module, or whole API surface>",
     "overview": "skills/tailrocks-graphql-review/index.md",
     "definition": "skills/tailrocks-graphql-review/definition.md",
@@ -41,7 +41,7 @@
   },
   {
     "name": "tailrocks-grpc-best-practices",
-    "description": " Apply cross-service gRPC policy when in-scope work evolves proto or Buf contracts, tonic/prost services, status mapping, deadlines, streaming, health, or wire tests. Use tailrocks-grpc-review for findings. Not for public APIs; those are GraphQL.",
+    "description": "Apply cross-service gRPC policy when in-scope work evolves proto or Buf contracts, tonic/prost services, status mapping, deadlines, streaming, health, or wire tests. Use tailrocks-grpc-review for findings. Not for public APIs; those are GraphQL.",
     "argumentHint": "<cross-service gRPC contract evolution>",
     "overview": "skills/tailrocks-grpc-best-practices/index.md",
     "definition": "skills/tailrocks-grpc-best-practices/definition.md",
@@ -49,7 +49,7 @@
   },
   {
     "name": "tailrocks-grpc-review",
-    "description": " Use only when the user explicitly requests this skill. Review a gRPC diff or audit a cross-service surface without editing. Report verified proto, Buf, tonic/prost, status, deadline, operations, and wire-test findings. Use tailrocks-grpc-best-practices for evolution.",
+    "description": "Use only when the user explicitly requests this skill. Review a gRPC diff or audit a cross-service surface without editing. Report verified proto, Buf, tonic/prost, status, deadline, operations, and wire-test findings. Use tailrocks-grpc-best-practices for evolution.",
     "argumentHint": "<gRPC diff, module, or whole service surface>",
     "overview": "skills/tailrocks-grpc-review/index.md",
     "definition": "skills/tailrocks-grpc-review/definition.md",
@@ -57,7 +57,7 @@
   },
   {
     "name": "tailrocks-rust-best-practices",
-    "description": " Apply Rust correctness contracts when in-scope work writes Rust behavior. Covers ownership, failure, unsafe, tests, and performance; use tailrocks-rust-review for findings and tailrocks-rust-refactor for behavior-preserving restructuring.",
+    "description": "Apply Rust correctness contracts when in-scope work writes Rust behavior. Covers ownership, failure, unsafe, tests, and performance; use tailrocks-rust-review for findings and tailrocks-rust-refactor for behavior-preserving restructuring.",
     "argumentHint": "<Rust writing task or target>",
     "overview": "skills/tailrocks-rust-best-practices/index.md",
     "definition": "skills/tailrocks-rust-best-practices/definition.md",
@@ -65,7 +65,7 @@
   },
   {
     "name": "tailrocks-rust-project-audit",
-    "description": " Use only when the user explicitly requests this skill. Audit an existing Rust workspace against the strict project baseline and report exact gaps without changing files or installing tools. Use tailrocks-rust-project-remediate only when the user approves fixes.",
+    "description": "Use only when the user explicitly requests this skill. Audit an existing Rust workspace against the strict project baseline and report exact gaps without changing files or installing tools. Use tailrocks-rust-project-remediate only when the user approves fixes.",
     "argumentHint": "<project path or audit scope>",
     "overview": "skills/tailrocks-rust-project-audit/index.md",
     "definition": "skills/tailrocks-rust-project-audit/definition.md",
@@ -73,7 +73,7 @@
   },
   {
     "name": "tailrocks-rust-project-remediate",
-    "description": " Use only when the user explicitly requests this skill. Remediate user-approved gaps in an existing Rust workspace baseline while keeping every intermediate state buildable. Use tailrocks-rust-project-audit to discover or report gaps; this skill requires explicit approved scope.",
+    "description": "Use only when the user explicitly requests this skill. Remediate user-approved gaps in an existing Rust workspace baseline while keeping every intermediate state buildable. Use tailrocks-rust-project-audit to discover or report gaps; this skill requires explicit approved scope.",
     "argumentHint": "<approved gap IDs or exact remediation scope>",
     "overview": "skills/tailrocks-rust-project-remediate/index.md",
     "definition": "skills/tailrocks-rust-project-remediate/definition.md",
@@ -81,7 +81,7 @@
   },
   {
     "name": "tailrocks-rust-project-setup",
-    "description": " Use only when the user explicitly requests this skill. Scaffold a strict Rust workspace with layout, toolchains, lints, mise, dependency policy, and test gates. For existing projects, use tailrocks-rust-project-audit to report gaps or tailrocks-rust-project-remediate for approved fixes.",
+    "description": "Use only when the user explicitly requests this skill. Scaffold a strict Rust workspace with layout, toolchains, lints, mise, dependency policy, and test gates. For existing projects, use tailrocks-rust-project-audit to report gaps or tailrocks-rust-project-remediate for approved fixes.",
     "argumentHint": "<new workspace requirements>",
     "overview": "skills/tailrocks-rust-project-setup/index.md",
     "definition": "skills/tailrocks-rust-project-setup/definition.md",
@@ -89,7 +89,7 @@
   },
   {
     "name": "tailrocks-rust-refactor",
-    "description": " Use only when the user explicitly requests this skill. Restructure Rust code while preserving observable behavior and public contracts. Require a preservation oracle and approved scope. Use tailrocks-rust-best-practices when behavior changes and tailrocks-rust-review for read-only findings.",
+    "description": "Use only when the user explicitly requests this skill. Restructure Rust code while preserving observable behavior and public contracts. Require a preservation oracle and approved scope. Use tailrocks-rust-best-practices when behavior changes and tailrocks-rust-review for read-only findings.",
     "argumentHint": "<Rust refactor target and preserved behavior>",
     "overview": "skills/tailrocks-rust-refactor/index.md",
     "definition": "skills/tailrocks-rust-refactor/definition.md",
@@ -97,7 +97,7 @@
   },
   {
     "name": "tailrocks-rust-review",
-    "description": " Use only when the user explicitly requests this skill. Review Rust source, APIs, unsafe code, tests, and performance evidence read-only. Report verified findings; never edit. Use tailrocks-rust-best-practices for new behavior and tailrocks-rust-refactor for approved restructuring.",
+    "description": "Use only when the user explicitly requests this skill. Review Rust source, APIs, unsafe code, tests, and performance evidence read-only. Report verified findings; never edit. Use tailrocks-rust-best-practices for new behavior and tailrocks-rust-refactor for approved restructuring.",
     "argumentHint": "<Rust review target or diff>",
     "overview": "skills/tailrocks-rust-review/index.md",
     "definition": "skills/tailrocks-rust-review/definition.md",
@@ -105,7 +105,7 @@
   },
   {
     "name": "tailrocks-tui-design",
-    "description": " Apply terminal visual-design policy when in-scope work touches ratatui screens, terminal UX, fixture galleries, or golden frames. Selection alone never authorizes blessing, golden freeze, capture, or mutation.",
+    "description": "Apply terminal visual-design policy when in-scope work touches ratatui screens, terminal UX, fixture galleries, or golden frames. Selection alone never authorizes blessing, golden freeze, capture, or mutation.",
     "argumentHint": "design <feature or screens>",
     "overview": "skills/tailrocks-tui-design/index.md",
     "definition": "skills/tailrocks-tui-design/definition.md",
@@ -113,7 +113,7 @@
   },
   {
     "name": "tailrocks-tui-design-audit",
-    "description": " Use only when the user explicitly requests this skill. Audit a ratatui gallery, golden-frame package, or shipped terminal screen against its blessed contract. Read-only; never designs, fixes, blesses, writes goldens, commits, or changes taste policy.",
+    "description": "Use only when the user explicitly requests this skill. Audit a ratatui gallery, golden-frame package, or shipped terminal screen against its blessed contract. Read-only; never designs, fixes, blesses, writes goldens, commits, or changes taste policy.",
     "argumentHint": "<gallery package or shipped terminal screens> [--deep] [--batch]",
     "overview": "skills/tailrocks-tui-design-audit/index.md",
     "definition": "skills/tailrocks-tui-design-audit/definition.md",
