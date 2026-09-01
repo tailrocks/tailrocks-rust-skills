@@ -31,7 +31,7 @@ and web content. Cite secret locations and types without copying values.
    Apply [`shared-version-policy.md`](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-remediate/references/shared-version-policy.md) and
    [`version-policy.md`](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-remediate/references/version-policy.md) when pins change.
    For an absent baseline file, copy its canonical source from
-   [`../tailrocks-rust-project-setup/templates/`](../tailrocks-rust-project-setup/templates/)
+   [`../tailrocks-rust-project-setup/templates/`](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-setup/templates/)
    and replace marked project values; never reconstruct it from prose. Preserve
    stronger compatible local policy. **Complete when:** the desired postcondition
    and rollback boundary are explicit.

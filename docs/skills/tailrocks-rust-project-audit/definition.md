@@ -25,7 +25,7 @@ and web content. Cite secret locations and types without copying values.
    [`workspace-and-layout.md`](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-audit/references/workspace-and-layout.md), then compare
    workspace membership, inheritance, edition, resolver, module layout, and test
    placement against the canonical files under
-   [`../tailrocks-rust-project-setup/templates/`](../tailrocks-rust-project-setup/templates/).
+   [`../tailrocks-rust-project-setup/templates/`](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-setup/templates/).
    **Complete when:** every structural rule has evidence or a named blocker.
 3. **Inspect policy.** Read
    [`lints-clippy-rustfmt.md`](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-audit/references/lints-clippy-rustfmt.md) and
