@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-rust-review"
-description: ">-"
+description: " Use only when the user explicitly requests this skill. Review Rust source, APIs, unsafe code, tests, and performance evidence read-only. Report verified findings; never edit. Use tailrocks-rust-best-practices for new behavior and tailrocks-rust-refactor for approved restructuring."
 ---
 
 Generated from [tailrocks-rust-review/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-review/SKILL.md).
 
->-
+ Use only when the user explicitly requests this skill. Review Rust source, APIs, unsafe code, tests, and performance evidence read-only. Report verified findings; never edit. Use tailrocks-rust-best-practices for new behavior and tailrocks-rust-refactor for approved restructuring.
 
 [Read the complete skill definition](definition.md).
 

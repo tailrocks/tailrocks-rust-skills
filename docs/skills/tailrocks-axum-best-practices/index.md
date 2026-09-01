@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-axum-best-practices"
-description: ">-"
+description: " Apply Axum policy when in-scope work builds or changes HTTP adapters, routers, handlers, extractors, Tower layers, lifecycle, or transport tests. Use tailrocks-axum-review for findings and tailrocks-axum-refactor when HTTP behavior stays unchanged."
 ---
 
 Generated from [tailrocks-axum-best-practices/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-axum-best-practices/SKILL.md).
 
->-
+ Apply Axum policy when in-scope work builds or changes HTTP adapters, routers, handlers, extractors, Tower layers, lifecycle, or transport tests. Use tailrocks-axum-review for findings and tailrocks-axum-refactor when HTTP behavior stays unchanged.
 
 [Read the complete skill definition](definition.md).
 

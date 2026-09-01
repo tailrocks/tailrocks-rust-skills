@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-rust-project-setup"
-description: ">-"
+description: " Use only when the user explicitly requests this skill. Scaffold a strict Rust workspace with layout, toolchains, lints, mise, dependency policy, and test gates. For existing projects, use tailrocks-rust-project-audit to report gaps or tailrocks-rust-project-remediate for approved fixes."
 ---
 
 Generated from [tailrocks-rust-project-setup/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-setup/SKILL.md).
 
->-
+ Use only when the user explicitly requests this skill. Scaffold a strict Rust workspace with layout, toolchains, lints, mise, dependency policy, and test gates. For existing projects, use tailrocks-rust-project-audit to report gaps or tailrocks-rust-project-remediate for approved fixes.
 
 [Read the complete skill definition](definition.md).
 

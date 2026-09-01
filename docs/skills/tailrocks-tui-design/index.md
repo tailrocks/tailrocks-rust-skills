@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-tui-design"
-description: ">-"
+description: " Apply terminal visual-design policy when in-scope work touches ratatui screens, terminal UX, fixture galleries, or golden frames. Selection alone never authorizes blessing, golden freeze, capture, or mutation."
 ---
 
 Generated from [tailrocks-tui-design/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-tui-design/SKILL.md).
 
->-
+ Apply terminal visual-design policy when in-scope work touches ratatui screens, terminal UX, fixture galleries, or golden frames. Selection alone never authorizes blessing, golden freeze, capture, or mutation.
 
 [Read the complete skill definition](definition.md).
 

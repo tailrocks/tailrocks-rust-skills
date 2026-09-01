@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-rust-refactor"
-description: ">-"
+description: " Use only when the user explicitly requests this skill. Restructure Rust code while preserving observable behavior and public contracts. Require a preservation oracle and approved scope. Use tailrocks-rust-best-practices when behavior changes and tailrocks-rust-review for read-only findings."
 ---
 
 Generated from [tailrocks-rust-refactor/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-refactor/SKILL.md).
 
->-
+ Use only when the user explicitly requests this skill. Restructure Rust code while preserving observable behavior and public contracts. Require a preservation oracle and approved scope. Use tailrocks-rust-best-practices when behavior changes and tailrocks-rust-review for read-only findings.
 
 [Read the complete skill definition](definition.md).
 

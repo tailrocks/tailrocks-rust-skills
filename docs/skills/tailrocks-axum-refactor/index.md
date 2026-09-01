@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-axum-refactor"
-description: ">-"
+description: " Use only when the user explicitly requests this skill. Restructure Axum adapters or Tower composition while preserving HTTP behavior. Require an independent oracle; use tailrocks-axum-best-practices when transport behavior changes."
 ---
 
 Generated from [tailrocks-axum-refactor/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-axum-refactor/SKILL.md).
 
->-
+ Use only when the user explicitly requests this skill. Restructure Axum adapters or Tower composition while preserving HTTP behavior. Require an independent oracle; use tailrocks-axum-best-practices when transport behavior changes.
 
 [Read the complete skill definition](definition.md).
 

@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-rust-best-practices"
-description: ">-"
+description: " Apply Rust correctness contracts when in-scope work writes Rust behavior. Covers ownership, failure, unsafe, tests, and performance; use tailrocks-rust-review for findings and tailrocks-rust-refactor for behavior-preserving restructuring."
 ---
 
 Generated from [tailrocks-rust-best-practices/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-best-practices/SKILL.md).
 
->-
+ Apply Rust correctness contracts when in-scope work writes Rust behavior. Covers ownership, failure, unsafe, tests, and performance; use tailrocks-rust-review for findings and tailrocks-rust-refactor for behavior-preserving restructuring.
 
 [Read the complete skill definition](definition.md).
 

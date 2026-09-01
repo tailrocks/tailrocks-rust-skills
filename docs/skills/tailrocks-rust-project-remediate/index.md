@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-rust-project-remediate"
-description: ">-"
+description: " Use only when the user explicitly requests this skill. Remediate user-approved gaps in an existing Rust workspace baseline while keeping every intermediate state buildable. Use tailrocks-rust-project-audit to discover or report gaps; this skill requires explicit approved scope."
 ---
 
 Generated from [tailrocks-rust-project-remediate/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-remediate/SKILL.md).
 
->-
+ Use only when the user explicitly requests this skill. Remediate user-approved gaps in an existing Rust workspace baseline while keeping every intermediate state buildable. Use tailrocks-rust-project-audit to discover or report gaps; this skill requires explicit approved scope.
 
 [Read the complete skill definition](definition.md).
 

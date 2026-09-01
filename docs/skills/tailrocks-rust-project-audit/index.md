@@ -1,11 +1,11 @@
 ---
 title: "Tailrocks: tailrocks-rust-project-audit"
-description: ">-"
+description: " Use only when the user explicitly requests this skill. Audit an existing Rust workspace against the strict project baseline and report exact gaps without changing files or installing tools. Use tailrocks-rust-project-remediate only when the user approves fixes."
 ---
 
 Generated from [tailrocks-rust-project-audit/SKILL.md](https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-audit/SKILL.md).
 
->-
+ Use only when the user explicitly requests this skill. Audit an existing Rust workspace against the strict project baseline and report exact gaps without changing files or installing tools. Use tailrocks-rust-project-remediate only when the user approves fixes.
 
 [Read the complete skill definition](definition.md).
 
