@@ -1,0 +1,19 @@
+{
+  "skills": [
+    "tailrocks-axum-best-practices",
+    "tailrocks-axum-refactor",
+    "tailrocks-axum-review",
+    "tailrocks-graphql-best-practices",
+    "tailrocks-graphql-review",
+    "tailrocks-grpc-best-practices",
+    "tailrocks-grpc-review",
+    "tailrocks-rust-best-practices",
+    "tailrocks-rust-project-audit",
+    "tailrocks-rust-project-remediate",
+    "tailrocks-rust-project-setup",
+    "tailrocks-rust-refactor",
+    "tailrocks-rust-review",
+    "tailrocks-tui-design",
+    "tailrocks-tui-design-audit"
+  ]
+}
