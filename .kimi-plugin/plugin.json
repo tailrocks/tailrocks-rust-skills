@@ -1,39 +1,18 @@
 {
   "name": "tailrocks-rust-skills",
   "version": "0.28.0",
-  "description": "Cross-agent Tailrocks skills for strict Rust, Axum, TypeScript, TanStack, native macOS Swift with Liquid Glass, code-health ratchets, and the roadmap delivery pipeline (idea, brainstorm, research, record-decision, finalize, plan, reconcile, portable goal handoff)",
+  "description": "Strict Rust engineering workflows covering Axum, GraphQL, gRPC, TUI design, project baselines, review, refactoring, and remediation.",
   "keywords": [
-    "tailrocks",
     "rust",
-    "edition-2024",
-    "skills",
-    "best-practices",
-    "clippy",
-    "rustfmt",
     "axum",
-    "typescript",
-    "bun",
-    "tanstack",
-    "cargo-deny",
-    "nextest",
-    "mise",
-    "workspace",
-    "code-review",
-    "root-cause",
-    "architecture",
-    "redesign",
-    "first-principles",
-    "correctness",
-    "research",
-    "roadmap",
-    "planning",
-    "goal",
-    "swift",
-    "swiftui",
-    "appkit",
-    "macos",
-    "liquid-glass",
-    "accessibility"
+    "graphql",
+    "grpc",
+    "tonic",
+    "juniper",
+    "ratatui",
+    "cargo",
+    "rustfmt",
+    "clippy"
   ],
   "author": {
     "name": "tailrocks",
@@ -43,7 +22,24 @@
   "license": "Apache-2.0",
   "skills": "./skills/",
   "interface": {
-    "displayName": "Tailrocks Skills",
-    "shortDescription": "Strict Rust, TypeScript, and native macOS engineering workflows"
-  }
+    "displayName": "Rust Skills",
+    "shortDescription": "Strict Rust, service, and terminal UI workflows.",
+    "longDescription": "Strict Rust engineering workflows covering Axum, GraphQL, gRPC, TUI design, project baselines, review, refactoring, and remediation.",
+    "capabilities": [
+      "Build",
+      "Review",
+      "Refactor",
+      "Scaffold",
+      "Audit",
+      "Remediate",
+      "Design"
+    ],
+    "websiteURL": "https://github.com/tailrocks/tailrocks-rust-skills",
+    "defaultPrompt": [
+      "Review this Rust module.",
+      "Set up this Rust workspace.",
+      "Audit this Axum or gRPC surface."
+    ]
+  },
+  "repository": "https://github.com/tailrocks/tailrocks-rust-skills"
 }

@@ -1,5 +1,19 @@
 {
   "$schema": "https://antigravity.google/schemas/v1/plugin.json",
   "name": "tailrocks-rust-skills",
-  "description": "Cross-agent Tailrocks skills for strict Rust, Axum, TypeScript, TanStack, native macOS Swift with Liquid Glass, code-health ratchets, and the roadmap delivery pipeline (idea, brainstorm, research, record-decision, finalize, plan, reconcile, portable goal handoff)"
+  "description": "Strict Rust engineering workflows covering Axum, GraphQL, gRPC, TUI design, project baselines, review, refactoring, and remediation.",
+  "keywords": [
+    "rust",
+    "axum",
+    "graphql",
+    "grpc",
+    "tonic",
+    "juniper",
+    "ratatui",
+    "cargo",
+    "rustfmt",
+    "clippy"
+  ],
+  "homepage": "https://github.com/tailrocks/tailrocks-rust-skills",
+  "repository": "https://github.com/tailrocks/tailrocks-rust-skills"
 }
