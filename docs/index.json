@@ -1,0 +1,122 @@
+[
+  {
+    "name": "tailrocks-axum-best-practices",
+    "description": ">-",
+    "argumentHint": "<Axum adapter behavior to build or change>",
+    "overview": "skills/tailrocks-axum-best-practices/index.md",
+    "definition": "skills/tailrocks-axum-best-practices/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-axum-best-practices/SKILL.md"
+  },
+  {
+    "name": "tailrocks-axum-refactor",
+    "description": ">-",
+    "argumentHint": "<Axum refactor scope and preserved HTTP behavior>",
+    "overview": "skills/tailrocks-axum-refactor/index.md",
+    "definition": "skills/tailrocks-axum-refactor/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-axum-refactor/SKILL.md"
+  },
+  {
+    "name": "tailrocks-axum-review",
+    "description": ">-",
+    "argumentHint": "<Axum review target or diff>",
+    "overview": "skills/tailrocks-axum-review/index.md",
+    "definition": "skills/tailrocks-axum-review/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-axum-review/SKILL.md"
+  },
+  {
+    "name": "tailrocks-graphql-best-practices",
+    "description": ">-",
+    "argumentHint": "<public GraphQL API evolution>",
+    "overview": "skills/tailrocks-graphql-best-practices/index.md",
+    "definition": "skills/tailrocks-graphql-best-practices/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-graphql-best-practices/SKILL.md"
+  },
+  {
+    "name": "tailrocks-graphql-review",
+    "description": ">-",
+    "argumentHint": "<GraphQL diff, module, or whole API surface>",
+    "overview": "skills/tailrocks-graphql-review/index.md",
+    "definition": "skills/tailrocks-graphql-review/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-graphql-review/SKILL.md"
+  },
+  {
+    "name": "tailrocks-grpc-best-practices",
+    "description": ">-",
+    "argumentHint": "<cross-service gRPC contract evolution>",
+    "overview": "skills/tailrocks-grpc-best-practices/index.md",
+    "definition": "skills/tailrocks-grpc-best-practices/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-grpc-best-practices/SKILL.md"
+  },
+  {
+    "name": "tailrocks-grpc-review",
+    "description": ">-",
+    "argumentHint": "<gRPC diff, module, or whole service surface>",
+    "overview": "skills/tailrocks-grpc-review/index.md",
+    "definition": "skills/tailrocks-grpc-review/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-grpc-review/SKILL.md"
+  },
+  {
+    "name": "tailrocks-rust-best-practices",
+    "description": ">-",
+    "argumentHint": "<Rust writing task or target>",
+    "overview": "skills/tailrocks-rust-best-practices/index.md",
+    "definition": "skills/tailrocks-rust-best-practices/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-best-practices/SKILL.md"
+  },
+  {
+    "name": "tailrocks-rust-project-audit",
+    "description": ">-",
+    "argumentHint": "<project path or audit scope>",
+    "overview": "skills/tailrocks-rust-project-audit/index.md",
+    "definition": "skills/tailrocks-rust-project-audit/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-audit/SKILL.md"
+  },
+  {
+    "name": "tailrocks-rust-project-remediate",
+    "description": ">-",
+    "argumentHint": "<approved gap IDs or exact remediation scope>",
+    "overview": "skills/tailrocks-rust-project-remediate/index.md",
+    "definition": "skills/tailrocks-rust-project-remediate/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-remediate/SKILL.md"
+  },
+  {
+    "name": "tailrocks-rust-project-setup",
+    "description": ">-",
+    "argumentHint": "<new workspace requirements>",
+    "overview": "skills/tailrocks-rust-project-setup/index.md",
+    "definition": "skills/tailrocks-rust-project-setup/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-project-setup/SKILL.md"
+  },
+  {
+    "name": "tailrocks-rust-refactor",
+    "description": ">-",
+    "argumentHint": "<Rust refactor target and preserved behavior>",
+    "overview": "skills/tailrocks-rust-refactor/index.md",
+    "definition": "skills/tailrocks-rust-refactor/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-refactor/SKILL.md"
+  },
+  {
+    "name": "tailrocks-rust-review",
+    "description": ">-",
+    "argumentHint": "<Rust review target or diff>",
+    "overview": "skills/tailrocks-rust-review/index.md",
+    "definition": "skills/tailrocks-rust-review/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-rust-review/SKILL.md"
+  },
+  {
+    "name": "tailrocks-tui-design",
+    "description": ">-",
+    "argumentHint": "design <feature or screens>",
+    "overview": "skills/tailrocks-tui-design/index.md",
+    "definition": "skills/tailrocks-tui-design/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-tui-design/SKILL.md"
+  },
+  {
+    "name": "tailrocks-tui-design-audit",
+    "description": ">-",
+    "argumentHint": "<gallery package or shipped terminal screens> [--deep] [--batch]",
+    "overview": "skills/tailrocks-tui-design-audit/index.md",
+    "definition": "skills/tailrocks-tui-design-audit/definition.md",
+    "source": "https://github.com/tailrocks/tailrocks-rust-skills/blob/main/skills/tailrocks-tui-design-audit/SKILL.md"
+  }
+]
