@@ -1,0 +1,4 @@
+schema = 2
+
+[generator]
+repository = "tailrocks/tailrocks-rust-skills"
