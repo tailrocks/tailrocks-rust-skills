@@ -20,8 +20,8 @@ directory.
 - Write all new and changed prose in ASD-STE100 Simplified Technical
   English, Issue 9 rules.
 - Never hand-edit `.github/`. Change `.velnor/config.toml` instead.
-  Regenerate the outputs. Restore `.github/PULL_REQUEST_TEMPLATE.md`
-  after each regenerate until the generator preserves it.
+  Regenerate the outputs. The generator preserves
+  `.github/PULL_REQUEST_TEMPLATE.md`. See `docs/maintenance.md`.
 - Never add evaluation content: no benchmarks, no model trials, no
   scored comparisons, no pass-rate targets. See `docs/maintenance.md`.
 - Keep one fact in one place. Link to `docs/` guides. Do not copy
