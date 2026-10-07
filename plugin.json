@@ -1,7 +1,15 @@
 {
-  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "tailrocks-rust-skills",
+  "version": "0.28.0",
   "description": "Strict Rust engineering workflows covering Axum, GraphQL, gRPC, TUI design, project baselines, review, refactoring, and remediation.",
+  "author": {
+    "name": "tailrocks",
+    "url": "https://github.com/tailrocks"
+  },
+  "homepage": "https://github.com/tailrocks/tailrocks-rust-skills",
+  "repository": "https://github.com/tailrocks/tailrocks-rust-skills",
+  "license": "Apache-2.0",
   "keywords": [
     "rust",
     "axum",
@@ -13,7 +21,5 @@
     "cargo",
     "rustfmt",
     "clippy"
-  ],
-  "homepage": "https://github.com/tailrocks/tailrocks-rust-skills",
-  "repository": "https://github.com/tailrocks/tailrocks-rust-skills"
+  ]
 }

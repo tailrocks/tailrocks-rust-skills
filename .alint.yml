@@ -1,0 +1,12 @@
+# Active skill package alint configuration (alint v0.17.0).
+# Extends the shared active profile by immutable URL plus SHA-256 pin.
+# Profile source: tailrocks/tailrocks-skills commit
+# d54adec8f3188962cdd2b8298350d24114b87079 ("Add shared alint policy
+# profiles and marketplace config"). Pin computed 2026-10-07 with
+# `shasum -a 256` over the raw response body; the raw body is
+# byte-identical to `git show d54adec:standards/alint/active.yml`.
+# Bump rule: one PR updates the REV and HASH together, then re-runs
+# `alint check`, the strict-JSON check, and the frontmatter/ID check.
+version: 1
+extends:
+  - https://raw.githubusercontent.com/tailrocks/tailrocks-skills/d54adec8f3188962cdd2b8298350d24114b87079/standards/alint/active.yml#sha256-80c782b168658bbfb10aa01f43712435ef20313f5af22ffaddd6b08256b22616
