@@ -41,7 +41,7 @@ an explicit scope, stop and ask.
 2. **Inspect structure.** Read `references/workspace-and-layout.md`.
    Compare workspace membership, inheritance, edition, resolver, module
    layout, and test placement against the canonical files under
-   [`../tailrocks-rust-project-setup/templates/`](../tailrocks-rust-project-setup/templates/).
+   [`../tailrocks-rust-project-setup/assets/`](../tailrocks-rust-project-setup/assets/).
    This step is complete when every structural rule has evidence or a
    named blocker.
 3. **Inspect policy.** Read `references/lints-clippy-rustfmt.md`. Read

@@ -5,7 +5,7 @@ Load this reference when assigning quality gates and cadence.
 ## Every pull request
 
 - `cargo fmt --check` and strict workspace Clippy.
-- nextest plus separate doctests; nextest does not run doctests.
+- Use nextest plus separate doctests. Nextest does not run doctests.
 - cargo-deny for license, ban, and source policy only.
 - cargo-audit for RustSec advisory, yanked, unmaintained, and unsound review.
 - cargo-shear for unused/misplaced dependencies and unlinked files.
@@ -19,7 +19,7 @@ unmaintained crates, and unsound crates. Advisory exceptions live only in
 
 Initialize cargo-vet once, commit `supply-chain/config.toml` and
 `supply-chain/audits.toml`, and make new exemptions explicit review decisions.
-Shrink exemptions over time; protect audit files with security code owners.
+Shrink exemptions over time. Protect audit files with security code owners.
 
 ## Scheduled or pre-release
 
@@ -31,20 +31,22 @@ unsafe-sensitive boundaries, small concurrency algorithms, and inexpressible
 invariants earn them. Routine changes do not.
 
 - cargo-hack over the feature powerset.
-- cargo-llvm-cov through nextest; use coverage to find untested behavior, not as
-  a substitute for assertions.
+- Run cargo-llvm-cov through nextest. Use coverage to find untested behavior,
+  not as a substitute for assertions.
 - cargo-semver-checks for every published library crate.
-- cargo-mutants for critical domain logic; surviving mutants identify weak tests.
+- Run cargo-mutants for critical domain logic. Surviving mutants identify weak
+  tests.
 - cargo-fuzz for parsers, protocol inputs, and unsafe-sensitive boundaries.
 - cargo-careful for extra standard-library debug assertions and runtime UB checks
   on code that Miri cannot execute.
-- Miri on pure crates and unsafe-sensitive code, using multiple seeds where
-  practical; Loom for small concurrency algorithms whose interleavings matter.
+- Run Miri on pure crates and unsafe-sensitive code, using multiple seeds
+  where practical. Run Loom for small concurrency algorithms whose
+  interleavings matter.
 - Dylint only for a project invariant shipped lints cannot express. Keep its lint
   crate outside the stable workspace, pin its nightly, specify UI tests, start in
   an advisory lane, measure false positives, then promote.
-- MSRV/latest dependency builds only when the project promises an older MSRV;
-  the house default supports current stable only.
+- Build MSRV/latest dependencies only when the project promises an older
+  MSRV. The house default supports current stable only.
 
 ## Dependency policy
 

@@ -22,8 +22,8 @@ homes — no `design/` folder, no sidecar JSON, no tool scripts.
 
 ## MANIFEST.md — the human contract
 
-One section per screen; every slot filled or explicitly `None` with a
-reason:
+One section per screen. Fill every slot, or mark it explicitly `None` with
+a reason:
 
 ```markdown
 ## <Screen name>
@@ -41,7 +41,7 @@ reason:
 ```
 
 An unfilled `Blessed` row means the screen is a draft, and a draft is not a
-contract: the golden test still runs, but no downstream document may cite
+contract. The golden test still runs, but no downstream document may cite
 the frames as settled design.
 
 ## Delivery wiring
@@ -50,14 +50,14 @@ When the work belongs to a roadmap item:
 
 - The item's `## Screens` subsection for each screen keeps its schematic
   and gains one pointer line:
-  `Design: crates/<app>-gallery/MANIFEST.md §<Screen name>` — the frames
-  are the pixel truth, the item keeps intent. Never paste frames into the
-  item; a copy is a second source of truth.
+  `Design: crates/<app>-gallery/MANIFEST.md §<Screen name>`. The frames
+  are the pixel truth, and the item keeps intent. Never paste frames into
+  the item. A copy is a second source of truth.
 - Work happens on the item's `roadmap/<slug>` branch, and the invocation
-  ends in one commit of everything it produced, marked with the
-  `Tailrocks-Skill: tailrocks-tui-design` trailer — the same one-invocation,
-  one-commit shape the delivery family uses, extended to the gallery and
-  view-layer paths this skill owns.
+  ends in one commit of everything it produced. Mark it with the
+  `Tailrocks-Skill: tailrocks-tui-design` trailer. This is the same
+  one-invocation, one-commit shape the delivery family uses, extended to the
+  gallery and view-layer paths this skill owns.
 - Planning copies nothing: a plan's screen contract cites the manifest
   section and frame files by path. The golden test is the screen's
   observable check, so a plan's done criteria get "golden test green" for
@@ -66,5 +66,5 @@ When the work belongs to a roadmap item:
   still SHAPING ground — say so rather than letting a draft ride into
   planning.
 
-Outside the roadmap flow the same package and commit convention apply; only
+Outside the roadmap flow the same package and commit convention apply. Only
 the branch and pointer targets change.

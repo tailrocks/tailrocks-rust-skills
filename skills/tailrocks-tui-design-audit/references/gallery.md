@@ -1,9 +1,9 @@
 # The gallery crate
 
-The gallery is the rendering half of the design contract: a small workspace
-crate that renders every designed screen from fixture data, previews it in a
-terminal, writes the golden frames, and carries the test that holds the
-implementation to them. One gallery per application.
+The gallery is the rendering half of the design contract. It is a small
+workspace crate that renders every designed screen from fixture data. It
+previews each screen in a terminal, writes the golden frames, and carries the
+test that holds the implementation to them. One gallery per application.
 
 ## Where the view layer lives
 
@@ -24,16 +24,16 @@ pub fn render_status_board(frame: &mut Frame, view: &StatusBoardView)
 
 Rules that make the contract hold:
 
-- **Pure function of `(view model, frame area)`.** No wall-clock reads, no
-  I/O, no global state inside rendering — the clock and every derived string
-  come in through the view model. A render function that reads `Utc::now()`
-  produces untestable goldens.
-- **The gallery calls these functions; it never copies them.** The moment a
+- **Pure function of `(view model, frame area)`**. No wall-clock reads, no
+  I/O, and no global state inside rendering. The clock and every derived
+  string come in through the view model. A render function that reads
+  `Utc::now()` produces untestable goldens.
+- **The gallery calls these functions. It never copies them**. The moment a
   render function is duplicated into the gallery, the design and the
   implementation stop sharing a substrate and the goldens prove nothing.
 - Design mode may create these modules — view models and render functions
   are design output. Event handling, data loading, and state transitions
-  are not; they stay unwritten until implementation.
+  are not. They stay unwritten until implementation.
 
 ## Crate layout
 
@@ -68,11 +68,11 @@ pub struct Entry {
 }
 ```
 
-`style_checks` carries the cell-level style assertions text frames cannot:
-each names a cell `(x, y)`, the expected fg/bg/modifiers, and what it pins
-("selected row reversed", "stale age cell yellow"). A handful of anchored
-cells per frame is enough; asserting every cell's style duplicates the frame
-in a worse notation.
+`style_checks` carries the cell-level style assertions that text frames
+cannot carry. Each check names a cell `(x, y)`, the expected fg/bg/modifiers,
+and what it pins ("selected row reversed", "stale age cell yellow"). A handful
+of anchored cells per frame is enough. Asserting every cell's style duplicates
+the frame in a worse notation.
 
 ## The preview binary
 
@@ -81,8 +81,9 @@ in a worse notation.
   `TestBackend` and print the frame to stdout. This is the iteration loop
   with the user: render, show, adjust. It draws through the same code path
   as the goldens, so what the user blesses is what the test enforces.
-- `--write` — regenerate every golden from the registry. The only writer of
-  `golden/`; see `golden-frames.md` for when running it is legitimate.
+- `--write` — regenerate every golden from the registry. It is the only
+  writer of `golden/`. See `golden-frames.md` for when running it is
+  legitimate.
 
 ## The golden test
 
@@ -95,8 +96,8 @@ in a worse notation.
    is a stale contract.
 
 Because the gallery renders the shipped view functions, this one test is
-simultaneously the regeneration check and the implementation gate: when the
-feature's view code changes, the test goes red, and the answer is either
-fixing the code or re-blessing the design — never silently rewriting frames.
+both the regeneration check and the implementation gate. When the feature's
+view code changes, the test goes red. The answer is either fixing the code or
+re-blessing the design, never silently rewriting frames.
 The test runs under the repository's normal test command, so the existing
 CI gates and any goal-execution loop enforce the design without new wiring.

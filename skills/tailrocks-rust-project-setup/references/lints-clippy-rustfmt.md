@@ -5,16 +5,16 @@ policy. The templates are the source of truth.
 
 ## Policy shape
 
-- Put workspace policy in `[workspace.lints]`; every member declares
+- Put workspace policy in `[workspace.lints]`. Every member declares
   `[lints] workspace = true`.
 - Deny Rust correctness, compatibility, unused, unsafe, and public-reachability
   problems in the manifest.
-- Deny `clippy::all`; warn on `pedantic` and `cargo`; CI promotes warnings with
-  `-D warnings`.
+- Deny `clippy::all`. Warn on `pedantic` and `cargo`. CI promotes warnings
+  with `-D warnings`.
 - Cherry-pick restriction lints. The complete `restriction` group is invalid
   policy because it contains contradictory and context-dependent rules.
 - Let cargo-shear own unused dependency detection and cargo-deny own duplicate
-  versions; avoid competing lints with target/feature false positives.
+  versions. Avoid competing lints with target/feature false positives.
 
 The house baseline forbids unsafe code, unchecked indexing/slicing, production
 panic/unwrap/expect, blocking calls on runtime threads, ignored errors, wildcard
@@ -43,6 +43,6 @@ never in the stable baseline.
 
 ## Completion check
 
-Every member inherits policy, every enabled lint has one owner, every suppression
-is narrow and reasoned, current code passes with `-D warnings`, and thresholds can
-only ratchet downward.
+Every member inherits policy. Every enabled lint has one owner, every
+suppression is narrow and reasoned, current code passes with `-D warnings`,
+and thresholds can only ratchet downward.

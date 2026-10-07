@@ -22,7 +22,7 @@ the same committed versions. GraphQL client codegen needs Bun. Proto
 lint and breaking gates need Buf at the exact version in `mise.toml`.
 
 Vet the package before install. Read `plugin.json`, the host
-manifests, and the 15 files under `skills/`. This package ships
+manifests, and the 15 directories under `skills/`. This package ships
 skills, references, and templates only. It adds no hooks and no MCP
 servers.
 
@@ -527,9 +527,10 @@ character lowercase `sha`. Branches, tags, and short SHAs are
 rejected, and the client re-verifies the sha against the cloned
 head. The `.grok-plugin/plugin-index.json` file is generated: never
 hand-edit it. Grok reads the Claude catalog with zero-config
-compatibility. This package sets `disable-model-invocation` to
-`true` on the ten user-only skills and to `false` on the five
-ordinary skills. Do not treat `allowed-tools` metadata as an
+compatibility. This package revision sets `disable-model-invocation`
+to `true` on the ten user-only skills and to `false` on the five
+ordinary skills. The pinned catalog revision predates the `false`
+keys on the ordinary skills. Do not treat `allowed-tools` metadata as an
 enforced tool-permission boundary.
 
 ## Kimi Code
@@ -552,10 +553,11 @@ auto-discovers the catalog, so the marketplace URL is required:
 /plugins install https://github.com/tailrocks/tailrocks-rust-skills/commit/0317f100714dc66285c01c24f7967134375b5ac5
 ```
 
-The commit pin is the recommended form. The pin above is the current
-central-catalog revision of this package (version 0.28.0). Apply
-every install, enable, disable, or remove with `/reload` or a new
-session.
+The commit pin is the recommended form. The pin above is the latest
+released catalog revision (0.28.0). It predates the rewrite on this
+branch. The catalog entries move to the new release revision after
+release. Apply every install, enable, disable, or remove with
+`/reload` or a new session.
 
 Inspect the install (session):
 
@@ -594,9 +596,10 @@ confined to the plugin root. Manifest names match
 `skills` to `./skills/`. Without it, Kimi reads a root SKILL.md
 instead. This package sets it (observed 2026-10-07). Invocation
 nesting caps at three levels. Duplicates resolve Project over User
-over Extra over Built-in. The ten user-only skills set
-`disableModelInvocation` to `true`: invoke them only with an
-explicit `/skill:` command. Audit enabled plugins: a
+over Extra over Built-in. In this package revision, the ten
+user-only skills set `disableModelInvocation` to `true`: invoke
+them only with an explicit `/skill:` command. The pinned catalog
+revision predates that key. Audit enabled plugins: a
 `sessionStart.skill` injection can bypass the gate.
 
 ## Migrate from the old catalog

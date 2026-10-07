@@ -10,21 +10,21 @@ command.
 
 | Skill | Task |
 | --- | --- |
-| `tailrocks-rust-best-practices` | Write correct Rust behavior. |
-| `tailrocks-rust-review` | Review Rust read-only. User-only. |
-| `tailrocks-rust-refactor` | Restructure Rust safely. User-only. |
-| `tailrocks-rust-project-setup` | Scaffold a strict workspace. User-only. |
-| `tailrocks-rust-project-audit` | Audit a workspace read-only. User-only. |
-| `tailrocks-rust-project-remediate` | Fix approved gaps. User-only. |
-| `tailrocks-axum-best-practices` | Build Axum HTTP adapters. |
-| `tailrocks-axum-review` | Review Axum read-only. User-only. |
-| `tailrocks-axum-refactor` | Restructure Axum safely. User-only. |
-| `tailrocks-graphql-best-practices` | Evolve the public GraphQL API. |
-| `tailrocks-graphql-review` | Review GraphQL read-only. User-only. |
-| `tailrocks-grpc-best-practices` | Evolve cross-service gRPC. |
-| `tailrocks-grpc-review` | Review gRPC read-only. User-only. |
-| `tailrocks-tui-design` | Design ratatui screens. |
-| `tailrocks-tui-design-audit` | Audit terminal design read-only. User-only. |
+| [`tailrocks-rust-best-practices`](skills/tailrocks-rust-best-practices/SKILL.md) | Write correct Rust behavior. |
+| [`tailrocks-rust-review`](skills/tailrocks-rust-review/SKILL.md) | Review Rust read-only. User-only. |
+| [`tailrocks-rust-refactor`](skills/tailrocks-rust-refactor/SKILL.md) | Restructure Rust safely. User-only. |
+| [`tailrocks-rust-project-setup`](skills/tailrocks-rust-project-setup/SKILL.md) | Scaffold a strict workspace. User-only. |
+| [`tailrocks-rust-project-audit`](skills/tailrocks-rust-project-audit/SKILL.md) | Audit a workspace read-only. User-only. |
+| [`tailrocks-rust-project-remediate`](skills/tailrocks-rust-project-remediate/SKILL.md) | Fix approved gaps. User-only. |
+| [`tailrocks-axum-best-practices`](skills/tailrocks-axum-best-practices/SKILL.md) | Build Axum HTTP adapters. |
+| [`tailrocks-axum-review`](skills/tailrocks-axum-review/SKILL.md) | Review Axum read-only. User-only. |
+| [`tailrocks-axum-refactor`](skills/tailrocks-axum-refactor/SKILL.md) | Restructure Axum safely. User-only. |
+| [`tailrocks-graphql-best-practices`](skills/tailrocks-graphql-best-practices/SKILL.md) | Evolve the public GraphQL API. |
+| [`tailrocks-graphql-review`](skills/tailrocks-graphql-review/SKILL.md) | Review GraphQL read-only. User-only. |
+| [`tailrocks-grpc-best-practices`](skills/tailrocks-grpc-best-practices/SKILL.md) | Evolve cross-service gRPC. |
+| [`tailrocks-grpc-review`](skills/tailrocks-grpc-review/SKILL.md) | Review gRPC read-only. User-only. |
+| [`tailrocks-tui-design`](skills/tailrocks-tui-design/SKILL.md) | Design ratatui screens. |
+| [`tailrocks-tui-design-audit`](skills/tailrocks-tui-design-audit/SKILL.md) | Audit terminal design read-only. User-only. |
 
 Each skill body lives in its own directory. Read
 `skills/tailrocks-rust-review/SKILL.md` for one complete example.

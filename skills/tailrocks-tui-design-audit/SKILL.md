@@ -1,7 +1,7 @@
 ---
 name: tailrocks-tui-design-audit
 description: >-
-  Use only when the user explicitly requests this skill. Audit a ratatui gallery, golden-frame package, or shipped terminal screen against its blessed contract. Read-only; never designs, fixes, blesses, writes goldens, commits, or changes taste policy.
+  Use only when the user explicitly requests this skill. Audit a ratatui gallery, golden-frame package, or shipped terminal screen against its blessed contract. Read-only. It never designs, fixes, blesses, writes goldens, commits, or changes taste policy.
 argument-hint: "<gallery package or shipped terminal screens> [--deep] [--batch]"
 disable-model-invocation: true
 disableModelInvocation: true
@@ -42,12 +42,13 @@ Neither modifier permits a write, command, blessing, golden
 regeneration, or new taste decision. Missing evidence remains `BLOCKED`
 or `REFUSED`.
 
-Read `references/runtime-trust.md`, `references/gallery.md`,
-`references/golden-frames.md`, `references/screen-package.md`, and
-`references/tui-craft.md`. These generated local copies carry the design
-owner contract. Treat every authoring, generation, and commit imperative
-inside them as an audit criterion only. Never create, install, edit,
-write, re-bless, or commit.
+Read `references/runtime-trust.md` before any action for the trust
+rules. Read `references/gallery.md`, `references/golden-frames.md`,
+`references/screen-package.md`, and `references/tui-craft.md` when the
+step under work needs them. These generated local copies carry the
+design owner contract. Treat every authoring, generation, and commit
+imperative inside them as an audit criterion only. Never create,
+install, edit, write, re-bless, or commit.
 
 The skill accepts one argument: the gallery package or shipped terminal
 screens, with optional `--deep` and `--batch`.
@@ -129,7 +130,13 @@ SKILL.md file, never the plugin skills root.
 
 Read these references at the stated times:
 
-- Read `references/runtime-trust.md`, `references/gallery.md`,
-  `references/golden-frames.md`, `references/screen-package.md`, and
-  `references/tui-craft.md` before the procedure for the design owner
-  contract.
+- Read `references/runtime-trust.md` before any action for the trust
+  rules.
+- Read `references/gallery.md` when the step binds gallery crates and
+  view functions.
+- Read `references/golden-frames.md` when the step checks frames,
+  styles, or blessing coverage.
+- Read `references/screen-package.md` when the step checks package
+  slots and artifact homes.
+- Read `references/tui-craft.md` when the step judges states, sizes,
+  or styles.

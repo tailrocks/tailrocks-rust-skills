@@ -14,14 +14,14 @@ requirements.
 - By default, keep `rust-version` in `[workspace.package]` equal to the
   pinned channel in `rust-toolchain.toml`. If published crates promise an
   older MSRV, set that floor explicitly and add a CI job on exactly that
-  version; otherwise the equal pin is the only supported toolchain.
+  version. Otherwise the equal pin is the only supported toolchain.
 
 ## Everything Is a Workspace
 
-Create the `[workspace]` root even with one crate: shared lint tables,
+Create the `[workspace]` root even with one crate. Shared lint tables,
 metadata, and dependency versions apply immediately, and a second crate is a
 one-line `members` change. The root is typically a *virtual* manifest (a
-`[workspace]` with no `[package]`); the actual crates live under `crates/`.
+`[workspace]` with no `[package]`). The actual crates live under `crates/`.
 
 ```text
 your-repo/
@@ -151,14 +151,15 @@ crates/your-core/src/parser/tests.rs   # ALL tests for parser, inline, nothing e
 
 ## Item Order and Naming
 
-Optimize each file for a first-time reader; the deeper rules live in the
+Optimize each file for a first-time reader. The deeper rules live in the
 `tailrocks-rust-best-practices` skill
 (`tailrocks-rust-best-practices/references/readability-style-architecture.md`).
 
-- Public or entry-point items first, then supporting private helpers; the
-  module's main type or function before its details.
-- Standard Rust naming: `snake_case` for crates, modules, files, functions,
-  and values; `UpperCamelCase` for types and traits; `SCREAMING_SNAKE_CASE`
-  for constants and statics.
+- Public or entry-point items first, then supporting private helpers. Put
+  the module's main type or function before its details.
+- Standard Rust naming: use `snake_case` for crates, modules, files,
+  functions, and values. Use `UpperCamelCase` for types and traits. Use
+  `SCREAMING_SNAKE_CASE` for constants and statics.
 - Avoid clever abbreviations. Established domain terms (`tui`, `cli`, `pty`,
-  `db`, `ctx`) are fine; invented shortenings (`mgr`, `cfg_ed`, `ws`) are not.
+  `db`, `ctx`) are fine. Invented shortenings (`mgr`, `cfg_ed`, `ws`) are
+  not.

@@ -1,9 +1,9 @@
 # Design pipeline
 
-The design stage sits between READY and planning: finalization grants READY, the
-medium's design owner produces the blessed reference, and planning refuses a
-screen contract that cites none. A work item with no visual surface explicitly
-skips the stage.
+The design stage sits between READY and planning. Finalization grants READY,
+the medium's design owner produces the blessed reference, and planning refuses
+a screen contract that cites none. A work item with no visual surface
+explicitly skips the stage.
 
 The stages use the same words on every medium — **design**, **bless**,
 **freeze**, and **audit**:

@@ -4,17 +4,18 @@ Tailrocks choice: the web client uses TanStack Query with Bun codegen.
 GraphQL itself needs no specific client stack.
 
 The web app is a renderer of server-owned state. It sends operations, caches
-results, and maps typed outcomes to UI. It holds no business rules: if a
-behavior needs a unit test to be trusted — a total, a permission, a state
-transition — it belongs in the Rust core and arrives as schema data. The test
+results, and maps typed outcomes to UI. It holds no business rules. A
+behavior that needs a unit test to be trusted — a total, a permission, a
+state transition — belongs in the Rust core. It arrives as schema data. The
+test
 for smuggled logic: could the server change this decision without a client
 deploy? If not, the decision is in the wrong place.
 
 ## Codegen under Bun
 
 All types come from GraphQL codegen with the client preset, run by Bun against
-the committed SDL snapshot — the same artifact the server gates on, so client
-types can never drift ahead of the contract:
+the committed SDL snapshot. That snapshot is the same artifact the server
+gates on, so client types can never drift ahead of the contract:
 
 ```ts
 // codegen.ts
@@ -39,13 +40,13 @@ bun run graphql-codegen --config codegen.ts
 ```
 
 `@graphql-codegen/cli` and the client preset are devDependencies installed
-with `bun add -d`; the codegen run is a `bun run` script and a mise task so
+with `bun add -d`. The codegen run is a `bun run` script and a mise task so
 local and CI invoke the identical command. Hand-written types for a GraphQL
 response are a finding: they are a second, unverified copy of the contract.
 
 ## Executing operations with TanStack Query
 
-One small typed executor; TanStack Query owns caching, retries, and
+Use one small typed executor. TanStack Query owns caching, retries, and
 invalidation. Query keys derive from operation name plus variables so
 invalidation targets an operation family without string drift:
 
@@ -98,7 +99,7 @@ why the name — not the document text — leads the key.
 
 ## Fragments live with components
 
-Each component declares the fields it renders as a colocated fragment; pages
+Each component declares the fields it renders as a colocated fragment. Pages
 compose fragments into one operation. With the client preset's fragment
 masking, a component can only read fields its own fragment named:
 
@@ -121,14 +122,14 @@ export function InvoiceRowView(props: { invoice: FragmentType<typeof InvoiceRow>
 Mechanism: masking makes data dependencies local — deleting a component
 deletes its field selections, and no component silently depends on fields a
 sibling happened to fetch. Formatting (money, dates) is rendering and belongs
-here; the *values* come from the server.
+here. The *values* come from the server.
 
 ## Persisted operations in production builds
 
 The codegen `persistedDocuments` output is a manifest mapping hash to document
-text. The production build ships only hashes: the executor sends
-`{ documentId: hash, variables }`, the manifest is delivered to the server as
-a build artifact, and the server rejects unknown hashes
+text. The production build ships only hashes. The executor sends
+`{ documentId: hash, variables }`. The manifest is delivered to the server
+as a build artifact, and the server rejects unknown hashes
 (`references/server-rust.md`). Development builds keep sending full documents
 so iteration never waits on a manifest sync. The manifest handoff is part of
 the deploy pipeline, not a manual step.
@@ -137,8 +138,8 @@ the deploy pipeline, not a manual step.
 
 Two error channels reach the UI, and they render differently:
 
-- **Typed user errors** from a mutation payload map to product UI: a `field`
-  path attaches the message to its form control, a code like
+- **Typed user errors** from a mutation payload map to product UI. A `field`
+  path attaches the message to its form control. A code like
   `INVOICE_ALREADY_SUBMITTED` selects copy the product team owns. Exhaustive
   `switch` on the code enum with a generic fallback arm, so a new server code
   degrades gracefully instead of crashing rendering.
@@ -149,7 +150,7 @@ Two error channels reach the UI, and they render differently:
   first.
 
 **Complete when:** every operation's types are generated from the committed
-SDL, every query key starts with the operation name, every component reads
-only its own fragment, production sends hashes not documents, user-error codes
-switch exhaustively with a fallback, and no transport message reaches the
+SDL. Every query key starts with the operation name. Every component reads
+only its own fragment. Production sends hashes not documents. User-error codes
+switch exhaustively with a fallback. No transport message reaches the
 screen.

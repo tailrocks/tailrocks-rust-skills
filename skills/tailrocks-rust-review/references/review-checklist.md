@@ -39,7 +39,7 @@ Use for PR review, final self-review, or broad Rust audits.
 
 ## Ownership and Performance
 
-- Parameters borrow when ownership is not needed; take ownership when cloning
+- Parameters borrow when ownership is not needed. Take ownership when cloning
   would otherwise be inevitable.
 - Clones are deliberate: ownership transfer, cheap reference counting, or
   measured tradeoffs.
@@ -67,7 +67,7 @@ Use for PR review, final self-review, or broad Rust audits.
   or a documented project-specific command is used.
 - Public docs and examples checked when public API or rustdoc changes:
   `cargo doc --no-deps` and `cargo test --doc` as appropriate.
-- Suppressions use the narrowest scope; prefer `#[expect(...)]` with a reason
+- Suppressions use the narrowest scope. Prefer `#[expect(...)]` with a reason
   over permanent `#[allow(...)]`.
 - New lints are not introduced wholesale without project agreement.
 - Performance claims backed by release-mode benchmarks, profiling, or an

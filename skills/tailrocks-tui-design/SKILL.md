@@ -115,7 +115,7 @@ The skill accepts one argument: `design` with the feature or screens.
    when every screen has named states, two pinned sizes, and fixture
    values, not fixture descriptions.
 2. **Build or extend the gallery.** Read `references/gallery.md`. Copy
-   the crate skeleton from [`templates/`](templates/) rather than
+   the crate skeleton from [`assets/`](assets/) rather than
    deriving it. The gallery is a workspace crate: fixtures,
    a screen registry, a preview binary, and the golden test that holds
    implementation to frames. This step is complete when every screen by

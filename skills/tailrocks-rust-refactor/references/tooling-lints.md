@@ -4,11 +4,12 @@ Read Clippy as a design signal, act on high-value lints, check docs, measure
 performance claims, and suppress lints correctly.
 
 **Configuration and CI setup live elsewhere.** The strict `[workspace.lints]`
-tables, `clippy.toml`, `rustfmt.toml`, the toolchain, and the cargo-deny /
-audit / shear / hack / nextest baseline and templates are owned by
-`tailrocks-rust-project-setup`; approved changes to an existing workspace are
-owned by `tailrocks-rust-project-remediate`. This file assumes that strict
-baseline is already in place and focuses on working within it.
+tables, `clippy.toml`, `rustfmt.toml`, and the toolchain are owned by
+`tailrocks-rust-project-setup`. That skill also owns the cargo-deny, audit,
+shear, hack, and nextest baseline and templates. Approved changes to an
+existing workspace are owned by `tailrocks-rust-project-remediate`. This
+file assumes that strict baseline is already in place and focuses on working
+within it.
 
 ## Running the Checks
 
@@ -22,7 +23,7 @@ cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
 
 - `--workspace --all-targets` checks every crate's libraries, binaries, tests,
   benches, and examples.
-- `--all-features` when features are additive; adjust when mutually exclusive
+- `--all-features` when features are additive. Adjust when mutually exclusive
   (the project should have a `cargo hack` job for the matrix).
 - `--locked` verifies the lockfile is current.
 - `-D warnings` is the gate — it turns the whole strict posture into a hard
@@ -50,7 +51,7 @@ Reliable signals of real improvement — fix rather than suppress:
   allocation or a reference-count clone that should be explicit.
 - `needless_borrow`, `needless_collect` — redundant work.
 - `large_enum_variant`, `result_large_err` — a big variant inflates every
-  value; box the large payload.
+  value. Box the large payload.
 - `map_unwrap_or`, `manual_ok_or`, `unnecessary_wraps`, `manual_let_else` —
   clearer combinator or control-flow forms.
 - `trivially_copy_pass_by_ref` — pass small `Copy` types by value.
@@ -58,7 +59,7 @@ Reliable signals of real improvement — fix rather than suppress:
 
 ## Formatting
 
-`cargo fmt` is mechanical and non-negotiable; run it before every commit and
+`cargo fmt` is mechanical and non-negotiable. Run it before every commit and
 never hand-format around it. If `cargo fmt --check` passes, formatting is
 correct by definition — raise it in review only when it hides meaning.
 
@@ -81,7 +82,7 @@ cargo test --workspace --doc --locked
 - No performance claims without measurement, unless the change removes an
   obvious allocation, clone, lock, or repeated computation.
 - Measure on optimized (release) builds. Use `cargo bench`, Criterion, or
-  project-provided benchmarks; profile real workloads with `cargo flamegraph`,
+  project-provided benchmarks. Profile real workloads with `cargo flamegraph`,
   `samply`, or OS profilers rather than trusting a micro-benchmark alone.
 - Confirm the delta exceeds benchmark noise and is relevant to the workload.
   Keep benchmark inputs deterministic.

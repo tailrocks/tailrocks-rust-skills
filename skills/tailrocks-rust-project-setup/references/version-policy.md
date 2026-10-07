@@ -9,27 +9,27 @@ explicitly required and isolate it behind a documented upgrade trigger.
 
 The collection baseline pins live only in the project-setup templates:
 
-- [`rust-toolchain.toml`](../../tailrocks-rust-project-setup/templates/rust-toolchain.toml)
+- [`rust-toolchain.toml`](../../tailrocks-rust-project-setup/assets/rust-toolchain.toml)
   owns the Rust channel.
-- [`Cargo.toml`](../../tailrocks-rust-project-setup/templates/Cargo.toml) owns
+- [`Cargo.toml`](../../tailrocks-rust-project-setup/assets/Cargo.toml) owns
   `workspace.package.rust-version` and every
   workspace dependency pin.
-- [`clippy.toml`](../../tailrocks-rust-project-setup/templates/clippy.toml)
+- [`clippy.toml`](../../tailrocks-rust-project-setup/assets/clippy.toml)
   owns `msrv`.
-- [`mise.toml`](../../tailrocks-rust-project-setup/templates/mise.toml) owns every
+- [`mise.toml`](../../tailrocks-rust-project-setup/assets/mise.toml) owns every
   cargo tool version and the binstall pin.
 
 After installation, the target project's committed artifacts own its installed
 pins. Audit compares those artifacts with current stable evidence and the
-collection baseline; remediation updates the target artifacts and lockfiles
+collection baseline. Remediation updates the target artifacts and lockfiles
 together without turning prose into another pin ledger.
 
 **Do not copy those versions into prose or another ledger.** A second copy has
-no reader and no gate, so it goes stale silently and then contradicts the
-artifact it claims to describe — which is worse than being absent, because it
+no reader and no gate, so it goes stale silently. It then contradicts the
+artifact it claims to describe, which is worse than being absent, because it
 reads as current. The channel, `rust-version`, and `msrv` say the same thing in
-three files because three tools each need it in their own format; a check
-asserts they agree rather than trusting anyone to remember.
+three files because three tools each need it in their own format. A check
+asserts that they agree rather than trusting anyone to remember.
 
 ## Primary release sources
 
@@ -72,11 +72,11 @@ the template pins, and opens the bump as a reviewable pull request. What stays
 yours:
 
 1. Read release and migration notes for every major or pre-1.0 minor transition
-   in that pull request — an automated bump proves a version exists, never that
-   it is compatible.
+   in that pull request. An automated bump proves that a version exists, never
+   that it is compatible.
 2. Run the full feature, lint, test, supply-chain, coverage, and semver matrix
    before accepting it.
-3. Stop on an incompatible latest-stable set; report the exact peer or MSRV
+3. Stop on an incompatible latest-stable set. Report the exact peer or MSRV
    conflict rather than silently retaining an older release.
 
 When working on a project that is not this repository, the same rule applies to

@@ -7,8 +7,8 @@ boundaries, and maintainable project structure.
 
 Classify changes before editing or reviewing:
 
-- Internal implementation change: require behavior tests; no new panics on
-  unhappy paths.
+- Internal implementation change: require behavior tests. Allow no new panics
+  on unhappy paths.
 - Public API expansion: scrutinize naming, ownership, compatibility, docs,
   examples, and future evolution.
 - New dependency or re-export: scrutinize compile time, maintenance, security,
@@ -41,10 +41,10 @@ reviewable. Keep unrelated cleanup out of behavior changes.
 
 Optimize files for a first-time reader.
 
-- Public or entry-point items before private helpers; the module's main type
-  or function first.
-- Core type declarations before impl details for a top-down view of the API;
-  related types ordered high-level to supporting detail.
+- Public or entry-point items before private helpers. Put the module's main
+  type or function first.
+- Core type declarations before impl details for a top-down view of the API.
+  Order related types high-level to supporting detail.
 - Keep helper structs and single-use context objects near the code that uses
   them.
 - Do not split a small feature across many modules to satisfy an abstract
@@ -69,12 +69,12 @@ Optimize files for a first-time reader.
   validation returns a refined type. Prefer returning a refined value such as
   `Option<&str>` or a validated newtype over separate boolean predicates that
   can drift from later use.
-- Avoid outward "doer" objects that only execute one action; prefer a function
-  or inherent method when that is the clearer API.
+- Avoid outward "doer" objects that only execute one action. Prefer a
+  function or inherent method when that is the clearer API.
 - Replace many optional or boolean parameters with a config struct, enum, or
   separate functions.
-- Pass context parameters first when threaded unchanged through many calls;
-  use internal context structs when many values must travel together.
+- Pass context parameters first when threaded unchanged through many calls.
+  Use internal context structs when many values must travel together.
 - Use OS string and path types at OS boundaries. Use domain-specific path
   types when they encode important invariants: absolute paths, workspace
   roots, virtual paths.
@@ -90,29 +90,29 @@ Optimize files for a first-time reader.
 - No `ref` keyword when match ergonomics already provide the needed reference.
 - `=> (),` for intentionally empty match arms.
 - Range comparisons in spatial order: `lo <= x && x <= hi`.
-- Use `map`, `then`, `filter`, and related combinators when they are natural;
-  prefer `for`, `if`, or `match` when direct control flow communicates more.
+- Use `map`, `then`, `filter`, and related combinators when they are natural.
+  Prefer `for`, `if`, or `match` when direct control flow communicates more.
 - Prefer type ascription on the binding over turbofish on the expression when
   the result type is what readers need to see. Avoid `_` in ascribed types
   when the concrete type is important to readability.
 
 ## Helpers and Context
 
-- Do not extract a helper just because a block is a few lines long;
-  single-use helpers can create parameter churn and hide control flow.
+- Do not extract a helper just because a block is a few lines long.
+  Single-use helpers can create parameter churn and hide control flow.
 - Extract helpers that name a reusable concept, isolate unsafe code, reduce
   duplication, make tests clearer, or need their own `return` or `?` flow.
 - Nested helper functions go at the end of the enclosing function, at most one
   level deep.
-- Introduce helper variables freely, especially for multiline conditions;
-  named conditions improve debugging and usually format better.
-- Avoid making large bodies generic across crate boundaries; a small generic
+- Introduce helper variables freely, especially for multiline conditions.
+  Named conditions improve debugging and usually format better.
+- Avoid making large bodies generic across crate boundaries. A small generic
   wrapper can call a non-generic implementation to reduce duplicated machine
   code.
 
 ## Tests and Assertions
 
-- Keep test fixtures minimal; remove copied real-world code that does not
+- Keep test fixtures minimal. Remove copied real-world code that does not
   affect the behavior under test.
 - Unindented raw string literals for multiline Rust fixtures when that keeps
   the fixture readable.
@@ -120,8 +120,8 @@ Optimize files for a first-time reader.
   over `#[should_panic]` unless panic is the documented behavior.
 - No `#[ignore]` for broken tests. If preserving current wrong behavior is
   necessary, assert that behavior and leave a tracked follow-up note.
-- Coverage marks only where the project already uses that pattern; each mark
-  tied to one canonical condition and one test.
+- Coverage marks only where the project already uses that pattern. Tie each
+  mark to one canonical condition and one test.
 - Assert invariants near the code that depends on them. In libraries and
   long-running tools, prefer recoverable diagnostics for user input failures.
 
@@ -132,7 +132,7 @@ Optimize files for a first-time reader.
 - Substantial inline comments are proper sentences. Use labels such as
   `SAFETY:`, `PERF:`, or `CONTEXT:` when they make important reasoning easier
   to find.
-- Markdown docs: sentence-per-line formatting can make diffs cleaner; split
+- Markdown docs: sentence-per-line formatting can make diffs cleaner. Split
   overlong sentences instead of hard-wrapping unreadable text.
 - Move lasting design context to rustdoc, tests, design docs, or architecture
   decision records. Local comments must not be the only durable documentation
@@ -149,7 +149,7 @@ Optimize files for a first-time reader.
   flags, error types, trait bounds, re-exports, or serialization formats.
 - Keep IO, serialization, process state, and external protocols at explicit
   boundaries. Do not derive serialization on deep internal types just because
-  it is easy; use separate boundary DTOs when wire compatibility matters.
+  it is easy. Use separate boundary DTOs when wire compatibility matters.
 - Preserve partial availability in long-running tools: broken inputs usually
   produce diagnostics, not a crashed process.
 - Add observability at long-running or concurrent boundaries so failures can

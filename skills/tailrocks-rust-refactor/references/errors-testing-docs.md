@@ -6,13 +6,13 @@ comments, panic behavior, and unsafe contracts.
 ## Error Handling
 
 - Expected runtime failures return `Result<T, E>`.
-- Absence is `Option<T>` only when there is no useful error information;
-  consider `Result<T, E>` when absence has a meaningful cause.
-- Avoid `Result<T, String>` and `Result<T, ()>` in public APIs; define a
+- Absence is `Option<T>` only when there is no useful error information.
+  Consider `Result<T, E>` when absence has a meaningful cause.
+- Avoid `Result<T, String>` and `Result<T, ()>` in public APIs. Define a
   meaningful error type.
 - Prefer `?` over nested match chains when propagation is the intent.
-- Use `or_else`, `map_err`, and `if let Ok(...) else` for recovery;
-  `inspect_err` to log or observe errors before propagation.
+- Use `or_else`, `map_err`, and `if let Ok(...) else` for recovery.
+  Use `inspect_err` to log or observe errors before propagation.
 - Preserve context when crossing boundaries: IO, parsing, network calls, user
   input, task execution, external services.
 - User-facing error messages do not end with punctuation unless local
@@ -49,12 +49,12 @@ Acceptable panics:
 Under the house lint baseline (`workspace.lints` denies `expect_used`,
 `panic`, `todo`, and `unimplemented`), each otherwise-allowed use requires
 a narrow `#[expect(clippy::..., reason = "...")]` at the site. `todo!` and
-`unimplemented!` are denied outright outside tests; leave them only in code
+`unimplemented!` are denied outright outside tests. Leave them only in code
 not yet wired into the workspace gates.
 
-Avoid panics on invalid user input; in parsers, servers, long-running tools,
-and background tasks; and in library APIs unless misuse is the documented
-contract.
+Avoid panics on invalid user input. This rule covers parsers, servers,
+long-running tools, and background tasks. It also covers library APIs unless
+misuse is the documented contract.
 
 Use `unreachable!` only when it communicates a proven invariant more precisely
 than a generic panic and carries the narrow lint expectation above. Do not use
@@ -95,9 +95,10 @@ Doc lints when a project wants stricter docs: `missing_docs`,
 ## Unit and Integration Tests
 
 - Tests are living examples of behavior.
-- `#[test]` for test functions; `#[cfg(test)]` modules for test-only code.
+- Use `#[test]` for test functions. Use `#[cfg(test)]` modules for test-only
+  code.
 - Test behavior through stable boundaries, not incidental helper APIs.
-- Keep fixtures minimal; every extra line must make the scenario clearer.
+- Keep fixtures minimal. Every extra line must make the scenario clearer.
 - Cover error paths and edge cases, not only happy paths.
 - Descriptive names communicate unit of work, expected behavior, and state
   being checked. Organize many tests for one function under a module named for
@@ -121,9 +122,9 @@ tests can exercise it directly.
 
 - Doc tests keep public API examples valid. Keep them small, self-contained,
   and free of network, environment-specific files, or timing.
-- `cargo test` runs doctests; `cargo nextest run` does not. Run
+- `cargo test` runs doctests. `cargo nextest run` does not. Run
   `cargo test --doc` separately when nextest is the main runner.
-- Use `ignore` only when the example should not run; prefer `text` for plain
+- Use `ignore` only when the example should not run. Prefer `text` for plain
   formatted snippets. Use `no_run` when code should compile but not execute
   due to side effects. Use `compile_fail` for intentionally invalid usage.
   Use `should_panic` only when panic is the documented behavior.

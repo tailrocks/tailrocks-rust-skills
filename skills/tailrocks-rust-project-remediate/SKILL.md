@@ -1,7 +1,7 @@
 ---
 name: tailrocks-rust-project-remediate
 description: >-
-  Use only when the user explicitly requests this skill. Remediate user-approved gaps in an existing Rust workspace baseline while keeping every intermediate state buildable. Use tailrocks-rust-project-audit to discover or report gaps; this skill requires explicit approved scope.
+  Use only when the user explicitly requests this skill. Remediate user-approved gaps in an existing Rust workspace baseline while keeping every intermediate state buildable. Use tailrocks-rust-project-audit to discover or report gaps. This skill requires explicit approved scope.
 argument-hint: "<approved gap IDs or exact remediation scope>"
 disable-model-invocation: true
 disableModelInvocation: true
@@ -49,7 +49,7 @@ scope. Without explicit approval, stop and ask.
    `references/shared-version-policy.md` first. Then apply
    `references/version-policy.md`. For an absent baseline file, copy its
    canonical source from
-   [`../tailrocks-rust-project-setup/templates/`](../tailrocks-rust-project-setup/templates/).
+   [`../tailrocks-rust-project-setup/assets/`](../tailrocks-rust-project-setup/assets/).
    Replace marked project values. Never reconstruct it from prose.
    Preserve stronger compatible local policy. This step is complete when
    the desired postcondition and rollback boundary are explicit.

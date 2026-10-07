@@ -13,7 +13,7 @@ conversion APIs, builders, type-state, and semver-sensitive changes.
   `ParseFooError`.
 - Feature names describe the capability directly (`std`, `serde`), not
   `with-std` or `use-serde`.
-- Cargo features must be additive; avoid negative names such as `no-foo`.
+- Cargo features must be additive. Avoid negative names such as `no-foo`.
 
 ## Conversions
 
@@ -32,7 +32,7 @@ conversion APIs, builders, type-state, and semver-sensitive changes.
 - `new` for the primary constructor when construction is simple.
 - Domain-specific constructors when they communicate an action better: `open`,
   `connect`, `bind`, `parse`, `from_*`.
-- Implement `Default` when the type has a sensible default; `new` and
+- Implement `Default` when the type has a sensible default. `new` and
   `default` should agree when both exist. Prefer `Default` to a zero-argument
   `new` with no extra meaning in construction.
 - Do not invent dummy default states for types with no valid default.
@@ -47,8 +47,8 @@ conversion APIs, builders, type-state, and semver-sensitive changes.
 ## Methods, Getters, and Fields
 
 - An operation with a clear receiver is a method.
-- Avoid out-parameters; return tuples or structs unless the point is reusing a
-  caller-owned buffer.
+- Avoid out-parameters. Return tuples or structs unless the point is reusing
+  a caller-owned buffer.
 - No unnecessary `get_` prefixes: `name(&self) -> &str`,
   `name_mut(&mut self) -> &mut String`.
 - Getters return borrowed data. Avoid `&String`, `&Vec<T>`, or `&Option<T>` in
@@ -57,7 +57,7 @@ conversion APIs, builders, type-state, and semver-sensitive changes.
   public field can be clearer than a getter.
 - A field with an invariant: document it, enforce it in construction, keep the
   field private, provide a getter.
-- Avoid setters as a default pattern; prefer methods that preserve invariants.
+- Avoid setters as a default pattern. Prefer methods that preserve invariants.
 
 ## Function Parameters
 
@@ -82,7 +82,7 @@ conversion APIs, builders, type-state, and semver-sensitive changes.
 - Seal traits when downstream implementations would prevent future evolution.
 - Avoid blanket implementations that may conflict with future more-specific
   impls.
-- Do not use `Deref` to emulate inheritance or reuse methods; implement
+- Do not use `Deref` to emulate inheritance or reuse methods. Implement
   explicit methods, traits, or delegation.
 
 ## Type Safety
@@ -92,7 +92,7 @@ conversion APIs, builders, type-state, and semver-sensitive changes.
 - Replace ambiguous booleans and options with enums or config structs when the
   call site is unclear.
 - Use `bitflags`-style types for combinable flag sets.
-- Validate inputs at boundaries. Prefer static validation through types; use
+- Validate inputs at boundaries. Prefer static validation through types. Use
   `Result` for runtime validation.
 - Consider `#[non_exhaustive]` for public enums and structs that may gain
   variants or fields and will be matched by external users.
@@ -114,15 +114,15 @@ Use type-state when compile-time state safety clearly pays for the extra types.
 ## Features, Dependencies, and Compatibility
 
 - Gate optional integration dependencies behind clearly named features.
-- Public dependencies of a stable crate join its stability story; add them
+- Public dependencies of a stable crate join its stability story. Add them
   deliberately.
 - Serialization derives create compatibility commitments. Keep wire/API types
   at boundaries, not deep in internals.
-- Public structs with private fields can add fields later; public field
+- Public structs with private fields can add fields later. Public field
   structs usually cannot.
 - Do not expose private helper errors, generated types, or internal modules in
   rustdoc.
-- Re-exports create multiple import paths; use them only as deliberate public
+- Re-exports create multiple import paths. Use them only as deliberate public
   API.
 - Keep IO, protocol, serialization, and external-process types at clear
   boundary layers rather than leaking through core logic.

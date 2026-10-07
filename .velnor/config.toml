@@ -10,4 +10,4 @@ schema = 1
 default_branch = "main"              # Push branch; required because CI checkouts have no origin/HEAD.
 
 [discovery]
-exclude = ["skills/**/templates/**"]
+exclude = ["skills/**/assets/**"]

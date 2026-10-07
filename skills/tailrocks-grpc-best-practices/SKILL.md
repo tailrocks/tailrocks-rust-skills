@@ -1,7 +1,7 @@
 ---
 name: tailrocks-grpc-best-practices
 description: >-
-  Apply cross-service gRPC policy when in-scope work evolves proto or Buf contracts, tonic/prost services, status mapping, deadlines, streaming, health, or wire tests. Use tailrocks-grpc-review for findings. Not for public APIs; those are GraphQL.
+  Apply cross-service gRPC policy when in-scope work evolves proto or Buf contracts, tonic/prost services, status mapping, deadlines, streaming, health, or wire tests. Use tailrocks-grpc-review for findings. This skill is not for public APIs. Those are GraphQL.
 argument-hint: "<cross-service gRPC contract evolution>"
 disable-model-invocation: false
 license: Apache-2.0

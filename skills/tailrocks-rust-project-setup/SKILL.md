@@ -57,7 +57,7 @@ The skill accepts one argument: the new workspace requirements.
    feature requirements in official crate documentation. This step is
    complete when every selected version has registry evidence and
    documented compatibility.
-3. **Install policy files.** Copy the templates from `templates/` rather
+3. **Install policy files.** Copy the templates from `assets/` rather
    than reconstructing policy:
 
    | Template | Destination |

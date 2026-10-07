@@ -1,7 +1,7 @@
 ---
 name: tailrocks-axum-refactor
 description: >-
-  Use only when the user explicitly requests this skill. Restructure Axum adapters or Tower composition while preserving HTTP behavior. Require an independent oracle; use tailrocks-axum-best-practices when transport behavior changes.
+  Use only when the user explicitly requests this skill. Restructure Axum adapters or Tower composition while preserving HTTP behavior. Require an independent oracle. Use tailrocks-axum-best-practices when transport behavior changes.
 argument-hint: "<Axum refactor scope and preserved HTTP behavior>"
 disable-model-invocation: true
 disableModelInvocation: true

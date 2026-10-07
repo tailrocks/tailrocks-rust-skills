@@ -1,9 +1,9 @@
 # Schema Design
 
 The schema is a public contract read by strangers. Every shape below exists to
-keep that contract evolvable without version numbers: connections can grow
-fields, payloads can grow error codes, `Node` can absorb new types — none of it
-breaks an existing client.
+keep that contract evolvable without version numbers. Connections can grow
+fields, payloads can grow error codes, and `Node` can absorb new types. None
+of it breaks an existing client.
 
 ## Naming
 
@@ -37,12 +37,13 @@ type Query {
 }
 ```
 
-Mechanism: opaque IDs let clients cache and refetch any object uniformly, and
-they keep database key strategy (integer, UUID, ULID, sharding) out of the
-public contract — you can change storage without a schema change. Encode the
-concrete type into the ID and reject an `Invoice` ID passed where a `Customer`
-ID is expected; that turns a whole class of confused-object bugs into typed
-user errors. Never expose raw database keys, even alongside the opaque ID.
+Mechanism: opaque IDs let clients cache and refetch any object uniformly.
+They keep database key strategy (integer, UUID, ULID, sharding) out of the
+public contract, so you can change storage without a schema change. Encode
+the concrete type into the ID. Reject an `Invoice` ID passed where a
+`Customer` ID is expected. That turns a whole class of confused-object bugs
+into typed user errors. Never expose raw database keys, even alongside the
+opaque ID.
 
 ## Lists are connections
 
@@ -73,16 +74,16 @@ type Query {
 }
 ```
 
-- Cursors are opaque and encode a stable sort position, not an offset — offset
-  pagination skips or repeats rows under concurrent writes and invites
+- Cursors are opaque and encode a stable sort position, not an offset.
+  Offset pagination skips or repeats rows under concurrent writes and invites
   `OFFSET 500000` table scans.
 - Cap `first`/`last` server-side (a stated number, typically 100) and reject
   requests that pass neither.
-- A plain `[Thing!]!` list is a deviation that needs a written reason: the set
-  is small, bounded by construction, and always fetched whole (e.g. the ≤ 10
-  members of a fixed enumeration-like collection).
+- A plain `[Thing!]!` list is a deviation that needs a written reason. The
+  set is small, bounded by construction, and always fetched whole (e.g. the
+  ≤ 10 members of a fixed enumeration-like collection).
 - Connections may grow — `totalCount`, aggregates, edge metadata — without
-  breaking anyone. A bare list cannot; that asymmetry is why connections are
+  breaking anyone. A bare list cannot. That asymmetry is why connections are
   the default even when today's UI shows ten rows.
 
 ## Mutations
@@ -117,14 +118,14 @@ type Mutation {
 }
 ```
 
-- **Expected failures are payload data, not thrown errors.** A validation or
-  precondition failure is a domain outcome the client must render; the
+- **Expected failures are payload data, not thrown errors**. A validation or
+  precondition failure is a domain outcome the client must render. The
   top-level GraphQL `errors` array is reserved for transport and system
   failures (auth, rate limit, internal). Mechanism: payload errors are typed,
-  enumerable, and testable per mutation; thrown errors are stringly-typed and
+  enumerable, and testable per mutation. Thrown errors are stringly-typed and
   force clients to parse messages.
 - The payload's success field (`invoice`) is nullable precisely because
-  `userErrors` may be non-empty; that pairing is the one sanctioned use of
+  `userErrors` may be non-empty. That pairing is the one sanctioned use of
   output nullability without a bespoke reason.
 - One payload type per mutation, never a shared `MutationResult` — each
   operation's error codes and result fields evolve independently.
@@ -141,8 +142,8 @@ Non-null (`!`) by default. A nullable field carries a written reason, one of:
    (`invoice.voidedAt`).
 3. **Mutation payload success field**, paired with `userErrors` as above.
 
-List positions are always non-null (`[Invoice!]`). Inputs invert the ratchet:
-a new input field or argument must be nullable or carry a default, because
+List positions are always non-null (`[Invoice!]`). Inputs invert the ratchet.
+A new input field or argument must be nullable or carry a default, because
 requiring it breaks every existing operation — see
 `references/contract-gates.md`.
 
@@ -152,15 +153,16 @@ An anemic CRUD schema (`createInvoice`, `updateInvoice(status:…)`,
 `deleteInvoice`) leaks storage shape and forces business rules into clients —
 exactly what the thin-UI rule forbids. Instead each state transition the
 domain recognizes is its own mutation (`submitInvoice`, `voidInvoice`,
-`recordPayment`), validated in the Rust core, with its own payload and error
-codes. A generic `update` mutation whose semantics depend on which fields were
+`recordPayment`). It is validated in the Rust core, with its own payload and
+error codes. A generic `update` mutation whose semantics depend on which
+fields were
 set cannot be typed, gated, or audited — reject it in review.
 
 ## Polymorphism
 
 - **Union** when members share no contract: `union TimelineEntry =
   PaymentRecorded | NoteAdded | StatusChanged`. Clients must handle each
-  member; adding a member is additive (clients need a fallback case).
+  member. Adding a member is additive (clients need a fallback case).
 - **Interface** when members share fields the client selects uniformly
   (`Node`, `Actor`). Prefer a union unless that shared selection genuinely
   exists — an interface invented to avoid writing fragments couples types
@@ -168,14 +170,14 @@ set cannot be typed, gated, or audited — reject it in review.
 
 ## When not to add a field
 
-Client-specific display logic stays in the client: `formattedTotal`,
-`statusColor`, `shortLabel` are rendering decisions, and baking one client's
+Client-specific display logic stays in the client. `formattedTotal`,
+`statusColor`, and `shortLabel` are rendering decisions. Baking one client's
 rendering into the public contract makes every other client carry it forever.
-The server exposes the domain value (`totalCents`, `currency`, `status`); the
+The server exposes the domain value (`totalCents`, `currency`, `status`). The
 UI formats it. The test: if two clients could reasonably want different
 values, it is not a server field.
 
-**Complete when:** every object is a `Node` with an opaque ID, every list is a
-connection or has a written exemption, every mutation has its own input,
-payload, and error codes, every nullable output cites one of the three
-reasons, and no mutation mirrors a table update.
+**Complete when:** every object is a `Node` with an opaque ID. Every list is
+a connection or has a written exemption. Every mutation has its own input,
+payload, and error codes. Every nullable output cites one of the three
+reasons. No mutation mirrors a table update.
