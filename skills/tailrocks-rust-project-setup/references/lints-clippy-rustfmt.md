@@ -30,9 +30,10 @@ boundary and removal condition.
 
 ## Ratchets
 
-Measure current maxima before adoption. Set complexity thresholds just above the
-clean baseline, then only lower them. A new violation is refactored or receives a
-narrow expectation; thresholds never rise to accommodate one change.
+Measure current maxima before adoption. Set complexity thresholds just
+above the clean baseline, then only lower them. A new violation is
+refactored or receives a narrow expectation. Thresholds never rise to
+accommodate one change.
 
 ## Formatter
 

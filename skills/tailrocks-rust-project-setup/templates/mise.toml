@@ -35,10 +35,13 @@ run = [
 
 [tasks.supply-chain]
 run = [
-    "cargo deny check advisories licenses bans sources",
-    "cargo audit",
-    "cargo vet",
+    "cargo deny check licenses bans sources",
+    "cargo audit --deny warnings",
 ]
+
+# Run only after `cargo vet init` created `supply-chain/`.
+[tasks.vet]
+run = "cargo vet"
 
 [tasks.hygiene]
 run = "cargo shear"

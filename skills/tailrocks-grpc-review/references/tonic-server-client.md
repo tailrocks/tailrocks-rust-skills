@@ -116,7 +116,7 @@ fails compilation until someone decides its code, instead of defaulting to
 `Internal` at 3 a.m.
 
 | Domain failure class | Code |
-|---|---|
+| --- | --- |
 | Request invalid regardless of system state (parse, range, malformed id) | `InvalidArgument` |
 | Referenced entity does not exist | `NotFound` |
 | Create/claim conflicts with an existing entity | `AlreadyExists` |

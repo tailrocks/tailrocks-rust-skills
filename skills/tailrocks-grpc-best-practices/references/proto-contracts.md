@@ -35,8 +35,9 @@ breaking:
     - FILE
 ```
 
-buf is installed via mise (`mise use buf@latest`), never a standalone
-download, so the version CI runs is the version developers run. The gates:
+Tailrocks choice: Buf governs proto tooling. Install Buf through mise at
+the exact version in `mise.toml`. Never use a standalone download. CI
+then runs the version developers run. The gates:
 
 ```sh
 buf lint

@@ -1,5 +1,8 @@
 # Client: TanStack on Bun
 
+Tailrocks choice: the web client uses TanStack Query with Bun codegen.
+GraphQL itself needs no specific client stack.
+
 The web app is a renderer of server-owned state. It sends operations, caches
 results, and maps typed outcomes to UI. It holds no business rules: if a
 behavior needs a unit test to be trusted — a total, a permission, a state

@@ -135,12 +135,12 @@ let reflection = tonic_reflection::server::Builder::configure()
     .build_v1()?;
 ```
 
-Production policy, stated: reflection stays enabled. Every gRPC listener is
-internal by doctrine, and being able to `buf curl`/`grpcurl` a live service
-during an incident outweighs schema secrecy inside the trust boundary. What
-reflection must never do is ride a listener reachable from outside that
-boundary — if such a listener exists, the listener is the defect to fix,
-not the reflection service.
+Tailrocks architecture choice: every gRPC listener is internal, and
+reflection stays enabled. gRPC itself permits public listeners. Inside the
+trust boundary, live inspection with `buf curl` or `grpcurl` during an
+incident outweighs schema secrecy. Reflection must never ride a listener
+that is reachable from outside that boundary. If such a listener exists,
+the listener is the defect to fix, not the reflection service.
 
 ## Graceful shutdown
 

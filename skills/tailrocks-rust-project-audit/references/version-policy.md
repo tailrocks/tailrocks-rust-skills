@@ -1,9 +1,9 @@
 # Rust Version Policy
 
 Latest means latest stable release available now, including the latest stable
-release series for pre-1.0 crates. Repository `main`, nightly, alpha, beta, and RC
-builds are not newer stable versions. Use a prerelease only when explicitly
-required and isolate it behind a documented upgrade trigger.
+release series for pre-1.0 crates. Repository `main`, nightly, alpha, beta,
+and RC builds are not newer stable versions. Use a prerelease only when
+explicitly required and isolate it behind a documented upgrade trigger.
 
 ## Sources of truth
 
@@ -14,7 +14,8 @@ The collection baseline pins live only in the project-setup templates:
 - [`Cargo.toml`](../../tailrocks-rust-project-setup/templates/Cargo.toml) owns
   `workspace.package.rust-version` and every
   workspace dependency pin.
-- [`clippy.toml`](../../tailrocks-rust-project-setup/templates/clippy.toml) owns `msrv`.
+- [`clippy.toml`](../../tailrocks-rust-project-setup/templates/clippy.toml)
+  owns `msrv`.
 - [`mise.toml`](../../tailrocks-rust-project-setup/templates/mise.toml) owns every
   cargo tool version and the binstall pin.
 
@@ -33,7 +34,7 @@ asserts they agree rather than trusting anyone to remember.
 ## Primary release sources
 
 | Component | Primary source |
-|---|---|
+| --- | --- |
 | Rust | <https://forge.rust-lang.org/> |
 | Axum | <https://docs.rs/axum/latest/axum/> |
 | Tokio | <https://crates.io/crates/tokio> |
@@ -52,10 +53,16 @@ asserts they agree rather than trusting anyone to remember.
 | cargo-dylint / dylint-link | <https://crates.io/crates/cargo-dylint> |
 | cargo-binstall | <https://crates.io/crates/cargo-binstall> |
 
-The project-setup
-[`resolve-crate-versions.ts`](../../tailrocks-rust-project-setup/scripts/resolve-crate-versions.ts)
-reads these registries and reports what is stable today; it is what the
-scheduled refresh runs.
+Resolve current stable releases with native registry queries. Query the
+crates.io API for one crate at a time. Read its maximum stable version from
+the response:
+
+```sh
+curl --fail --silent https://crates.io/api/v1/crates/serde
+```
+
+The scheduled refresh runs these queries and opens the bump as a reviewable
+pull request.
 
 ## Freshness
 

@@ -1,14 +1,8 @@
 # cargo-deny policy. Copy to the repository root.
-# Run: cargo deny check advisories licenses bans sources
-
-[advisories]
-# Refuse dependencies pulled from a yanked release.
-yanked = "deny"
-# Accept a specific advisory only with a written reason and a revisit trigger.
-# Keep this list mirrored in `.cargo/audit.toml` so `cargo audit` agrees.
-# ignore = [
-#     { id = "RUSTSEC-YYYY-NNNN", reason = "no safe upgrade yet; not reachable in our usage. Revisit on <dep> bump." },
-# ]
+# Run: cargo deny check licenses bans sources
+# cargo-deny owns licenses, bans, and sources. cargo-audit owns advisories
+# and yanked releases. Record advisory exceptions in `.cargo/audit.toml`
+# only, never here.
 
 [licenses]
 # Allowlist only. A dependency under any other license fails the gate until you

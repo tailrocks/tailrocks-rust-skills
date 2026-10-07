@@ -13,11 +13,12 @@ Clippy policy, cargo tools, and lockfile deliberately in one tooling change.
 The template provides these gates:
 
 | Task | Contract |
-|---|---|
+| --- | --- |
 | `check` | all targets/features compile from the lockfile |
 | `lint` | rustfmt plus Clippy with warnings denied |
 | `test` | nextest plus doctests |
-| `supply-chain` | deny, audit, and vet |
+| `supply-chain` | deny and audit |
+| `vet` | vet, only after `cargo vet init` created `supply-chain/` |
 | `hygiene` | unused dependencies/files |
 | `features` | feature powerset compiles |
 | `coverage` | LLVM coverage through nextest |

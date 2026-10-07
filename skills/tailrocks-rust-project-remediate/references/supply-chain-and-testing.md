@@ -6,16 +6,29 @@ Load this reference when assigning quality gates and cadence.
 
 - `cargo fmt --check` and strict workspace Clippy.
 - nextest plus separate doctests; nextest does not run doctests.
-- cargo-deny license, ban, source, and advisory policy.
-- cargo-audit for immediate RustSec lockfile review.
+- cargo-deny for license, ban, and source policy only.
+- cargo-audit for RustSec advisory, yanked, unmaintained, and unsound review.
 - cargo-shear for unused/misplaced dependencies and unlinked files.
 - cargo-vet when the repository carries `supply-chain/` audits and exemptions.
+
+Cargo-deny and cargo-audit have distinct duties. Cargo-deny owns policy:
+allowed licenses, banned crates, duplicate-version limits, and permitted
+sources. Cargo-audit owns the RustSec database: advisories, yanked releases,
+unmaintained crates, and unsound crates. Advisory exceptions live only in
+`.cargo/audit.toml`. Never record one exception in two tools.
 
 Initialize cargo-vet once, commit `supply-chain/config.toml` and
 `supply-chain/audits.toml`, and make new exemptions explicit review decisions.
 Shrink exemptions over time; protect audit files with security code owners.
 
 ## Scheduled or pre-release
+
+Select scheduled tools by risk. No change needs every tool below. Run
+feature, coverage, semver, and mutation tasks on scheduled or pre-release
+jobs when they exceed pull-request latency. Run fuzz, Miri, Loom, careful,
+and Dylint only for code that earns them. Parsers, protocol inputs,
+unsafe-sensitive boundaries, small concurrency algorithms, and inexpressible
+invariants earn them. Routine changes do not.
 
 - cargo-hack over the feature powerset.
 - cargo-llvm-cov through nextest; use coverage to find untested behavior, not as
@@ -37,13 +50,15 @@ Shrink exemptions over time; protect audit files with security code owners.
 
 Keep crates.io as the only default registry, deny wildcard and unreviewed git
 dependencies, allowlist licenses, ban unwanted native TLS, and ledger duplicate
-versions. Cargo-deny answers policy/advisories; cargo-vet answers whether
-third-party code has been reviewed to the required criteria. Both are required
-for high-assurance services.
+versions. Cargo-deny answers policy. Cargo-audit answers advisories.
+Cargo-vet answers whether third-party code has been reviewed to the
+required criteria. Deny and audit run on every pull request. Vet runs when
+the repository carries `supply-chain/` audits, and always for
+high-assurance services.
 
 ## Completion check
 
-Every gate has one owner and cadence, every accepted advisory/exemption has a
-reason and revisit condition, doctests run separately, and critical parsers and
-domain rules receive generative, fuzz, coverage, or mutation evidence
-proportionate to their risk.
+Every gate has one owner and cadence, every accepted advisory or exemption
+has a reason and revisit condition, and doctests run separately. Critical
+parsers and domain rules receive generative, fuzz, coverage, or mutation
+evidence proportionate to their risk. Routine changes need no heavy tool.

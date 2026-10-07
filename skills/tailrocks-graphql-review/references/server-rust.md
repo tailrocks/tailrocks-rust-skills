@@ -1,13 +1,13 @@
 # Server: Juniper on Axum
 
-Juniper is the sanctioned GraphQL library for Rust — the reference project is
-<https://github.com/graphql-rust/juniper>. Latest stable `juniper` with
-`juniper_axum` on the latest stable Axum; verify current docs for exact
-signatures before writing code (the `RootNode` generics and the
-`juniper_axum` extractors have shifted across releases). The GraphQL crate is
-an adapter: it depends on the domain crates, never the reverse, and the
-domain crates compile without Juniper, Axum, or serde unless serialization is
-itself domain policy.
+Tailrocks choice: Juniper is the GraphQL library for Rust services. The
+reference project is <https://github.com/graphql-rust/juniper>. Use latest
+stable `juniper` with `juniper_axum` on the latest stable Axum. Verify
+current docs for exact signatures before writing code (the `RootNode`
+generics and the `juniper_axum` extractors have shifted across releases).
+The GraphQL crate is an adapter. It depends on the domain crates. The
+reverse never holds. The domain crates compile without Juniper, Axum, or
+serde, unless serialization is itself domain policy.
 
 ## Module layout
 
@@ -15,8 +15,8 @@ Code-first, one module per domain area, roots assembled in one place:
 
 ```text
 crates/api/src/
+  schema.rs         # build_schema(), Query/Mutation root assembly
   schema/
-    mod.rs          # build_schema(), Query/Mutation root assembly
     invoice.rs      # Invoice object, InvoiceConnection, invoice mutations
     customer.rs     # Customer object
     errors.rs       # UserError, UserErrorCode, domain-error mapping
@@ -26,6 +26,8 @@ crates/api/src/
   bin/
     print-schema.rs # prints the SDL for the contract gate
 ```
+
+The layout above obeys the Tailrocks self-named module rule: no `mod.rs`.
 
 `build_schema()` takes no live connections — everything request-scoped
 (viewer identity, request ID, loaders) lives in the Juniper `Context`
@@ -70,16 +72,17 @@ the already-authenticated identity from request data.
 
 ## Storage handles
 
-PostgreSQL is the storage layer, reached through tokio-postgres (the
-rust-postgres project) pooled by **deadpool-postgres** — the direct analog of
-HikariCP in the reference JVM stack; neither reference project pins a Rust
-pool (the Rust reference has no database layer, the JVM one pools with
-HikariCP), so deadpool-postgres is the recorded decision, not an inherited
-pin. The pool is constructed at startup, owned by the domain core, and sized
+Tailrocks choice: PostgreSQL is the storage layer. Tokio-postgres reaches
+it. Deadpool-postgres pools it. Deadpool-postgres is the direct analog of
+HikariCP in the reference JVM stack. Neither reference project pins a Rust
+pool. The Rust reference has no database layer. The JVM reference pools
+with HikariCP. Deadpool-postgres is therefore the recorded decision, not
+an inherited pin. The pool is constructed at startup,
+owned by the domain core, and sized
 with written numbers (max connections, acquire timeout) alongside the GraphQL
-limits. Resolvers and loaders never check out connections or run SQL — they
-call core capabilities, and the core holds the pool. A `Pool` field on the
-Juniper `Context` is a boundary leak and a finding in review.
+limits. Resolvers and loaders never check out connections and never run
+SQL. They call core capabilities, and the core holds the pool. A `Pool`
+field on the Juniper `Context` is a boundary leak and a finding in review.
 
 ## Per-request loaders: the N+1 gate
 
