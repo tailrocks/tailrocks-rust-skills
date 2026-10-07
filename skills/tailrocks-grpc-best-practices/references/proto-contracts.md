@@ -6,12 +6,13 @@ gates, and major-version migration.
 
 ## Ownership and layout
 
-- The contract lives in a dedicated proto module: a `proto/` directory at the
-  repository root with `buf.yaml` at its top, or a dedicated proto repository
-  when several repositories consume the same contracts. Application crates
-  consume generated code; they never own `.proto` files ad hoc.
+- The contract lives in a dedicated proto module. Use a `proto/` directory
+  at the repository root with `buf.yaml` at its top, or a dedicated proto
+  repository when several repositories consume the same contracts.
+  Application crates consume generated code. They never own `.proto` files
+  ad hoc.
 - Directory layout mirrors the package: package `tailrocks.inventory.v1`
-  lives at `proto/tailrocks/inventory/v1/inventory.proto`. buf's standard
+  lives at `proto/tailrocks/inventory/v1/inventory.proto`. Buf's standard
   lint set enforces the mirror (`PACKAGE_DIRECTORY_MATCH`), which makes the
   package name derivable from the path and vice versa.
 - Package names are `tailrocks.<domain>.v<major>`. The version suffix is
@@ -35,8 +36,9 @@ breaking:
     - FILE
 ```
 
-buf is installed via mise (`mise use buf@latest`), never a standalone
-download, so the version CI runs is the version developers run. The gates:
+Tailrocks choice: Buf governs proto tooling. Install Buf through mise at
+the exact version in `mise.toml`. Never use a standalone download. CI
+then runs the version developers run. The gates:
 
 ```sh
 buf lint
@@ -44,13 +46,13 @@ buf breaking --against '.git#branch=main'
 ```
 
 Both run in CI on every PR. Mechanism: `lint` catches style drift at write
-time; `breaking` compiles both sides to descriptors and compares them, so a
-wire-incompatible edit fails the PR instead of failing a peer service at
-runtime — where it surfaces as corrupted data, not as an error.
+time. `breaking` compiles both sides to descriptors and compares them. A
+wire-incompatible edit then fails the PR instead of failing a peer service
+at runtime, where it surfaces as corrupted data, not as an error.
 
 ## Field numbers are the wire format
 
-Names never travel; numbers do. Every field-number rule follows from that.
+Names never travel. Numbers do. Every field-number rule follows from that.
 
 - **Never renumber.** A payload written under the old numbering decodes under
   the new one with values landing in the wrong fields. If the types happen to
@@ -73,8 +75,8 @@ Names never travel; numbers do. Every field-number rule follows from that.
 - Numbers 1–15 encode tag and wire type in one byte. Spend them on hot,
   frequently set fields and leave a little headroom for hot fields added
   later.
-- `buf breaking` rejects renumbering and reuse against the current baseline;
-  the `reserved` statements protect against the same edit landing later, when
+- `buf breaking` rejects renumbering and reuse against the current baseline.
+  The `reserved` statements protect against the same edit landing later, when
   the baseline has moved past the removal.
 
 ## Presence
@@ -84,9 +86,9 @@ Names never travel; numbers do. Every field-number rule follows from that.
   zero value, mark the field `optional` — explicit presence, generated as
   `Option<T>` by prost.
 - Message-typed fields always have presence (`Option<T>` in prost).
-- Failure scenario for getting this wrong: an implicit `int32 quantity` on an
-  update RPC cannot distinguish "set quantity to 0" from "quantity not
-  sent" — the server zeroes inventory the caller meant to leave untouched.
+- Failure scenario for getting this wrong: an implicit `int32 quantity` on
+  an update RPC cannot distinguish "set quantity to 0" from "quantity not
+  sent". The server zeroes inventory the caller meant to leave untouched.
   Any update RPC with skippable fields uses `optional` fields or a
   `FieldMask`, decided per RPC and stated in its comment.
 
@@ -101,7 +103,7 @@ enum ItemState {
 ```
 
 - The zero value is `<ENUM_NAME>_UNSPECIFIED`, always. An absent enum field
-  decodes as 0; if 0 were `ACTIVE`, "never set" and "active" merge into one
+  decodes as 0. If 0 were `ACTIVE`, "never set" and "active" merge into one
   value and no code can tell them apart again.
 - Values carry the enum-name prefix (`ENUM_VALUE_PREFIX`,
   `ENUM_ZERO_VALUE_SUFFIX` in buf's standard set).
@@ -124,7 +126,7 @@ service InventoryService {
   `google.protobuf.Empty` in a service definition — even when the message has
   no fields today. Mechanism: the request/response message is the only
   evolution point an RPC has. A field added to a shared message changes every
-  RPC using it at once; an `Empty` response can never gain a field without a
+  RPC using it at once. An `Empty` response can never gain a field without a
   breaking signature change. `message DeleteItemResponse {}` costs nothing
   now and preserves the ability to return, say, a deletion timestamp later.
 - buf's standard set enforces the naming and uniqueness
@@ -133,7 +135,7 @@ service InventoryService {
 
 ## Pagination
 
-Every `List`/`Search` RPC paginates from day one; retrofitting pagination
+Every `List`/`Search` RPC paginates from day one. Retrofitting pagination
 onto an unpaginated RPC is a behavioral break clients cannot detect from the
 schema.
 
@@ -152,26 +154,26 @@ message ListItemsResponse {
 - The server caps `page_size`, treats 0 as "server default", and returns an
   empty `next_page_token` on the last page.
 - The token is an opaque cursor, not an offset. Offsets skip or duplicate
-  rows under concurrent writes and freeze the sort order into the contract;
-  a cursor encodes position and leaves the server free to change its query.
+  rows under concurrent writes and freeze the sort order into the contract.
+  A cursor encodes position and leaves the server free to change its query.
 
 ## Well-known types
 
-- Every instant is `google.protobuf.Timestamp`; every span is
+- Every instant is `google.protobuf.Timestamp`. Every span is
   `google.protobuf.Duration`. Never `int64` epoch fields or ISO strings —
   "seconds or milliseconds?" is a classic silent cross-service defect, and
-  the well-known types delete the question. prost provides them via
-  `prost-types`; convert to domain time types at the adapter boundary.
+  the well-known types delete the question. Prost provides them via
+  `prost-types`. Convert to domain time types at the adapter boundary.
 - `google.protobuf.FieldMask` policy: used only on genuine partial-update
-  RPCs, as an `update_mask` field whose comment states the mask semantics
-  (unset mask means full replace, or is rejected — decide and document).
+  RPCs, as an `update_mask` field whose comment states the mask semantics.
+  An unset mask means full replace, or is rejected — decide and document.
   Everywhere else, writes are full-resource. FieldMask-driven response
   filtering on reads is not used: cross-service payloads are small, and the
   complexity is not earned.
 
 ## Comments are the API documentation
 
-Every service, RPC, message, field, and enum value carries a comment; they
+Every service, RPC, message, field, and enum value carries a comment. They
 propagate into the generated Rust docs and are what a calling team actually
 reads. The RPC comment states two things prose elsewhere cannot be trusted
 to carry:
@@ -194,22 +196,22 @@ rpc CreateItem(CreateItemRequest) returns (CreateItemResponse);
 
 Additive changes — new fields, new RPCs, new enum values, new messages — are
 backward compatible in place and never justify a version bump. A new major
-version is for the rare change that cannot be expressed additively: a field
-whose type or meaning must change, or a resource model that must be
+version is for the rare change that cannot be expressed additively. Either
+a field type or meaning must change, or the resource model must be
 restructured.
 
 Procedure:
 
 1. Create `proto/tailrocks/inventory/v2/` with package
-   `tailrocks.inventory.v2`. v1 files are untouched; `buf breaking` stays
+   `tailrocks.inventory.v2`. v1 files are untouched. `buf breaking` stays
    green because breaking-change detection is scoped by file and package.
-2. Compile and serve both: the server registers the v1 and v2 services
-   side by side, both delegating to the same domain layer — the adapters
-   differ, the domain does not.
-3. Migrate callers one at a time; per-RPC call metrics (see
+2. Compile and serve both. The server registers the v1 and v2 services
+   side by side, both delegating to the same domain layer. The adapters
+   differ. The domain does not.
+3. Migrate callers one at a time. Per-RPC call metrics (see
    [`references/operations.md`](operations.md)) show v1 traffic draining.
-4. Retire v1 only when its call rate has read zero over an agreed window,
-   then delete the v1 directory in a reviewed change that acknowledges the
+4. Retire v1 only when its call rate has read zero over an agreed window.
+   Then delete the v1 directory in a reviewed change that acknowledges the
    `buf breaking` failure as intended.
 
 Version the package, not the repository and not the server binary — both

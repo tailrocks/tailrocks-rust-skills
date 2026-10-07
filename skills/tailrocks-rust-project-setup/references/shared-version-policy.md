@@ -13,5 +13,5 @@ transitions, and prove peer, platform, and toolchain compatibility before
 acceptance.
 
 A minimum release age is forbidden.
-Security advisories use the highest fixed version immediately; batching or
+Security advisories use the highest fixed version immediately. Batching or
 dependency-update delays never postpone a vulnerability fix.

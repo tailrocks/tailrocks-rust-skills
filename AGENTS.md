@@ -1,10 +1,39 @@
-# Rules
+# AGENTS.md
 
-- No legacy code. Finish every migration: remove old paths completely—no compatibility shims, aliases, or deprecation periods. Breaking changes are preferred.
-- This is a research project. It is unsafe and expected to contain breaking changes; never treat it as production-ready. Break things when needed and deliver new implementations fast.
-- Always apply these principles:
-  - Judge work by correctness, consistency, and project fit. Never defer a known-wrong state because of ROI, cost, effort, or claims that it is low-value, marginal, or an edge case.
-  - Stop only when the required change is proven impossible with the available tools or model. When uncertain, inspect, test, and measure first.
-  - Before fixing a bug, identify why the architecture permitted it and whether the same structure permits related bugs.
-  - Prefer fixes that remove the enabling condition. Use a symptom-layer patch only when the root fix is proven infeasible or belongs in a separate change, and name the deferred root cause.
+This package holds 15 Rust engineering skills. Install it
+as one unit. Do not copy one `SKILL.md` file out of its skill directory.
+The audit and remediate skills read templates from the setup skill
+directory.
 
+## Structure
+
+- `plugin.json` is the portable manifest. It is the source of truth
+  for name, version, and description.
+- `.claude-plugin/plugin.json` and `.kimi-plugin/plugin.json` are
+  host manifests. They repeat the same name, version, and description.
+- `skills/` holds one directory per skill id. Each directory holds its
+  own `SKILL.md` file plus its own references.
+- `docs/` holds the package guides. Start at `docs/README.md`.
+
+## Rules for changes
+
+- Write all new and changed prose in ASD-STE100 Simplified Technical
+  English, Issue 9 rules.
+- Never hand-edit `.github/`. Change `.velnor/config.toml` instead.
+  Regenerate the outputs. The generator preserves
+  `.github/PULL_REQUEST_TEMPLATE.md`. See `docs/maintenance.md`.
+- Never add evaluation content: no benchmarks, no model trials, no
+  scored comparisons, no pass-rate targets. See `docs/maintenance.md`.
+- Keep one fact in one place. Link to `docs/` guides. Do not copy
+  skill bodies into guides.
+
+## Checks before a pull request
+
+Run these checks from the repository root:
+
+```sh
+alint check
+```
+
+See `docs/maintenance.md` for the strict-JSON check, the frontmatter
+check, and the full check list with expected results.

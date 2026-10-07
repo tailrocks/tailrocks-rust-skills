@@ -2,7 +2,9 @@
 
 Baseline for creating a project, adding a crate, or reviewing Cargo workspace
 structure. Strict and modern: edition 2024, resolver 3, a workspace from the
-first commit, and Rust 2024 self-named module files with no `mod.rs`.
+first commit, and self-named module files with no `mod.rs`. The module-file
+rule and the test-file rule below are Tailrocks rules. They are not Cargo
+requirements.
 
 ## Edition and Resolver
 
@@ -12,14 +14,14 @@ first commit, and Rust 2024 self-named module files with no `mod.rs`.
 - By default, keep `rust-version` in `[workspace.package]` equal to the
   pinned channel in `rust-toolchain.toml`. If published crates promise an
   older MSRV, set that floor explicitly and add a CI job on exactly that
-  version; otherwise the equal pin is the only supported toolchain.
+  version. Otherwise the equal pin is the only supported toolchain.
 
 ## Everything Is a Workspace
 
-Create the `[workspace]` root even with one crate: shared lint tables,
+Create the `[workspace]` root even with one crate. Shared lint tables,
 metadata, and dependency versions apply immediately, and a second crate is a
 one-line `members` change. The root is typically a *virtual* manifest (a
-`[workspace]` with no `[package]`); the actual crates live under `crates/`.
+`[workspace]` with no `[package]`). The actual crates live under `crates/`.
 
 ```text
 your-repo/
@@ -43,9 +45,10 @@ your-repo/
 - **One crate per bounded concern.** Split by responsibility — domain/core,
   IO, protocol, CLI, a `xtask` automation binary — not by arbitrary size.
   Crate boundaries are the boundaries the compiler enforces.
-- **Keep binaries thin.** Logic lives in library crates; the binary is a small
-  `main` that wires them together. Code trapped in `main.rs` cannot be unit-
-  or integration-tested.
+- **Keep binaries thin.** Logic lives in library crates. The binary is a small
+  `main` that wires them together. Unit tests run in binary targets, but
+  integration tests under `tests/` can use only the library target. Logic
+  that needs integration coverage belongs in a library crate.
 - **Make the dependency graph a DAG.** Leaf crates depend on core crates,
   never the reverse. No cycles. If two crates need each other, a shared
   concept wants its own crate underneath both.
@@ -55,8 +58,13 @@ your-repo/
 
 ## Shared-Metadata and Lint Inheritance
 
-Declare policy once at the root; inherit it everywhere. Never copy these into
-member crates.
+Declare policy once at the root. Inherit it everywhere. Never copy these
+values into member crates. Cargo inherits exactly these package keys:
+`authors`, `categories`, `description`, `documentation`, `edition`,
+`exclude`, `homepage`, `include`, `keywords`, `license`, `license-file`,
+`publish`, `readme`, `repository`, `rust-version`, and `version`. Cargo also
+shares `[workspace.dependencies]` and `[workspace.lints]`. Cargo inherits
+nothing else.
 
 Root `Cargo.toml`:
 
@@ -96,13 +104,16 @@ serde.workspace = true
 - `[lints] workspace = true` pulls in the strict `[workspace.lints]` tables. A
   crate missing this line silently escapes the entire lint policy — check for
   it in review.
-- `[workspace.dependencies]` gives one version per third-party crate across
-  the whole workspace: no drift, no duplicate builds, one place to bump.
+- `[workspace.dependencies]` gives one version requirement per third-party
+  crate across the whole workspace: one place to bump. It does not remove
+  every duplicate version or build. Different requirements and feature sets
+  can still resolve more than one version of one crate.
 
-## Module Layout: No `mod.rs`
+## Module Layout: No `mod.rs` (Tailrocks Rule)
 
-Use Rust 2024 self-named module files, enforced by
-`clippy::mod_module_files = "deny"` in the workspace Clippy table.
+Use self-named module files. This rule is a Tailrocks rule, not a Cargo
+requirement. The workspace Clippy table enforces it with
+`clippy::mod_module_files = "deny"`.
 
 ```text
 # correct — self-named module root beside its children
@@ -118,10 +129,11 @@ crates/your-core/src/parser/mod.rs
 - The self-named layout keeps a module and its submodules adjacent in the file
   tree.
 
-## Tests in Their Own File
+## Tests in Their Own File (Tailrocks Rule)
 
 Do not inline `#[cfg(test)] mod tests { ... }` in a source file. Split logic
-from tests, always.
+from tests, always. This rule is a Tailrocks rule, not a Cargo requirement.
+Cargo accepts inline test modules, including in binary targets.
 
 ```text
 crates/your-core/src/parser.rs         # implementation + `#[cfg(test)] mod tests;`
@@ -139,14 +151,15 @@ crates/your-core/src/parser/tests.rs   # ALL tests for parser, inline, nothing e
 
 ## Item Order and Naming
 
-Optimize each file for a first-time reader; the deeper rules live in the
+Optimize each file for a first-time reader. The deeper rules live in the
 `tailrocks-rust-best-practices` skill
 (`tailrocks-rust-best-practices/references/readability-style-architecture.md`).
 
-- Public or entry-point items first, then supporting private helpers; the
-  module's main type or function before its details.
-- Standard Rust naming: `snake_case` for crates, modules, files, functions,
-  and values; `UpperCamelCase` for types and traits; `SCREAMING_SNAKE_CASE`
-  for constants and statics.
+- Public or entry-point items first, then supporting private helpers. Put
+  the module's main type or function before its details.
+- Standard Rust naming: use `snake_case` for crates, modules, files,
+  functions, and values. Use `UpperCamelCase` for types and traits. Use
+  `SCREAMING_SNAKE_CASE` for constants and statics.
 - Avoid clever abbreviations. Established domain terms (`tui`, `cli`, `pty`,
-  `db`, `ctx`) are fine; invented shortenings (`mgr`, `cfg_ed`, `ws`) are not.
+  `db`, `ctx`) are fine. Invented shortenings (`mgr`, `cfg_ed`, `ws`) are
+  not.

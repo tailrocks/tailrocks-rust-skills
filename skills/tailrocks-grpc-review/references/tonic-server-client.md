@@ -5,16 +5,16 @@ mapping, structured error details, channel construction, TLS between
 services, interceptors, and Tower layers.
 
 Resolve every dependency at its latest stable release at execution time
-(`cargo add` does this); never copy a version number from prose, including
+(`cargo add` does this). Never copy a version number from prose, including
 this file. Current lines split the prost integration out of `tonic` into
-`tonic-prost` (runtime codec) and `tonic-prost-build` (codegen) — verify
+`tonic-prost` (runtime codec) and `tonic-prost-build` (codegen). Verify
 symbol locations against the docs of the versions the workspace resolves.
 
 ## Codegen owned by the build
 
-Dependencies: `tonic`, `prost`, `tonic-prost`, `prost-types`; build
-dependency `tonic-prost-build`; `tonic-health`, `tonic-reflection`, and
-`tonic-types` where the sections below use them.
+Dependencies: `tonic`, `prost`, `tonic-prost`, `prost-types`. Build
+dependency: `tonic-prost-build`. Add `tonic-health`, `tonic-reflection`,
+and `tonic-types` where the sections below use them.
 
 `build.rs` in the gRPC adapter crate:
 
@@ -79,9 +79,9 @@ impl TryFrom<pb::CreateItemRequest> for domain::CreateItem {
 ```
 
 Failure scenario the seam prevents: a generated type stored in the domain or
-database layer couples every consumer to the proto contract — a v2 package
+database layer couples every consumer to the proto contract. A v2 package
 migration then rewrites persistence and business logic instead of one
-adapter, and prost's generated `Option`s and open enums leak "maybe unset"
+adapter. Prost's generated `Option`s and open enums leak "maybe unset"
 into code that already proved validity.
 
 The service impl is thin — convert in, call one narrow capability, convert
@@ -111,35 +111,35 @@ impl inventory_service_server::InventoryService for InventoryGrpc {
 ## Status mapping: one exhaustive function per adapter
 
 Domain errors map to canonical codes in a single `fn to_status(err:
-DomainError) -> Status` with an exhaustive match — a new domain variant
+DomainError) -> Status` with an exhaustive match. A new domain variant
 fails compilation until someone decides its code, instead of defaulting to
 `Internal` at 3 a.m.
 
 | Domain failure class | Code |
-|---|---|
+| --- | --- |
 | Request invalid regardless of system state (parse, range, malformed id) | `InvalidArgument` |
 | Referenced entity does not exist | `NotFound` |
 | Create/claim conflicts with an existing entity | `AlreadyExists` |
-| State forbids the operation; retrying unchanged will not help | `FailedPrecondition` |
-| Concurrency conflict; safe to retry the whole transaction at a higher level | `Aborted` |
+| State forbids the operation. Retrying unchanged will not help | `FailedPrecondition` |
+| Concurrency conflict. Safe to retry the whole transaction at a higher level | `Aborted` |
 | Quota or rate limit exhausted | `ResourceExhausted` |
 | Caller unidentified or credentials invalid | `Unauthenticated` |
 | Caller identified but not allowed | `PermissionDenied` |
-| Transient dependency failure; retrying may help | `Unavailable` |
+| Transient dependency failure. Retrying may help | `Unavailable` |
 | Invariant broken — a bug, not an input | `Internal` |
 
 Rules with mechanisms:
 
 - **`Internal` never carries internal detail.** Log the cause once, at the
-  mapping point, with the trace/correlation id; return a generic message.
+  mapping point, with the trace/correlation id. Return a generic message.
   The `Status` message crosses a trust boundary between teams and ends up in
-  the caller's logs — SQL fragments, hostnames, and struct dumps in it are
+  the caller's logs. SQL fragments, hostnames, and struct dumps in it are
   an information leak with a long shelf life.
-- **Do not fabricate `DeadlineExceeded`, `Cancelled`, or `Unimplemented`.**
-  The transport and codegen own those; a handler emitting them lies to
+- **Do not fabricate `DeadlineExceeded`, `Cancelled`, or `Unimplemented`**.
+  The transport and codegen own those. A handler emitting them lies to
   retry policies and dashboards about what happened.
 - **`NotFound` vs `InvalidArgument`:** a well-formed id that matches nothing
-  is `NotFound`; an id that could never match anything is
+  is `NotFound`. An id that could never match anything is
   `InvalidArgument`. Callers cache and branch on the difference.
 
 When the caller must act structurally on a failure, attach `google.rpc`
@@ -178,17 +178,17 @@ let channel = Endpoint::from_shared(cfg.inventory_url.clone())?
 let inventory = InventoryServiceClient::new(channel);
 ```
 
-- **Never connect per request.** Each connect pays TCP + TLS + HTTP/2 setup,
-  and a churn of short-lived connections defeats keepalive, load reporting,
-  and every balancing strategy at once.
-- `connect_lazy` keeps startup order out of the dependency graph; the first
+- **Never connect per request**. Each connect pays TCP plus TLS plus HTTP/2
+  setup. A churn of short-lived connections defeats keepalive, load
+  reporting, and every balancing strategy at once.
+- `connect_lazy` keeps startup order out of the dependency graph. The first
   call surfaces `Unavailable`, which the retry policy in
   [`references/operations.md`](operations.md) already handles.
 - HTTP/2 keepalives are what actually detect a dead peer behind a silent
-  middlebox; without them a hung connection looks identical to a slow one
+  middlebox. Without them a hung connection looks identical to a slow one
   until the OS gives up, minutes later.
 - Set `max_decoding_message_size`/`max_encoding_message_size` deliberately
-  when payloads can exceed the default decode limit (4 MiB); an unexamined
+  when payloads can exceed the default decode limit (4 MiB). An unexamined
   default here is a latent production failure on the first large page.
 
 ## TLS between services
@@ -196,12 +196,12 @@ let inventory = InventoryServiceClient::new(channel);
 Decide once per deployment and record it:
 
 - **Platform mTLS (service mesh/sidecar):** the mesh authenticates and
-  encrypts; tonic listens in plaintext on localhost only. Do not layer app
+  encrypts. Tonic listens in plaintext on localhost only. Do not layer app
   TLS on top — double encryption, and certificate rotation now has two
   owners.
 - **App-level TLS (no mesh):** rustls-backed tonic TLS, mTLS preferred so
   the server authenticates callers, not just the reverse. Enable exactly one
-  TLS backend feature on `tonic` plus a roots feature; check current feature
+  TLS backend feature on `tonic` plus a roots feature. Check current feature
   names in the tonic docs for the resolved version.
 
 ```rust
@@ -216,7 +216,7 @@ let client_tls = ClientTlsConfig::new()
     .domain_name("inventory.internal");
 ```
 
-Certificates and keys come from the platform's secret store; cite their
+Certificates and keys come from the platform's secret store. Cite their
 location in findings, never their contents.
 
 ## Interceptors and Tower layers
@@ -224,7 +224,7 @@ location in findings, never their contents.
 Two tools, one rule: an interceptor is synchronous, metadata-only, and
 cheap — auth checks, id propagation. Anything async, fallible against a
 backend, body-aware, or timing-related is a Tower layer on
-`Server::builder().layer(...)`, ordered like any Tower stack: request id,
+`Server::builder().layer(...)`. Order it like any Tower stack: request id,
 then trace span, then metrics, then limits.
 
 Auth at the server edge — verify once, inject the verified principal, and
@@ -248,12 +248,12 @@ let svc = InventoryServiceServer::with_interceptor(grpc, auth);
 ```
 
 With app-level mTLS, the peer identity from `request.peer_certs()` can serve
-as the principal instead of a token; with mesh mTLS, trust the mesh-injected
+as the principal instead of a token. With mesh mTLS, trust the mesh-injected
 identity headers only from the mesh's own listener.
 
-Tracing propagation is symmetric or traces fragment at every hop: the client
+Tracing propagation is symmetric or traces fragment at every hop. The client
 interceptor injects W3C `traceparent` metadata from the current span
-context; the server extracts it and parents the per-RPC span on it before
+context. The server extracts it and parents the per-RPC span on it before
 any work runs. Metrics live in a layer recording service, method, and final
 status code — the fields [`references/operations.md`](operations.md) builds
 alerting on.

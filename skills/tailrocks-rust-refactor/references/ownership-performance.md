@@ -8,8 +8,8 @@ types, shared state, and hot paths.
 - Parameters that only read data: `&str`, `&[T]`, `&Path`, `Option<&T>`.
 - Caller retains ownership and the function mutates in place: `&mut T`.
 - Take `T`, `String`, `Vec<T>`, or `PathBuf` when the function stores the
-  value, moves it into another owner, sends it to another thread, or would
-  otherwise clone immediately.
+  value. Also take them when it moves the value into another owner, sends it
+  to another thread, or would otherwise clone immediately.
 - Push unavoidable ownership decisions to the caller so allocation and cloning
   costs are visible at the call site.
 - `Cow<'_, T>` only when accepting either borrowed or owned data materially
@@ -24,7 +24,7 @@ types, shared state, and hot paths.
   not a hard law.
 - Large arrays can be `Copy` when the element type is `Copy`, but large stack
   copies can still be expensive or risky.
-- Enum size is governed by the largest variant; one large variant makes every
+- Enum size is governed by the largest variant. One large variant makes every
   enum value large.
 
 ## Cloning
@@ -48,7 +48,7 @@ Warning signs:
 - Large `Vec`, `HashMap`, `String`, or tree-like values cloned casually.
 
 Prefer `.cloned()` or `.copied()` at the point where iterator item ownership
-is intended; avoid ad-hoc `.map(|x| x.clone())` unless the closure does more
+is intended. Avoid ad-hoc `.map(|x| x.clone())` unless the closure does more
 than cloning.
 
 ## Lazy Fallbacks and Allocation
@@ -56,12 +56,12 @@ than cloning.
 - Do not collect into `Vec` just to inspect length, first element, any/all, or
   a fixed small number of elements.
 - Prefer lazy fallback combinators when the fallback allocates, formats, logs,
-  or calls a function: `ok_or_else` over eager `ok_or` for non-trivial errors;
-  `map_or_else` over eager `map_or` for non-trivial defaults; `unwrap_or_else`
-  or `unwrap_or_default` over eager `unwrap_or` when fallback construction has
-  cost.
-- Use `inspect_err` to observe an error without changing it; `map_err` to
-  transform errors at a boundary.
+  or calls a function. Prefer `ok_or_else` over eager `ok_or` for non-trivial
+  errors. Prefer `map_or_else` over eager `map_or` for non-trivial defaults.
+  Prefer `unwrap_or_else` or `unwrap_or_default` over eager `unwrap_or` when
+  fallback construction has cost.
+- Use `inspect_err` to observe an error without changing it. Use `map_err`
+  to transform errors at a boundary.
 - Recursive traversals that build a collection: consider passing an
   accumulator to reuse allocation.
 - No string formatting on hot paths unless the formatted string is needed.
@@ -100,9 +100,9 @@ Dynamic dispatch (`&dyn Trait`, `Box<dyn Trait>`, `Arc<dyn Trait>`) when:
 - Code size and compile time matter more than call-site specialization.
 - A stable abstraction boundary is more important than direct calls.
 
-Prefer `&dyn Trait` when borrowing is enough; `Arc<dyn Trait>` for shared
+Prefer `&dyn Trait` when borrowing is enough. Use `Arc<dyn Trait>` for shared
 access across threads. Box at public or architectural boundaries when type
-erasure is required; avoid boxing early inside internal structs.
+erasure is required. Avoid boxing early inside internal structs.
 
 Avoid making large bodies generic, especially across crate boundaries. A small
 generic wrapper can call a non-generic implementation to reduce duplicated
@@ -111,14 +111,14 @@ machine code.
 ## Stack, Heap, and Size
 
 - Keep small `Copy` values on the stack.
-- Do not pass huge values by value; use references. Values above a few hundred
-  bytes deserve scrutiny.
+- Do not pass huge values by value. Use references. Values above a few
+  hundred bytes deserve scrutiny.
 - Heap-allocate recursive structures with `Box`, `Vec`, or another owning
   pointer.
 - Return small `Copy` or cheaply cloned values by value.
 - Add `#[inline]` only when measurement shows it helps.
 - `Box::new([0; N])` for large arrays may create a large stack value before
-  boxing; prefer heap-first construction patterns for large buffers.
+  boxing. Prefer heap-first construction patterns for large buffers.
 - Specialized containers such as `smallvec` only when their stack/heap
   tradeoff fits the workload.
 
@@ -132,7 +132,7 @@ Prefer plain ownership and borrowing first.
 - `Rc<T>`: single-threaded shared ownership.
 - `Arc<T>`: multi-threaded shared ownership.
 - `Cell<T>`: copy-only interior mutability, single-threaded.
-- `RefCell<T>`: runtime-checked interior mutability; borrow violations panic.
+- `RefCell<T>`: runtime-checked interior mutability. Borrow violations panic.
 - `Mutex<T>`: thread-safe exclusive interior mutability, often under `Arc`.
 - `RwLock<T>`: thread-safe multiple-reader or single-writer access, often
   under `Arc`.
@@ -146,18 +146,18 @@ Use `Arc<[T]>` for shared read-only data across threads when appropriate. Use
 `Arc<Mutex<T>>` or `Arc<RwLock<T>>` only when shared mutable state is
 necessary. Keep lock and `RefCell` borrow scopes tight.
 
-No `Deref` as inheritance or API delegation; implement explicit methods or
+No `Deref` as inheritance or API delegation. Implement explicit methods or
 traits when callers need them.
 
 ## Performance Discipline
 
-- Do not guess; measure. Build and benchmark optimized code before making
+- Do not guess. Measure. Build and benchmark optimized code before making
   performance claims.
 - Use `cargo bench`, criterion, project-provided benchmarks,
   `cargo flamegraph`, `samply`, or targeted timing around real workloads.
 - Profile release builds unless debug behavior is the thing under
   investigation.
-- Treat tiny improvements cautiously; the difference must exceed benchmark
+- Treat tiny improvements cautiously. The difference must exceed benchmark
   noise.
 - Let Clippy catch redundant clones, clone-on-copy, needless collect, large
   enum variants, and avoidable allocation.

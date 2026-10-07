@@ -29,12 +29,12 @@ File rules, each load-bearing for byte equality:
 A golden that renders differently twice is not a contract. The fixture
 layer, not the render layer, owns determinism:
 
-- The clock is a fixture value; every age, duration, and timestamp string
+- The clock is a fixture value. Every age, duration, and timestamp string
   derives from it. No `now()` inside view code.
-- Fixture collections are explicitly ordered; nothing depends on map
+- Fixture collections are explicitly ordered. Nothing depends on map
   iteration or randomness.
-- Sizes are pinned per entry. Resize behavior is designed as rules (which
-  regions give, what drops first) and pinned at two sizes — reference and
+- Sizes are pinned per entry. Resize behavior is designed as rules: which
+  regions give, what drops first. Pin it at two sizes — reference and
   minimum — not as a golden per width. A below-minimum screen is its own
   state with its own frame.
 
@@ -47,7 +47,7 @@ gap, and both live in the gallery:
   `buffer[(x, y)].style()` — fg, bg, modifiers. Anchor the cells that carry
   meaning: selection, state glyphs, banners, headers, footers.
 - **Style roles in `MANIFEST.md`**: the human-readable table of which role
-  gets which named color and modifier, so the blessing covers style even
+  gets which named color and modifier. It lets the blessing cover style even
   though the frame file shows none of it.
 
 Because styles are the invisible half, the design must survive without
@@ -55,12 +55,12 @@ them: state is always glyph plus word, never color alone.
 
 ## Direction of authority
 
-The frames hold the code; the code never holds the frames. `--write` is
+The frames hold the code. The code never holds the frames. `--write` is
 legitimate exactly twice:
 
 1. During design, before blessing — iteration.
-2. After the user re-blesses a deliberate design change — the frame diff is
-   reviewed as a design decision, in its own commit, before any
+2. After the user re-blesses a deliberate design change, the frame diff is
+   reviewed as a design decision. It lands in its own commit, before any
    implementation change that depends on it.
 
 Running `--write` because the golden test is red is the inversion that
