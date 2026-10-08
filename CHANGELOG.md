@@ -35,6 +35,12 @@ Applied the common active-package structure on branch
 - Labeled Juniper, TanStack, Buf, and private gRPC use as Tailrocks
   choices.
 
+## 0.28.1 - 2026-10-08
+
+- Regenerated CI with Velnor Actions 0.1.4.
+- Replaced the `.github/CLAUDE.md` symlink with a regular pointer
+  file. Installers that reject symlinks now accept the package.
+
 ## 0.28.0 - 2026-10-07
 
 Fifteen-skill package at commit `0317f100714dc66285c01c24f7967134375b5ac5`
