@@ -12,7 +12,8 @@ default_branch = "main"              # Push branch; required because CI checkout
 # Verification jobs, one support job per entry, all covered by the
 # required gate. Unknown names fail generate.
 [workflow.verify]
-jobs = ["alint"]
+jobs = ["alint", "strict-json", "frontmatter-id", "link-check"]
+lychee_args = ["--offline", "--include-fragments"]
 
 [discovery]
 exclude = ["skills/**/assets/**"]
