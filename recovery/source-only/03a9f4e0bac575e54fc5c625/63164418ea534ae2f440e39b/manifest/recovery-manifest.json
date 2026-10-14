@@ -1,0 +1,2140 @@
+{
+  "archive_directory_path_map": [
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/logs"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs/refs",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/logs/refs"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs/refs/heads",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/logs/refs/heads"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs/refs/remotes",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/logs/refs/remotes"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs/refs/remotes/origin",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/logs/refs/remotes/origin"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/objects"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/a0",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/objects/a0"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/e0",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/objects/e0"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/e7",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/objects/e7"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/eb",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/objects/eb"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/refs",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/refs"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/refs/heads",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/refs/heads"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/refs/remotes",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/refs/remotes"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/refs/remotes/origin",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".git/refs/remotes/origin"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/worktree/.github",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".github"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/worktree/.github.velnor-stage",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".github.velnor-stage"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/worktree/.github.velnor-stage/spare",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".github.velnor-stage/spare"
+    },
+    {
+      "archive_directory": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/worktree/.velnor",
+      "empty_or_present": true,
+      "source_mode": 448,
+      "source_path": ".velnor"
+    }
+  ],
+  "archive_file_path_map": [
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/COMMIT_EDITMSG",
+      "blob_oid": "3c27e5b972db10146f388b5555c5bc5f2a43e28b",
+      "git_mode": "100644",
+      "sha256": "3774af3185bcd168ddc066bc1f76fe4f8b82b07b65bae166385b4f0de19e59c7",
+      "size": 98,
+      "source_mode": 384,
+      "source_path": ".git/COMMIT_EDITMSG"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/index",
+      "blob_oid": "5bcbc794efa6982402c49bd37b9ddf1eef24efaa",
+      "git_mode": "100644",
+      "sha256": "830c6e1a6b5a9e58e6831dd15bb501a8b18b9999be96015be9d26fc6df40c424",
+      "size": 21058,
+      "source_mode": 384,
+      "source_path": ".git/index"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs/HEAD",
+      "blob_oid": "63d39c390f5c92498f473095051ca722b0f72c4b",
+      "git_mode": "100644",
+      "sha256": "1e106a8356729e8bb58db22b9abaad73659141e21f1fd0858f1d6fd320f3f0cb",
+      "size": 3048,
+      "source_mode": 384,
+      "source_path": ".git/logs/HEAD"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs/refs/heads/release-0.1.7-regeneration",
+      "blob_oid": "42261dc9a8ca7024f893e684ff9381c4f0bb139e",
+      "git_mode": "100644",
+      "sha256": "46122f18d3ec74bc052f48190f0522ac83e1eb2fba17cacdee66a8e6a4521d73",
+      "size": 780,
+      "source_mode": 384,
+      "source_path": ".git/logs/refs/heads/release-0.1.7-regeneration"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/logs/refs/remotes/origin/chatgpt-web-validators-2026-10-12",
+      "blob_oid": "1a085386569f73e01c1ba897e7f4bb45530e9536",
+      "git_mode": "100644",
+      "sha256": "95a5e2a7eab4f7cc967d1dfacbc6919c2cca81d359de98a4affe93df22366529",
+      "size": 450,
+      "source_mode": 384,
+      "source_path": ".git/logs/refs/remotes/origin/chatgpt-web-validators-2026-10-12"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/a0/8dd8edd604063e2a8762bf5c74029aaa9d1351",
+      "blob_oid": "5a61f88c3f7775d43e6880ffc46c8fe94fbdb742",
+      "git_mode": "100644",
+      "sha256": "94a0d71ca05deb0cdb6a5b47b9eccb90ceb48455de8cfe230a691fff78d215f6",
+      "size": 1271,
+      "source_mode": 256,
+      "source_path": ".git/objects/a0/8dd8edd604063e2a8762bf5c74029aaa9d1351"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/e0/a54ffde537414825aac71f362d5d804c802a62",
+      "blob_oid": "a4458fb35f93fff59240b9db4d38159e1f5a6c19",
+      "git_mode": "100644",
+      "sha256": "51251f0ffc300123d9272e8eb08f96c350ef020856ae185ddbf41664ad495639",
+      "size": 55,
+      "source_mode": 256,
+      "source_path": ".git/objects/e0/a54ffde537414825aac71f362d5d804c802a62"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/e7/6be1abb79374fb06ee928e48675c372c4eb1cb",
+      "blob_oid": "1508ce69d69b760024da208425b45e4a4b408e0a",
+      "git_mode": "100644",
+      "sha256": "6fba28150b9466544d4d186d04eb8b69560e61078a89a292e3d5ab7cf1f14918",
+      "size": 55,
+      "source_mode": 256,
+      "source_path": ".git/objects/e7/6be1abb79374fb06ee928e48675c372c4eb1cb"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/objects/eb/4b4c3ca438a0137dc161a3296193ed43367679",
+      "blob_oid": "41d4cff7d884d9fc744790dd211f1c45a947a106",
+      "git_mode": "100644",
+      "sha256": "c00bc884b7323f3962d85e89a500dc06837739a3823500a2d0f2bcd373355b9c",
+      "size": 159,
+      "source_mode": 256,
+      "source_path": ".git/objects/eb/4b4c3ca438a0137dc161a3296193ed43367679"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/refs/heads/release-0.1.7-regeneration",
+      "blob_oid": "98266c0894a217eed4240ec10a9981a1a580f828",
+      "git_mode": "100644",
+      "sha256": "413822425a8956ab87104a2dc4cc7c19f3fadbb86d3a49ec67942f60d47f3c10",
+      "size": 41,
+      "source_mode": 384,
+      "source_path": ".git/refs/heads/release-0.1.7-regeneration"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin/refs/remotes/origin/chatgpt-web-validators-2026-10-12",
+      "blob_oid": "98266c0894a217eed4240ec10a9981a1a580f828",
+      "git_mode": "100644",
+      "sha256": "413822425a8956ab87104a2dc4cc7c19f3fadbb86d3a49ec67942f60d47f3c10",
+      "size": 41,
+      "source_mode": 384,
+      "source_path": ".git/refs/remotes/origin/chatgpt-web-validators-2026-10-12"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/worktree/.velnor/release-manifest.json",
+      "blob_oid": "7341cc988702a00c9abce76d0a3ddd3777502f81",
+      "git_mode": "100644",
+      "sha256": "eeecd05bd116504734e97b071a8f666e705c881184a1ff7f56012e4e8e81f39b",
+      "size": 953,
+      "source_mode": 384,
+      "source_path": ".velnor/release-manifest.json"
+    },
+    {
+      "archive_path": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/manifest/snapshot-manifest.json",
+      "blob_oid": "08d9706a547b386fce8218eb378fc808e8ee784f",
+      "git_mode": "100644",
+      "sha256": "aac73a295631cda11abc3ffa227f162bdb091f333edc51e80df5ca93b17831e8",
+      "size": 20592,
+      "source_mode": 420,
+      "source_path": "/Users/donbeave/.local/state/github-repatriation/operations/user-request-20261013T2201Z/supplemental-icloud-28/reappeared-quarantine-recovery-v1/snapshots/03a9f4e0bac575e54fc5c625/1236086b9cb60e77cf71fa89/snapshot-manifest.json"
+    }
+  ],
+  "archive_files_exclude_dotgit_path_component": true,
+  "frozen_quarantine_scope_sha256": "a73bc4e46636990fd55c0c72f270d891600dbd74cec1f03eb334af8d7d6f4486",
+  "group_id": "03a9f4e0bac575e54fc5c625",
+  "incarnation_source_id": "63164418ea534ae2f440e39b",
+  "index_exactly_matches_remote_pull8_tree": true,
+  "missing_tracked_worktree_paths": [
+    {
+      "blob_oid": "da881f0d97a11ab3ae324de12db8fc9420e767ff",
+      "mode": "100644",
+      "path": ".alint.yml",
+      "remote_refs_reachable": true,
+      "sha256": "a708e340a4cf23ac28fb162c03a2d258321496515efc6acdd057f621ae2310fe",
+      "size": 795
+    },
+    {
+      "blob_oid": "8ec12f72d26aa474cfe419a42c4bddf72e3156bd",
+      "mode": "100644",
+      "path": ".claude-plugin/plugin.json",
+      "remote_refs_reachable": true,
+      "sha256": "fe0593eca18ddbfa1ed0c2fd6ae34533000dad1d3b564c5e73e7cce34b5a59f8",
+      "size": 214
+    },
+    {
+      "blob_oid": "a08dd8edd604063e2a8762bf5c74029aaa9d1351",
+      "mode": "100644",
+      "path": ".github/AGENTS.md",
+      "remote_refs_reachable": true,
+      "sha256": "e7cfdf22075e1ed5d755c0dc6d7e3ee032283cef6097945edf97da01f92b489b",
+      "size": 2739
+    },
+    {
+      "blob_oid": "43c994c2d3617f947bcb5adf1933e21dabe46bb5",
+      "mode": "100644",
+      "path": ".github/CLAUDE.md",
+      "remote_refs_reachable": true,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49",
+      "size": 11
+    },
+    {
+      "blob_oid": "16fd09c4f0051f3a0aaf8a423f79f42930bb6e88",
+      "mode": "100644",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "remote_refs_reachable": true,
+      "sha256": "44a7c92b6d1b8432993bdd48783f185a48e3c3f11468cd615a8fe69911d32cf7",
+      "size": 689
+    },
+    {
+      "blob_oid": "b7d79d57e76450fe6e2392c61d336dddda7e94e9",
+      "mode": "100644",
+      "path": ".github/actionlint.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "b654b735a199dc415c17b05106cc1820f53566b328987f1822880e69ce1d2fa0",
+      "size": 150
+    },
+    {
+      "blob_oid": "c1f7b4d032cca4e50be98f9a1f47bd972b52be47",
+      "mode": "100644",
+      "path": ".github/actions/u26/action.yml",
+      "remote_refs_reachable": true,
+      "sha256": "88cd150e3705c174c837ab576c4fca8acc95e9018ace861c432b214c1bf50629",
+      "size": 1574
+    },
+    {
+      "blob_oid": "895c6ba00a52d59449eff60c34c2ac95dd2134a6",
+      "mode": "100644",
+      "path": ".github/actions/velnor-tool-seed/action.yml",
+      "remote_refs_reachable": true,
+      "sha256": "912b153c2c885d3754139e82a185e51c7b0c5a94adea3bb7d93cacf529e257be",
+      "size": 5909
+    },
+    {
+      "blob_oid": "89cb2705c721646378cc73aabe59a2bf58dadd24",
+      "mode": "100644",
+      "path": ".github/actions/velnor-tools-cache-restore/action.yml",
+      "remote_refs_reachable": true,
+      "sha256": "3cb6dda1f789147cb5f62b5a07913d4381330e5aa20386291c0a5846b5208a29",
+      "size": 2535
+    },
+    {
+      "blob_oid": "a40594b54de7524d79fb5393bfc4ab52042f044a",
+      "mode": "100644",
+      "path": ".github/actions/velnor-tools-prelude-u26/action.yml",
+      "remote_refs_reachable": true,
+      "sha256": "1885cab527ad97e6cd114b610f99b1b35c9984e1bf78e32a01957c8515a7798e",
+      "size": 902
+    },
+    {
+      "blob_oid": "11f1ca2a1ecbca02ceed3233a3b7d640a534709a",
+      "mode": "100644",
+      "path": ".github/scripts/velnor-tools-cache-identity.sh",
+      "remote_refs_reachable": true,
+      "sha256": "8cbfb0a9b7dcb964365cebd2caa825475b1f206332d3edd2ed0b9ef104ec1289",
+      "size": 5808
+    },
+    {
+      "blob_oid": "f63c601ea2fc4de0bed8d86576072f1b82bf2f75",
+      "mode": "100644",
+      "path": ".github/workflows/ci.yml",
+      "remote_refs_reachable": true,
+      "sha256": "fcba4d4e6b83532f034421bb7ef519d10ca42d03e233133a06d30fb4002dbc4b",
+      "size": 30278
+    },
+    {
+      "blob_oid": "9c07c1cc503660276fbefbf83c0a9fa964af450a",
+      "mode": "100644",
+      "path": ".gitignore",
+      "remote_refs_reachable": true,
+      "sha256": "41800e3b692ad00973c93e191196cfdb0d7657482e6b5066b25fd3c90c46fe56",
+      "size": 48
+    },
+    {
+      "blob_oid": "9f04816a8b48cabc3256eb7adbf5ecc121e3198c",
+      "mode": "100644",
+      "path": ".kimi-plugin/plugin.json",
+      "remote_refs_reachable": true,
+      "sha256": "f3a5abc49044f2b0717f6060936ba9eb2db469cabc5f9d8920d340707b55ca3f",
+      "size": 476
+    },
+    {
+      "blob_oid": "0299de9dc4f99fccf75ebcb892f59379dd070f00",
+      "mode": "100644",
+      "path": ".velnor/config.toml",
+      "remote_refs_reachable": true,
+      "sha256": "28ca43e98700a65af7c80cc060caa750617d5178722302ccba0386a41f57c3c6",
+      "size": 763
+    },
+    {
+      "blob_oid": "bbd7226587c60f2babb76cf1917bb9ed05f6fb20",
+      "mode": "100644",
+      "path": "AGENTS.md",
+      "remote_refs_reachable": true,
+      "sha256": "7dba465b622f0b05347edea161067a124b262b8a39eac03b30e7034510750b00",
+      "size": 1418
+    },
+    {
+      "blob_oid": "0c6acb41382dc6227d2735b77897f0edc210ad0b",
+      "mode": "100644",
+      "path": "CHANGELOG.md",
+      "remote_refs_reachable": true,
+      "sha256": "7c829403b5d56aa77be93820d29d172270091d30673e6dc2f2965dd886de78ea",
+      "size": 1985
+    },
+    {
+      "blob_oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "mode": "100644",
+      "path": "LICENSE",
+      "remote_refs_reachable": true,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size": 11357
+    },
+    {
+      "blob_oid": "afd3de89633718f7f5d1bed0cc171c9ed83eb71a",
+      "mode": "100644",
+      "path": "README.md",
+      "remote_refs_reachable": true,
+      "sha256": "50e26cb245c0a054eb2fbc605d897692865ecf8dd99d580eed07d32d16db46df",
+      "size": 5277
+    },
+    {
+      "blob_oid": "5b75f579b307910be26674aa67541a946fa4347b",
+      "mode": "100644",
+      "path": "docs/README.md",
+      "remote_refs_reachable": true,
+      "sha256": "cc78ef0c3f430979771e67044601d90a01202c555f10136a44b657338d1237df",
+      "size": 2697
+    },
+    {
+      "blob_oid": "657001f600f611ee82d5c0659066fee87931ee08",
+      "mode": "100644",
+      "path": "docs/compatibility.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe817ee5a8f39a84113066d96d7d222048a256854020bb8a76e371418349c6c9",
+      "size": 2609
+    },
+    {
+      "blob_oid": "178764e5c9116f9f9164957ef0692c6f8c2dec01",
+      "mode": "100644",
+      "path": "docs/installation.md",
+      "remote_refs_reachable": true,
+      "sha256": "6bd81473f181dc6f59d43573c9c4b78b892fbdacbe75c7036b96187e7a53c2c7",
+      "size": 22592
+    },
+    {
+      "blob_oid": "f3d2699a015fffddd871a532d90bdfbd1376815e",
+      "mode": "100644",
+      "path": "docs/maintenance.md",
+      "remote_refs_reachable": true,
+      "sha256": "d12a246cf23d6d01cd8b6d7c1f15d835d5005e0024bad6bc813c112c8ad69954",
+      "size": 6431
+    },
+    {
+      "blob_oid": "cdd288217c2cfc7916d4dc74d73d82d2836f8b87",
+      "mode": "100644",
+      "path": "docs/troubleshooting.md",
+      "remote_refs_reachable": true,
+      "sha256": "cf2fb0326822d21d310d8770ff791536396f556d8162a0ab61ec9012a66f85df",
+      "size": 3649
+    },
+    {
+      "blob_oid": "afd7cfd94b1a33e4704a8500b64793efbcf05a08",
+      "mode": "100644",
+      "path": "docs/usage.md",
+      "remote_refs_reachable": true,
+      "sha256": "9d3a1c7585d59ce633cdbaaa6e3098738823df8d30ec0a487bff9631c4a0d772",
+      "size": 4024
+    },
+    {
+      "blob_oid": "e392bf5df2f7a5b4785e840519ad8f4c1acac7ab",
+      "mode": "100644",
+      "path": "plugin.json",
+      "remote_refs_reachable": true,
+      "sha256": "d60ec238074b843b80f578f4a0c77d3015b53231e25ca473129ab129a1d7fdab",
+      "size": 696
+    },
+    {
+      "blob_oid": "37a301a3c259c5e89e8162ef99a0885cc58ebc3a",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-best-practices/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "a29170e835a3b99037e599c0b5730ebb5ae1f7cf15b097af2e5636dc3ce053a1",
+      "size": 6052
+    },
+    {
+      "blob_oid": "1f0da0d6076d7f66cac9d51e743bb141f5f9d8ee",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-best-practices/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "583b26bf64972ddc9a875f230b9d1b74d0d97ce65ab65c209e98ad91d8bd0e32",
+      "size": 341
+    },
+    {
+      "blob_oid": "d0659c9c0ef9fb8b5c567969bd386c1515507d7a",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-best-practices/references/architecture-and-state.md",
+      "remote_refs_reachable": true,
+      "sha256": "5315a991539d30b395c6347aa9c06de28a1b029c43cc4cc4f39eb596f54e1837",
+      "size": 1418
+    },
+    {
+      "blob_oid": "76d8f5cd96209e3f8fe6e1084a1bb33f10419a4c",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-best-practices/references/extractors-and-errors.md",
+      "remote_refs_reachable": true,
+      "sha256": "80632552249082f5ef307bf16e48dea6cdb184c783bc2e0a7972852c91f8134c",
+      "size": 1547
+    },
+    {
+      "blob_oid": "60f91d497edf841bc822b3cbe2b960c25af93a97",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-best-practices/references/lifecycle-and-testing.md",
+      "remote_refs_reachable": true,
+      "sha256": "aa6576de5e6a4b71711aa9e9fa0b04b454e08ad9b17fd4634dfc2d919a593a0c",
+      "size": 1765
+    },
+    {
+      "blob_oid": "b4eaed70b2886d4771cccba6132b8cf3cc559b43",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-best-practices/references/middleware-and-security.md",
+      "remote_refs_reachable": true,
+      "sha256": "4110f130d87880b7766ddf6ea3f3b618f693b5647033c53f947db84f86f593fb",
+      "size": 1894
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-best-practices/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "28a7d368240578fa71f3fc7cc2083f3c093b6150",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-refactor/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "7f4bda381e3eb1dc108f39369e1cb8fdd9cb649e1d44c0036580fe718ae9da1e",
+      "size": 4826
+    },
+    {
+      "blob_oid": "7daa56ba29e20cc29124b2610de0c339dfa64d61",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-refactor/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "ce8654cb263fd01d115570dcbd0803cf3d86cf4d65bb0199d781683e7f8bc18a",
+      "size": 347
+    },
+    {
+      "blob_oid": "d0659c9c0ef9fb8b5c567969bd386c1515507d7a",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-refactor/references/architecture-and-state.md",
+      "remote_refs_reachable": true,
+      "sha256": "5315a991539d30b395c6347aa9c06de28a1b029c43cc4cc4f39eb596f54e1837",
+      "size": 1418
+    },
+    {
+      "blob_oid": "76d8f5cd96209e3f8fe6e1084a1bb33f10419a4c",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-refactor/references/extractors-and-errors.md",
+      "remote_refs_reachable": true,
+      "sha256": "80632552249082f5ef307bf16e48dea6cdb184c783bc2e0a7972852c91f8134c",
+      "size": 1547
+    },
+    {
+      "blob_oid": "60f91d497edf841bc822b3cbe2b960c25af93a97",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-refactor/references/lifecycle-and-testing.md",
+      "remote_refs_reachable": true,
+      "sha256": "aa6576de5e6a4b71711aa9e9fa0b04b454e08ad9b17fd4634dfc2d919a593a0c",
+      "size": 1765
+    },
+    {
+      "blob_oid": "b4eaed70b2886d4771cccba6132b8cf3cc559b43",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-refactor/references/middleware-and-security.md",
+      "remote_refs_reachable": true,
+      "sha256": "4110f130d87880b7766ddf6ea3f3b618f693b5647033c53f947db84f86f593fb",
+      "size": 1894
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-refactor/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "5bc79e834c781e0c4766c8bec342e47b1929b9be",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-review/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "98ea8f205f6240ac3461ba21a69d92923678f566060916e54e9a2d6c5d1f86d7",
+      "size": 4586
+    },
+    {
+      "blob_oid": "75502157faf13a5cca01772fb04b74ff1e4ebcd0",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-review/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "92bab84dbf67d0bb693ad2b3f00e1808c4f3df1466fdc4b3dff26c3b4d379134",
+      "size": 334
+    },
+    {
+      "blob_oid": "d0659c9c0ef9fb8b5c567969bd386c1515507d7a",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-review/references/architecture-and-state.md",
+      "remote_refs_reachable": true,
+      "sha256": "5315a991539d30b395c6347aa9c06de28a1b029c43cc4cc4f39eb596f54e1837",
+      "size": 1418
+    },
+    {
+      "blob_oid": "76d8f5cd96209e3f8fe6e1084a1bb33f10419a4c",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-review/references/extractors-and-errors.md",
+      "remote_refs_reachable": true,
+      "sha256": "80632552249082f5ef307bf16e48dea6cdb184c783bc2e0a7972852c91f8134c",
+      "size": 1547
+    },
+    {
+      "blob_oid": "60f91d497edf841bc822b3cbe2b960c25af93a97",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-review/references/lifecycle-and-testing.md",
+      "remote_refs_reachable": true,
+      "sha256": "aa6576de5e6a4b71711aa9e9fa0b04b454e08ad9b17fd4634dfc2d919a593a0c",
+      "size": 1765
+    },
+    {
+      "blob_oid": "b4eaed70b2886d4771cccba6132b8cf3cc559b43",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-review/references/middleware-and-security.md",
+      "remote_refs_reachable": true,
+      "sha256": "4110f130d87880b7766ddf6ea3f3b618f693b5647033c53f947db84f86f593fb",
+      "size": 1894
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-axum-review/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "cf78408bd1e9867a3f07098bf11439a194d96513",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-best-practices/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "64fad7532002f9339f8260dfd7c231e6db301e4fa7d6f7dd879d8482ff749627",
+      "size": 6845
+    },
+    {
+      "blob_oid": "dcb97b09b4f37aea7f7c5d8a32175705653cdde4",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-best-practices/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "f49bb3d91a2e21e58b1c082c5cda7ff935ff087d4684e1a06884c8929c77e2fd",
+      "size": 407
+    },
+    {
+      "blob_oid": "d2ecbb2de415510a9c7c06292b2b925216ec9555",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-best-practices/references/client-tanstack.md",
+      "remote_refs_reachable": true,
+      "sha256": "89f1d6f25fae8b9810f376e6b4bb1db7b42de03722dbe72542f6d4030a2c2a11",
+      "size": 5720
+    },
+    {
+      "blob_oid": "3d8aec162b1b0760e6dc33313fda843a69cd7ea9",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-best-practices/references/contract-gates.md",
+      "remote_refs_reachable": true,
+      "sha256": "d3ff5d56d19d99ece7301a5504c61ad78e02f98ad5b0cc592dc53163d7a43f91",
+      "size": 5146
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-best-practices/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "719007973564f2047b54d620f580d3e54f57a11b",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-best-practices/references/schema-design.md",
+      "remote_refs_reachable": true,
+      "sha256": "5e8e243ce3db26c300a2a65498bfc2280bdef4f7ad299fbe38448b1850d1528e",
+      "size": 6790
+    },
+    {
+      "blob_oid": "d565b762f5f05b3cc69c54f6f3678ee7413f63f4",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-best-practices/references/server-rust.md",
+      "remote_refs_reachable": true,
+      "sha256": "2d96fff87aeb6723bced0f0ae0a2de47ab72499ecfe431d43c8b8d5667b859d8",
+      "size": 10824
+    },
+    {
+      "blob_oid": "199a3c0de42dee493b220e5b7882564fa09237c4",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-review/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "9cef0524ff6c0b5c7eee89458335132898f7d694f53fa7240aa4d1174e673f40",
+      "size": 5951
+    },
+    {
+      "blob_oid": "8077d11aa818401e7aebc20f1a71809671672104",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-review/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "6a7a64fce6cc82852860c68b6f61afe8d03616379c57a221a91991cca95c4570",
+      "size": 367
+    },
+    {
+      "blob_oid": "d2ecbb2de415510a9c7c06292b2b925216ec9555",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-review/references/client-tanstack.md",
+      "remote_refs_reachable": true,
+      "sha256": "89f1d6f25fae8b9810f376e6b4bb1db7b42de03722dbe72542f6d4030a2c2a11",
+      "size": 5720
+    },
+    {
+      "blob_oid": "3d8aec162b1b0760e6dc33313fda843a69cd7ea9",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-review/references/contract-gates.md",
+      "remote_refs_reachable": true,
+      "sha256": "d3ff5d56d19d99ece7301a5504c61ad78e02f98ad5b0cc592dc53163d7a43f91",
+      "size": 5146
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-review/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "719007973564f2047b54d620f580d3e54f57a11b",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-review/references/schema-design.md",
+      "remote_refs_reachable": true,
+      "sha256": "5e8e243ce3db26c300a2a65498bfc2280bdef4f7ad299fbe38448b1850d1528e",
+      "size": 6790
+    },
+    {
+      "blob_oid": "d565b762f5f05b3cc69c54f6f3678ee7413f63f4",
+      "mode": "100644",
+      "path": "skills/tailrocks-graphql-review/references/server-rust.md",
+      "remote_refs_reachable": true,
+      "sha256": "2d96fff87aeb6723bced0f0ae0a2de47ab72499ecfe431d43c8b8d5667b859d8",
+      "size": 10824
+    },
+    {
+      "blob_oid": "86d09c1988294492efa3538497cbdfa6c48be5b3",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-best-practices/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "6a854a809f97da77860278720b987c55ca3510f511088b673609699e8a73abc2",
+      "size": 6618
+    },
+    {
+      "blob_oid": "7f558710c6b46485460cfe7b3693f5b3afc9c6b1",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-best-practices/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "190be0670e613f91bf76a746268a09116c48c6de1a2a82c91220103063728680",
+      "size": 376
+    },
+    {
+      "blob_oid": "08eec0803373ed0c5373501e727397971920d6ad",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-best-practices/references/operations.md",
+      "remote_refs_reachable": true,
+      "sha256": "f73fad109c03fd4810e525624baeead3d94858ac5447f6a856c0c47863c736e1",
+      "size": 10321
+    },
+    {
+      "blob_oid": "968a16b875d58224ab058f12c28b536677bffb6c",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-best-practices/references/proto-contracts.md",
+      "remote_refs_reachable": true,
+      "sha256": "d74f98d30fcca66818a10537e881f08a08b1cfa78b7e218eb6d6856df8fd91ce",
+      "size": 8784
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-best-practices/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "4105384e99e24a227be77b00b805520e358cfac0",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-best-practices/references/tonic-server-client.md",
+      "remote_refs_reachable": true,
+      "sha256": "7acd1aa0c71b2c66bfd71e9d5bc9849d7194db69a5c95db75bf23cfa4070ba0f",
+      "size": 10594
+    },
+    {
+      "blob_oid": "4958412f6bbe5427556399402b1c2fbf720b551e",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-review/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "34d0d1d74b82f8672ac4dd909b7388b178260e2fa2bc7f872ad22bbc576765eb",
+      "size": 6025
+    },
+    {
+      "blob_oid": "23c9131aa67018a32bc8483c008f4583906c2bb3",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-review/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "45d27860a6f4ebb2bd270c9d25c9cbc7b25d1804c11c029c8f40e1047b06a168",
+      "size": 355
+    },
+    {
+      "blob_oid": "08eec0803373ed0c5373501e727397971920d6ad",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-review/references/operations.md",
+      "remote_refs_reachable": true,
+      "sha256": "f73fad109c03fd4810e525624baeead3d94858ac5447f6a856c0c47863c736e1",
+      "size": 10321
+    },
+    {
+      "blob_oid": "968a16b875d58224ab058f12c28b536677bffb6c",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-review/references/proto-contracts.md",
+      "remote_refs_reachable": true,
+      "sha256": "d74f98d30fcca66818a10537e881f08a08b1cfa78b7e218eb6d6856df8fd91ce",
+      "size": 8784
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-review/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "4105384e99e24a227be77b00b805520e358cfac0",
+      "mode": "100644",
+      "path": "skills/tailrocks-grpc-review/references/tonic-server-client.md",
+      "remote_refs_reachable": true,
+      "sha256": "7acd1aa0c71b2c66bfd71e9d5bc9849d7194db69a5c95db75bf23cfa4070ba0f",
+      "size": 10594
+    },
+    {
+      "blob_oid": "5580bb5605675b14d8ff347f421f927b410d96c4",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "2563bd4fb76c238a918194bd865ada72f422c452228e8bebb82506a4bb2f49d6",
+      "size": 5933
+    },
+    {
+      "blob_oid": "96a10d12262ea449b7698e43db9af7472c39d50b",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "66d8595c7c2ffd839ed1f91fd2ec4319904a09342af574f89498ae16a8654d96",
+      "size": 318
+    },
+    {
+      "blob_oid": "2bbc027c761f93f4cdbbc31234445d53677781c0",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/references/api-design.md",
+      "remote_refs_reachable": true,
+      "sha256": "4e83bc0da735834430afd652c39351c9dd40d8add2305d6ec48111a12ae8024f",
+      "size": 6192
+    },
+    {
+      "blob_oid": "7799b947cfad521a2e76fae1820127a125e85ec6",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/references/errors-testing-docs.md",
+      "remote_refs_reachable": true,
+      "sha256": "2000b078dcef62f36d457585bd8bd321977a935aa3ff9fa5839dacc6e4fc7018",
+      "size": 7708
+    },
+    {
+      "blob_oid": "b1a65614de3b6d9b3b564e07670be6cdb923a9de",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/references/ownership-performance.md",
+      "remote_refs_reachable": true,
+      "sha256": "d0c8011ad7e1657b3f7be6507d62affd10553c241e9b350c374599442bc66034",
+      "size": 7335
+    },
+    {
+      "blob_oid": "f397ecd4e6883f71755b5e30aa618ea22b861354",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/references/readability-style-architecture.md",
+      "remote_refs_reachable": true,
+      "sha256": "b0a74ff59687d0d2c69324ee8148bd270ecb0c872c334cf028d4f28ce9999b4c",
+      "size": 7966
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "bb808f38df0d7662e5cc1726891a6dfead1e1d21",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-best-practices/references/tooling-lints.md",
+      "remote_refs_reachable": true,
+      "sha256": "cc5fb2233549a8568b20a283e4df44be526a9064f4c0009e5a0acad9a7cb75ce",
+      "size": 4491
+    },
+    {
+      "blob_oid": "691841cdd5746fe1f7d5182dd2c82ac59c68e862",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "95aa4ae4cbf72e3d5c915f7773fb2864998d3636d09b89bd107a1dab9427a780",
+      "size": 5724
+    },
+    {
+      "blob_oid": "ad120f857c38b8ab1e5d1ebb731dcb8854c4a5d6",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "2c62acb3baa11fb263f106b5922c0ebc3d78c3535f20e427ea630375c54540b6",
+      "size": 358
+    },
+    {
+      "blob_oid": "6c9d684990728d795208b15016361a24f44b59bc",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/references/lints-clippy-rustfmt.md",
+      "remote_refs_reachable": true,
+      "sha256": "5659ba12c4e32614d32e60a62f86072fb83b6ee78f7a59b0aa39399853a5b02b",
+      "size": 2021
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "320690049da38d337c5e5d61a79023423b9c8d80",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/references/shared-version-policy.md",
+      "remote_refs_reachable": true,
+      "sha256": "cd24fdb730df0223328a2e24d1586314cafea1e912387cf2004a7ace5a6cd548",
+      "size": 871
+    },
+    {
+      "blob_oid": "8e86ccba5b0fcbfaf9aa2f25b2190c048c42f867",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/references/supply-chain-and-testing.md",
+      "remote_refs_reachable": true,
+      "sha256": "6f146adc1b458e59955d54d112ce776cf9e4b1d0318f5e843654aa6f37e45e7f",
+      "size": 3346
+    },
+    {
+      "blob_oid": "8ef08214ee9c13e8415c3c9fffe55a3ad143a573",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/references/toolchain-and-mise.md",
+      "remote_refs_reachable": true,
+      "sha256": "10a517c5b3bf622d50043fc092330c13f9474387ce195b4119aea9f1c7436b58",
+      "size": 1655
+    },
+    {
+      "blob_oid": "87a6b2e8121d9ed4960c5ffb2f6c4101c6d82aca",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/references/version-policy.md",
+      "remote_refs_reachable": true,
+      "sha256": "d1e9ca027614181278097ef8cb2033b5a4dec98e6ac1cc2c27e8adee0177ea21",
+      "size": 4009
+    },
+    {
+      "blob_oid": "6e86a160a995d7b8ca4020d96bf391d88779f689",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-audit/references/workspace-and-layout.md",
+      "remote_refs_reachable": true,
+      "sha256": "b0421e38206c39329a0307556847a96a423315979d10a2fba87f0c3356433c19",
+      "size": 6639
+    },
+    {
+      "blob_oid": "c775b612ac1096db1090041f7f965faa55b63cca",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "42d59022ba0f4fb4464cd61e5ad0373b33af721d7f383545e89d2680ec89a5fc",
+      "size": 4422
+    },
+    {
+      "blob_oid": "122c19e4261beff1e69da7fee8572453f6479f05",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "3cfd5bf974cb29324e346f8e1b6269669bdfa529419a9599ed06e0326b6ea661",
+      "size": 326
+    },
+    {
+      "blob_oid": "6c9d684990728d795208b15016361a24f44b59bc",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/references/lints-clippy-rustfmt.md",
+      "remote_refs_reachable": true,
+      "sha256": "5659ba12c4e32614d32e60a62f86072fb83b6ee78f7a59b0aa39399853a5b02b",
+      "size": 2021
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "320690049da38d337c5e5d61a79023423b9c8d80",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/references/shared-version-policy.md",
+      "remote_refs_reachable": true,
+      "sha256": "cd24fdb730df0223328a2e24d1586314cafea1e912387cf2004a7ace5a6cd548",
+      "size": 871
+    },
+    {
+      "blob_oid": "8e86ccba5b0fcbfaf9aa2f25b2190c048c42f867",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/references/supply-chain-and-testing.md",
+      "remote_refs_reachable": true,
+      "sha256": "6f146adc1b458e59955d54d112ce776cf9e4b1d0318f5e843654aa6f37e45e7f",
+      "size": 3346
+    },
+    {
+      "blob_oid": "8ef08214ee9c13e8415c3c9fffe55a3ad143a573",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/references/toolchain-and-mise.md",
+      "remote_refs_reachable": true,
+      "sha256": "10a517c5b3bf622d50043fc092330c13f9474387ce195b4119aea9f1c7436b58",
+      "size": 1655
+    },
+    {
+      "blob_oid": "87a6b2e8121d9ed4960c5ffb2f6c4101c6d82aca",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/references/version-policy.md",
+      "remote_refs_reachable": true,
+      "sha256": "d1e9ca027614181278097ef8cb2033b5a4dec98e6ac1cc2c27e8adee0177ea21",
+      "size": 4009
+    },
+    {
+      "blob_oid": "6e86a160a995d7b8ca4020d96bf391d88779f689",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-remediate/references/workspace-and-layout.md",
+      "remote_refs_reachable": true,
+      "sha256": "b0421e38206c39329a0307556847a96a423315979d10a2fba87f0c3356433c19",
+      "size": 6639
+    },
+    {
+      "blob_oid": "9eb694f6b85cfb172887538089784e4c26a712e2",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "c2b3637b7d51412006b9e9db6de8a33c699626ae6da51efd2ff2017e74fce7bc",
+      "size": 6199
+    },
+    {
+      "blob_oid": "1500557661ca018c17f3feb3dfbe26e82f56dee9",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "88461abd03b3c7848d19dfd8d5d49028ec649623dc22470c649715ea6c7365e6",
+      "size": 359
+    },
+    {
+      "blob_oid": "1d90d42f5eea2d826345d72d071e66f742f6698c",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/.cargo/audit.toml",
+      "remote_refs_reachable": true,
+      "sha256": "de915e28e307952f60a92ca9b8ededaf35fe3d7226156bd31c66c33fc0d3aff3",
+      "size": 535
+    },
+    {
+      "blob_oid": "9035dd421003dd23118a476d1cfb37832b8ed163",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/.config/nextest.toml",
+      "remote_refs_reachable": true,
+      "sha256": "f0ee26a9ef43a64fb75dcdd2eaead6bd14528db3a686ab3572c1fd4b6d284d5c",
+      "size": 885
+    },
+    {
+      "blob_oid": "d58c9e6994d990ffdef20df090db54aac6393f56",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/Cargo.toml",
+      "remote_refs_reachable": true,
+      "sha256": "e9dc0e7ea577e594a330f95f5c3d2cc9073d05e0ada662152fa0466fb1d0ca9c",
+      "size": 4986
+    },
+    {
+      "blob_oid": "e40e07e1b792cb2bb2d7dfb05770440b5f9b076b",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/clippy.toml",
+      "remote_refs_reachable": true,
+      "sha256": "a0c8d318a76625abfd6e9742d8cdd2e7cb750754d91b490804640ccce49cc453",
+      "size": 1751
+    },
+    {
+      "blob_oid": "de21e74659d251a41271be9c5ba4fed286d93d1c",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/deny.toml",
+      "remote_refs_reachable": true,
+      "sha256": "1758e26bc305471541aa2d84a804e2adc3d577e6c13c838ad95ca5cf21849e19",
+      "size": 1507
+    },
+    {
+      "blob_oid": "42b4cf01905fb9e500c538d260857038af41fd81",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/mise.toml",
+      "remote_refs_reachable": true,
+      "sha256": "6e68f121147e6eb65ecd265c2f2df8b039482eed19f9a957743ed889ec6161cf",
+      "size": 1620
+    },
+    {
+      "blob_oid": "4017acf14e18f1f862b176945def9d77d938cc57",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/rust-toolchain.toml",
+      "remote_refs_reachable": true,
+      "sha256": "e832ee3c9baee9d7d7959a2e760c1f1a6a18e1ecf8612937a7b72ef56acdd298",
+      "size": 158
+    },
+    {
+      "blob_oid": "18d4fc70bca7dc5b1bb0ebf435108be22dc5aa98",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/assets/rustfmt.toml",
+      "remote_refs_reachable": true,
+      "sha256": "e51721bfd7e339a176bd3fbd8328861b4c68d2b17ccf5902de1718a0cd2f13ed",
+      "size": 1222
+    },
+    {
+      "blob_oid": "6c9d684990728d795208b15016361a24f44b59bc",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/references/lints-clippy-rustfmt.md",
+      "remote_refs_reachable": true,
+      "sha256": "5659ba12c4e32614d32e60a62f86072fb83b6ee78f7a59b0aa39399853a5b02b",
+      "size": 2021
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "320690049da38d337c5e5d61a79023423b9c8d80",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/references/shared-version-policy.md",
+      "remote_refs_reachable": true,
+      "sha256": "cd24fdb730df0223328a2e24d1586314cafea1e912387cf2004a7ace5a6cd548",
+      "size": 871
+    },
+    {
+      "blob_oid": "8e86ccba5b0fcbfaf9aa2f25b2190c048c42f867",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/references/supply-chain-and-testing.md",
+      "remote_refs_reachable": true,
+      "sha256": "6f146adc1b458e59955d54d112ce776cf9e4b1d0318f5e843654aa6f37e45e7f",
+      "size": 3346
+    },
+    {
+      "blob_oid": "8ef08214ee9c13e8415c3c9fffe55a3ad143a573",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/references/toolchain-and-mise.md",
+      "remote_refs_reachable": true,
+      "sha256": "10a517c5b3bf622d50043fc092330c13f9474387ce195b4119aea9f1c7436b58",
+      "size": 1655
+    },
+    {
+      "blob_oid": "87a6b2e8121d9ed4960c5ffb2f6c4101c6d82aca",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/references/version-policy.md",
+      "remote_refs_reachable": true,
+      "sha256": "d1e9ca027614181278097ef8cb2033b5a4dec98e6ac1cc2c27e8adee0177ea21",
+      "size": 4009
+    },
+    {
+      "blob_oid": "6e86a160a995d7b8ca4020d96bf391d88779f689",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-project-setup/references/workspace-and-layout.md",
+      "remote_refs_reachable": true,
+      "sha256": "b0421e38206c39329a0307556847a96a423315979d10a2fba87f0c3356433c19",
+      "size": 6639
+    },
+    {
+      "blob_oid": "cad4ff051a7aa7553b0718198459cbe16ad3ebc4",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "4f636b67ee6a3918a5c60b097be9decd0167fe3e3553e6498794557d531b3f18",
+      "size": 4933
+    },
+    {
+      "blob_oid": "2c8213c09fabe8aeb7c422e6a0cb98d5378730a2",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "76a433a3a2a9570ac70a3768d124807c9d245b5178e0593eb29aa3cc9a38d169",
+      "size": 313
+    },
+    {
+      "blob_oid": "2bbc027c761f93f4cdbbc31234445d53677781c0",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/references/api-design.md",
+      "remote_refs_reachable": true,
+      "sha256": "4e83bc0da735834430afd652c39351c9dd40d8add2305d6ec48111a12ae8024f",
+      "size": 6192
+    },
+    {
+      "blob_oid": "7799b947cfad521a2e76fae1820127a125e85ec6",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/references/errors-testing-docs.md",
+      "remote_refs_reachable": true,
+      "sha256": "2000b078dcef62f36d457585bd8bd321977a935aa3ff9fa5839dacc6e4fc7018",
+      "size": 7708
+    },
+    {
+      "blob_oid": "b1a65614de3b6d9b3b564e07670be6cdb923a9de",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/references/ownership-performance.md",
+      "remote_refs_reachable": true,
+      "sha256": "d0c8011ad7e1657b3f7be6507d62affd10553c241e9b350c374599442bc66034",
+      "size": 7335
+    },
+    {
+      "blob_oid": "f397ecd4e6883f71755b5e30aa618ea22b861354",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/references/readability-style-architecture.md",
+      "remote_refs_reachable": true,
+      "sha256": "b0a74ff59687d0d2c69324ee8148bd270ecb0c872c334cf028d4f28ce9999b4c",
+      "size": 7966
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "bb808f38df0d7662e5cc1726891a6dfead1e1d21",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-refactor/references/tooling-lints.md",
+      "remote_refs_reachable": true,
+      "sha256": "cc5fb2233549a8568b20a283e4df44be526a9064f4c0009e5a0acad9a7cb75ce",
+      "size": 4491
+    },
+    {
+      "blob_oid": "8eae272bb211cd8a5634984027348ae9a815b37d",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "950643bd2804b206ebe30f192dc6fbb44fbd2bb42ef7bda9535fd490e58502ac",
+      "size": 4412
+    },
+    {
+      "blob_oid": "2c48f2498e48ecc015afdd83d50f73072cde4900",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "e5aa01d5d2f14a1bee604118b2365e3b65384230a781d7b166f89ff548831f8f",
+      "size": 290
+    },
+    {
+      "blob_oid": "2bbc027c761f93f4cdbbc31234445d53677781c0",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/references/api-design.md",
+      "remote_refs_reachable": true,
+      "sha256": "4e83bc0da735834430afd652c39351c9dd40d8add2305d6ec48111a12ae8024f",
+      "size": 6192
+    },
+    {
+      "blob_oid": "7799b947cfad521a2e76fae1820127a125e85ec6",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/references/errors-testing-docs.md",
+      "remote_refs_reachable": true,
+      "sha256": "2000b078dcef62f36d457585bd8bd321977a935aa3ff9fa5839dacc6e4fc7018",
+      "size": 7708
+    },
+    {
+      "blob_oid": "b1a65614de3b6d9b3b564e07670be6cdb923a9de",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/references/ownership-performance.md",
+      "remote_refs_reachable": true,
+      "sha256": "d0c8011ad7e1657b3f7be6507d62affd10553c241e9b350c374599442bc66034",
+      "size": 7335
+    },
+    {
+      "blob_oid": "f397ecd4e6883f71755b5e30aa618ea22b861354",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/references/readability-style-architecture.md",
+      "remote_refs_reachable": true,
+      "sha256": "b0a74ff59687d0d2c69324ee8148bd270ecb0c872c334cf028d4f28ce9999b4c",
+      "size": 7966
+    },
+    {
+      "blob_oid": "9f8d75c319a9a12002e574ec311666a363ce1485",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/references/review-checklist.md",
+      "remote_refs_reachable": true,
+      "sha256": "648088d64a6f0d57e815c3172e4112d075346c3d200d70684e8e2c002adb267c",
+      "size": 3712
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "bb808f38df0d7662e5cc1726891a6dfead1e1d21",
+      "mode": "100644",
+      "path": "skills/tailrocks-rust-review/references/tooling-lints.md",
+      "remote_refs_reachable": true,
+      "sha256": "cc5fb2233549a8568b20a283e4df44be526a9064f4c0009e5a0acad9a7cb75ce",
+      "size": 4491
+    },
+    {
+      "blob_oid": "32f904be88bdae263752a408934c0249e1a24899",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design-audit/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "69898841e386545caa0ca9ec0ff6ea2ca9fda6f20f7c0a8f8e15917f22c524d5",
+      "size": 6877
+    },
+    {
+      "blob_oid": "bb1fd85e4c82e659078f4081a1f0b7ee20cf141d",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design-audit/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "31d58850a1f9842d4ec3e7355e7f87bc7fd461c0e137665f576428c0bac2dba2",
+      "size": 378
+    },
+    {
+      "blob_oid": "10cbc22d4f1d49112f8537348549318fcb8d6129",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design-audit/references/gallery.md",
+      "remote_refs_reachable": true,
+      "sha256": "5b839ce20662df7d126000a5ebe84676f6a026f7d2962ae7a856172696e01fe2",
+      "size": 4225
+    },
+    {
+      "blob_oid": "03a8c5c14b8b1b8a8150970d8a29ab6ca62fe9bb",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design-audit/references/golden-frames.md",
+      "remote_refs_reachable": true,
+      "sha256": "9d33c22959fd9d4962ebb8578c6be3702c43461ce9db425c8e24badcc45c040d",
+      "size": 2925
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design-audit/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "1985ed5ec0086a1551d3b66d80103d3b52759fcb",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design-audit/references/screen-package.md",
+      "remote_refs_reachable": true,
+      "sha256": "4a9ace6d873df7e9cbb7cb7599c6ba1f3bb31a5cc058d5630d8cc8de5882ccdd",
+      "size": 2877
+    },
+    {
+      "blob_oid": "944ffc2cce773ed5d2024b2bbd4aa8297541634e",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design-audit/references/tui-craft.md",
+      "remote_refs_reachable": true,
+      "sha256": "08ffaa5459eb14e0c78a815abc8c87712b9d9bcdf05381d7de270da083d098ae",
+      "size": 3685
+    },
+    {
+      "blob_oid": "f0efe33d9733856c63253672c9ac6f9c4cf971e3",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/SKILL.md",
+      "remote_refs_reachable": true,
+      "sha256": "b5b91dc97b81c6cfcc86a558c23d186a59473eed0eff816caf7db468feb3c15d",
+      "size": 8458
+    },
+    {
+      "blob_oid": "d147ac3c19e2c07f03d6f96d71eda3fc2c4e376c",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/agents/openai.yaml",
+      "remote_refs_reachable": true,
+      "sha256": "2fe2fbcd65559cc4813e4ac7024a99060a7774798ada768d700ebaf3dc55fd45",
+      "size": 526
+    },
+    {
+      "blob_oid": "2adac6d2e11c710e84e7430296e112874102c0a4",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/assets/Cargo.toml",
+      "remote_refs_reachable": true,
+      "sha256": "6991af9f75e8d3eaa7dae82931cb484f1f03f65f02df8ee350d93f0906f8fdde",
+      "size": 278
+    },
+    {
+      "blob_oid": "714e0bb78b10c7d27f3636d6d567065b63866030",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/assets/MANIFEST.md",
+      "remote_refs_reachable": true,
+      "sha256": "1e63dcd2d602f347451a3d5654437bd23d9d40804a1347b5caec289a58252c15",
+      "size": 1305
+    },
+    {
+      "blob_oid": "f6901957702ce8d86091971aab69d56bbf88f0d2",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/assets/src/fixtures.rs",
+      "remote_refs_reachable": true,
+      "sha256": "18a784e4253db8725b82f138ceecf42aff94356f91125e172cbc3afdf16db991",
+      "size": 1439
+    },
+    {
+      "blob_oid": "7510eabd9db4c7a8aa565e6384e24ded38d8a3c2",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/assets/src/lib.rs",
+      "remote_refs_reachable": true,
+      "sha256": "21a39f37ef8ef645b5f753b6321ed45592fa20690721bb8245047295a7b27f1f",
+      "size": 519
+    },
+    {
+      "blob_oid": "b5dda8a34bfc7b58219ac16e94ad101bc3feae63",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/assets/src/main.rs",
+      "remote_refs_reachable": true,
+      "sha256": "18c5c3f4878a2edadd2e9f9e806ba9f5793b300f46310039889d184290c50487",
+      "size": 15051
+    },
+    {
+      "blob_oid": "c7351945dbf048818198c5bc71ed2b35f1535c0b",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/assets/src/registry.rs",
+      "remote_refs_reachable": true,
+      "sha256": "892595020a6f498fb1c700d7b4fe34bbe064391610c0258335c3aecd62f0e45b",
+      "size": 4135
+    },
+    {
+      "blob_oid": "b96b553b1eff04ce368b284c2f38e39535f3a5d6",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/assets/tests/golden.rs",
+      "remote_refs_reachable": true,
+      "sha256": "0941f6d12345e163852d5c5da05fce8a1f6605394bc954302acdf7c2179c8a7e",
+      "size": 2538
+    },
+    {
+      "blob_oid": "03659be5eb332a82c4de932027293dcf79df6644",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/references/design-pipeline.md",
+      "remote_refs_reachable": true,
+      "sha256": "b40e0d270d427357b5f8e02d8a7281e0bfb1996b9136b4e7989ba861f158f6f5",
+      "size": 952
+    },
+    {
+      "blob_oid": "10cbc22d4f1d49112f8537348549318fcb8d6129",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/references/gallery.md",
+      "remote_refs_reachable": true,
+      "sha256": "5b839ce20662df7d126000a5ebe84676f6a026f7d2962ae7a856172696e01fe2",
+      "size": 4225
+    },
+    {
+      "blob_oid": "03a8c5c14b8b1b8a8150970d8a29ab6ca62fe9bb",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/references/golden-frames.md",
+      "remote_refs_reachable": true,
+      "sha256": "9d33c22959fd9d4962ebb8578c6be3702c43461ce9db425c8e24badcc45c040d",
+      "size": 2925
+    },
+    {
+      "blob_oid": "04ecd54ab9c9108639e23881979b4f09d48e28b8",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/references/runtime-trust.md",
+      "remote_refs_reachable": true,
+      "sha256": "fe3069ab854a3ac81377db86803d1e6d142ee807624a2a17a7939b295b21b4b5",
+      "size": 821
+    },
+    {
+      "blob_oid": "1985ed5ec0086a1551d3b66d80103d3b52759fcb",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/references/screen-package.md",
+      "remote_refs_reachable": true,
+      "sha256": "4a9ace6d873df7e9cbb7cb7599c6ba1f3bb31a5cc058d5630d8cc8de5882ccdd",
+      "size": 2877
+    },
+    {
+      "blob_oid": "944ffc2cce773ed5d2024b2bbd4aa8297541634e",
+      "mode": "100644",
+      "path": "skills/tailrocks-tui-design/references/tui-craft.md",
+      "remote_refs_reachable": true,
+      "sha256": "08ffaa5459eb14e0c78a815abc8c87712b9d9bcdf05381d7de270da083d098ae",
+      "size": 3685
+    }
+  ],
+  "missing_tracked_worktree_paths_disposition": "UNKNOWN_INCOMPLETE_CHECKOUT; do not synthesize D changes; each missing path maps to verified base tree bytes",
+  "original_source_path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work/dco/tailrocks-rust-skills/repo",
+  "original_source_path_absent_nofollow": true,
+  "present_worktree_bytes_archived_under": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/worktree",
+  "quarantine_parent_chain": [
+    {
+      "dev": 16777234,
+      "ino": 20994,
+      "mode": 493,
+      "path": "/Users"
+    },
+    {
+      "dev": 16777234,
+      "ino": 47530,
+      "mode": 488,
+      "path": "/Users/donbeave"
+    },
+    {
+      "dev": 16777234,
+      "ino": 47537,
+      "mode": 448,
+      "path": "/Users/donbeave/Library"
+    },
+    {
+      "dev": 16777234,
+      "ino": 81285,
+      "mode": 320,
+      "path": "/Users/donbeave/Library/Mobile Documents"
+    },
+    {
+      "dev": 16777234,
+      "ino": 81286,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs"
+    },
+    {
+      "dev": 16777234,
+      "ino": 108966,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents"
+    },
+    {
+      "dev": 16777234,
+      "ino": 138943,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112658265,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112658271,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112658344,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112697987,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work/dco"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112698007,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work/dco/tailrocks-rust-skills"
+    }
+  ],
+  "quarantine_path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work/dco/tailrocks-rust-skills/repo.user-repatriation-quarantine-03a9f4e0bac575e54fc5c625",
+  "raw_git_admin_bytes_archived_under": "recovery/source-only/03a9f4e0bac575e54fc5c625/63164418ea534ae2f440e39b/git-admin",
+  "remote_base_commit": "4b05f4f89bb3ef98e150833c77bcc07194a82869",
+  "remote_base_ref": "refs/pull/8/head",
+  "repository": "tailrocks/tailrocks-rust-skills",
+  "repository_id": 1353757640,
+  "schema": "source-only-github-recovery-archive-v1",
+  "snapshot_entries": [
+    {
+      "ctime_ns": 1791951050649468864,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117922327,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791951023000000000,
+      "nlink": 7,
+      "relative_path": ".git",
+      "size": 224,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951783449011432,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117925941,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/COMMIT_EDITMSG",
+      "sha256": "3774af3185bcd168ddc066bc1f76fe4f8b82b07b65bae166385b4f0de19e59c7",
+      "size": 98,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951784665475269,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117925942,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/index",
+      "sha256": "830c6e1a6b5a9e58e6831dd15bb501a8b18b9999be96015be9d26fc6df40c424",
+      "size": 21058,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951785353342810,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117925943,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950963000000000,
+      "nlink": 4,
+      "relative_path": ".git/logs",
+      "size": 128,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951785933389374,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972785,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/logs/HEAD",
+      "sha256": "1e106a8356729e8bb58db22b9abaad73659141e21f1fd0858f1d6fd320f3f0cb",
+      "size": 3048,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951786613700167,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117972786,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950963000000000,
+      "nlink": 4,
+      "relative_path": ".git/logs/refs",
+      "size": 128,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951786648972518,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117972795,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950963000000000,
+      "nlink": 3,
+      "relative_path": ".git/logs/refs/heads",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951787150981674,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972797,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/logs/refs/heads/release-0.1.7-regeneration",
+      "sha256": "46122f18d3ec74bc052f48190f0522ac83e1eb2fba17cacdee66a8e6a4521d73",
+      "size": 780,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951787737115853,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117972796,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950963000000000,
+      "nlink": 3,
+      "relative_path": ".git/logs/refs/remotes",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951787768201890,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117972805,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950963000000000,
+      "nlink": 3,
+      "relative_path": ".git/logs/refs/remotes/origin",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951789544107224,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972806,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906124000000000,
+      "nlink": 1,
+      "relative_path": ".git/logs/refs/remotes/origin/chatgpt-web-validators-2026-10-12",
+      "sha256": "95a5e2a7eab4f7cc967d1dfacbc6919c2cca81d359de98a4affe93df22366529",
+      "size": 450,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951110813458332,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117925944,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791951023000000000,
+      "nlink": 6,
+      "relative_path": ".git/objects",
+      "size": 192,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951790277075542,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117930541,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950926000000000,
+      "nlink": 3,
+      "relative_path": ".git/objects/a0",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951790769860609,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972816,
+      "kind": "file",
+      "mode": 256,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/objects/a0/8dd8edd604063e2a8762bf5c74029aaa9d1351",
+      "sha256": "94a0d71ca05deb0cdb6a5b47b9eccb90ceb48455de8cfe230a691fff78d215f6",
+      "size": 1271,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951791469183877,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117930542,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950926000000000,
+      "nlink": 3,
+      "relative_path": ".git/objects/e0",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951792019628453,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972824,
+      "kind": "file",
+      "mode": 256,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/objects/e0/a54ffde537414825aac71f362d5d804c802a62",
+      "sha256": "51251f0ffc300123d9272e8eb08f96c350ef020856ae185ddbf41664ad495639",
+      "size": 55,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951792649811194,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117930543,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791951023000000000,
+      "nlink": 3,
+      "relative_path": ".git/objects/e7",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951793311014804,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972849,
+      "kind": "file",
+      "mode": 256,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/objects/e7/6be1abb79374fb06ee928e48675c372c4eb1cb",
+      "sha256": "6fba28150b9466544d4d186d04eb8b69560e61078a89a292e3d5ab7cf1f14918",
+      "size": 55,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951794032477896,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117930544,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950926000000000,
+      "nlink": 3,
+      "relative_path": ".git/objects/eb",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951794739689913,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972858,
+      "kind": "file",
+      "mode": 256,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/objects/eb/4b4c3ca438a0137dc161a3296193ed43367679",
+      "sha256": "c00bc884b7323f3962d85e89a500dc06837739a3823500a2d0f2bcd373355b9c",
+      "size": 159,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951110831174834,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117925945,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950956000000000,
+      "nlink": 4,
+      "relative_path": ".git/refs",
+      "size": 128,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951170843874762,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117930545,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950926000000000,
+      "nlink": 3,
+      "relative_path": ".git/refs/heads",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951795949268964,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117935267,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906121000000000,
+      "nlink": 1,
+      "relative_path": ".git/refs/heads/release-0.1.7-regeneration",
+      "sha256": "413822425a8956ab87104a2dc4cc7c19f3fadbb86d3a49ec67942f60d47f3c10",
+      "size": 41,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951170844987435,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117930546,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950955000000000,
+      "nlink": 3,
+      "relative_path": ".git/refs/remotes",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951796603610331,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117935268,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950955000000000,
+      "nlink": 3,
+      "relative_path": ".git/refs/remotes/origin",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951796997175381,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117972871,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906124000000000,
+      "nlink": 1,
+      "relative_path": ".git/refs/remotes/origin/chatgpt-web-validators-2026-10-12",
+      "sha256": "413822425a8956ab87104a2dc4cc7c19f3fadbb86d3a49ec67942f60d47f3c10",
+      "size": 41,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951050593951471,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117922328,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950928000000000,
+      "nlink": 2,
+      "relative_path": ".github",
+      "size": 64,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951050627602633,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117922329,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950942000000000,
+      "nlink": 3,
+      "relative_path": ".github.velnor-stage",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951797598024177,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117925946,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950942000000000,
+      "nlink": 2,
+      "relative_path": ".github.velnor-stage/spare",
+      "size": 64,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951050850942711,
+      "dev": 16777234,
+      "flags": 32768,
+      "gid": 20,
+      "ino": 117922330,
+      "kind": "directory",
+      "mode": 448,
+      "mtime_ns": 1791950926000000000,
+      "nlink": 3,
+      "relative_path": ".velnor",
+      "size": 96,
+      "uid": 501,
+      "xattrs": {}
+    },
+    {
+      "ctime_ns": 1791951798147814333,
+      "dev": 16777234,
+      "flags": 32832,
+      "gid": 20,
+      "ino": 117925959,
+      "kind": "file",
+      "mode": 384,
+      "mtime_ns": 1791906085000000000,
+      "nlink": 1,
+      "relative_path": ".velnor/release-manifest.json",
+      "sha256": "eeecd05bd116504734e97b071a8f666e705c881184a1ff7f56012e4e8e81f39b",
+      "size": 953,
+      "uid": 501,
+      "xattrs": {}
+    }
+  ],
+  "snapshot_manifest_sha256": "aac73a295631cda11abc3ffa227f162bdb091f333edc51e80df5ca93b17831e8",
+  "snapshot_manifest_source_path": "/Users/donbeave/.local/state/github-repatriation/operations/user-request-20261013T2201Z/supplemental-icloud-28/reappeared-quarantine-recovery-v1/snapshots/03a9f4e0bac575e54fc5c625/1236086b9cb60e77cf71fa89/snapshot-manifest.json",
+  "snapshot_tree_sha256": "1236086b9cb60e77cf71fa89659484ee0fc4e23740ef058e46cbfae4d33c037b",
+  "source_branch_refs": {
+    "refs/heads/release-0.1.7-regeneration": "4b05f4f89bb3ef98e150833c77bcc07194a82869",
+    "refs/remotes/origin/chatgpt-web-validators-2026-10-12": "4b05f4f89bb3ef98e150833c77bcc07194a82869"
+  },
+  "source_config_file_present": false,
+  "source_current_identity": {
+    "dev": 16777234,
+    "ino": 117921332,
+    "mode": 448,
+    "mtime_ns": 1791951023000000000,
+    "size": 192
+  },
+  "source_head_file_present": false,
+  "source_head_reflog_terminal_sha": "4b05f4f89bb3ef98e150833c77bcc07194a82869",
+  "source_id": "2d3e4980d66f4221c18a969a",
+  "source_parent_chain": [
+    {
+      "dev": 16777234,
+      "ino": 20994,
+      "mode": 493,
+      "path": "/Users"
+    },
+    {
+      "dev": 16777234,
+      "ino": 47530,
+      "mode": 488,
+      "path": "/Users/donbeave"
+    },
+    {
+      "dev": 16777234,
+      "ino": 47537,
+      "mode": 448,
+      "path": "/Users/donbeave/Library"
+    },
+    {
+      "dev": 16777234,
+      "ino": 81285,
+      "mode": 320,
+      "path": "/Users/donbeave/Library/Mobile Documents"
+    },
+    {
+      "dev": 16777234,
+      "ino": 81286,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs"
+    },
+    {
+      "dev": 16777234,
+      "ino": 108966,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents"
+    },
+    {
+      "dev": 16777234,
+      "ino": 138943,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112658265,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112658271,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112658344,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112697987,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work/dco"
+    },
+    {
+      "dev": 16777234,
+      "ino": 112698007,
+      "mode": 448,
+      "path": "/Users/donbeave/Library/Mobile Documents/com~apple~CloudDocs/Documents/Codex/2026-10-12/goal-mission-make-tailrocks-skills-work/work/dco/tailrocks-rust-skills"
+    }
+  ]
+}

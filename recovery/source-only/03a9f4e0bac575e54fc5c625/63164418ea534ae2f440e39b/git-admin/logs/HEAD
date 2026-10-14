@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 a2cfae1b8a4d1b29247e1b2a3bfd4fe6f30d23a7 Alexey Zhokhov <alexey@zhokhov.com> 1791836568 +0700	clone: from https://github.com/tailrocks/tailrocks-rust-skills.git
+a2cfae1b8a4d1b29247e1b2a3bfd4fe6f30d23a7 c9049e359cd98d0d7f16580fafd3eef494daa05b Alexey Zhokhov <alexey@zhokhov.com> 1791836581 +0700	checkout: moving from main to chatgpt-web-validators-2026-10-12
+c9049e359cd98d0d7f16580fafd3eef494daa05b a2cfae1b8a4d1b29247e1b2a3bfd4fe6f30d23a7 Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase (start): checkout origin/main
+a2cfae1b8a4d1b29247e1b2a3bfd4fe6f30d23a7 1d40928cdeb55320b21b3124720fb4501a75e1fc Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase: fast-forward
+1d40928cdeb55320b21b3124720fb4501a75e1fc 5b2f9eeef8d8fa5401ba5fbc5f9456741f67fcbc Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase (reword): ci: validate skill metadata and links
+5b2f9eeef8d8fa5401ba5fbc5f9456741f67fcbc 582767955e2b1ad3dff84b5e7b226fa42b405ad5 Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase (reword): ci: check local documentation links
+582767955e2b1ad3dff84b5e7b226fa42b405ad5 fa385a806408b431027bda6cc050ff59872bce40 Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase (reword): ci: check local documentation links
+fa385a806408b431027bda6cc050ff59872bce40 6128b9a1ebda7b2b22aaf1ca973b853e7a6db040 Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase (reword): ci: correct local link validation
+6128b9a1ebda7b2b22aaf1ca973b853e7a6db040 fb8ccca3c36018fd09b3ffe2fc6be3b1ff37f825 Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase (reword): ci: correct local link validation
+fb8ccca3c36018fd09b3ffe2fc6be3b1ff37f825 fb8ccca3c36018fd09b3ffe2fc6be3b1ff37f825 Alexey Zhokhov <alexey@zhokhov.com> 1791836588 +0700	rebase (finish): returning to refs/heads/chatgpt-web-validators-2026-10-12
+fb8ccca3c36018fd09b3ffe2fc6be3b1ff37f825 c9049e359cd98d0d7f16580fafd3eef494daa05b Alexey Zhokhov <alexey@zhokhov.com> 1791900333 +0700	checkout: moving from chatgpt-web-validators-2026-10-12 to release-0.1.7-regeneration
+c9049e359cd98d0d7f16580fafd3eef494daa05b e23b889f6bb895b83714a89339c2926adc741352 Alexey Zhokhov <alexey@zhokhov.com> 1791900336 +0700	commit: ci: pin Velnor 0.1.7 with local link checks
+e23b889f6bb895b83714a89339c2926adc741352 fb8ccca3c36018fd09b3ffe2fc6be3b1ff37f825 Alexey Zhokhov <alexey@zhokhov.com> 1791900366 +0700	rebase (start): checkout origin/pr-8-live
+fb8ccca3c36018fd09b3ffe2fc6be3b1ff37f825 8199c5f2337869a9cbcd022b4551903f7fef08c9 Alexey Zhokhov <alexey@zhokhov.com> 1791900366 +0700	rebase (pick): ci: pin Velnor 0.1.7 with local link checks
+8199c5f2337869a9cbcd022b4551903f7fef08c9 8199c5f2337869a9cbcd022b4551903f7fef08c9 Alexey Zhokhov <alexey@zhokhov.com> 1791900366 +0700	rebase (finish): returning to refs/heads/release-0.1.7-regeneration
+8199c5f2337869a9cbcd022b4551903f7fef08c9 4b05f4f89bb3ef98e150833c77bcc07194a82869 Alexey Zhokhov <alexey@zhokhov.com> 1791906121 +0700	commit: ci: pin Velnor 0.1.8 and regenerate workflows

@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 c9049e359cd98d0d7f16580fafd3eef494daa05b Alexey Zhokhov <alexey@zhokhov.com> 1791900333 +0700	branch: Created from origin/pr-8
+c9049e359cd98d0d7f16580fafd3eef494daa05b e23b889f6bb895b83714a89339c2926adc741352 Alexey Zhokhov <alexey@zhokhov.com> 1791900336 +0700	commit: ci: pin Velnor 0.1.7 with local link checks
+e23b889f6bb895b83714a89339c2926adc741352 8199c5f2337869a9cbcd022b4551903f7fef08c9 Alexey Zhokhov <alexey@zhokhov.com> 1791900366 +0700	rebase (finish): refs/heads/release-0.1.7-regeneration onto fb8ccca3c36018fd09b3ffe2fc6be3b1ff37f825
+8199c5f2337869a9cbcd022b4551903f7fef08c9 4b05f4f89bb3ef98e150833c77bcc07194a82869 Alexey Zhokhov <alexey@zhokhov.com> 1791906121 +0700	commit: ci: pin Velnor 0.1.8 and regenerate workflows
