@@ -1,15 +1,16 @@
 # tailrocks-rust-skills
 
-One portable package with 15 skills. The skills cover strict Rust
-engineering: project baselines, correctness, Axum HTTP services, public
-GraphQL APIs, cross-service gRPC, and terminal UI design. Five skills are
-model-selectable. Ten skills are user-only and need an explicit human
-command.
+One portable package with 16 skills. The skills cover strict Rust
+engineering: toolchain policy, project baselines, correctness, Axum HTTP
+services, public GraphQL APIs, cross-service gRPC, and terminal UI design.
+Six skills are model-selectable. Ten skills are user-only and need an
+explicit human command.
 
 ## Skills
 
 | Skill | Task |
 | --- | --- |
+| [`tailrocks-rust-toolchain`](skills/tailrocks-rust-toolchain/SKILL.md) | Apply the Rust toolchain policy. |
 | [`tailrocks-rust-best-practices`](skills/tailrocks-rust-best-practices/SKILL.md) | Write correct Rust behavior. |
 | [`tailrocks-rust-review`](skills/tailrocks-rust-review/SKILL.md) | Review Rust read-only. User-only. |
 | [`tailrocks-rust-refactor`](skills/tailrocks-rust-refactor/SKILL.md) | Restructure Rust safely. User-only. |

@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This package holds 15 Rust engineering skills. Install it
+This package holds 16 Rust engineering skills. Install it
 as one unit. Do not copy one `SKILL.md` file out of its skill directory.
 The audit and remediate skills read templates from the setup skill
 directory.

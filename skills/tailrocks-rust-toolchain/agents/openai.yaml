@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tailrocks: Rust Toolchain Policy"
+  short_description: "Latest stable Rust with mbx through mise in every clone"
+  default_prompt: "Use $tailrocks-rust-toolchain to align this clone with the Rust toolchain policy: latest stable Rust, mbx as the Cargo provider, committed mise.toml and rust-toolchain.toml."
+policy:
+  allow_implicit_invocation: true

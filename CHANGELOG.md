@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.29.0 - 2026-10-22
+
+- Added `tailrocks-rust-toolchain`, a model-selectable skill. It applies
+  the Rust toolchain policy to any clone: latest stable Rust, mbx as the
+  Cargo provider through mise, and the committed `mise.toml` and
+  `rust-toolchain.toml` baseline. The skill ships both files as assets.
+
 ## 0.28.1 - 2026-10-08
 
 Applied the common active-package structure on branch
