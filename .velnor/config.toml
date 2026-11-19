@@ -9,3 +9,13 @@ lychee_args = ["--offline", "--include-fragments"]
 
 [discovery]
 exclude = ["skills/**/assets/**"]
+
+[[workflow.tasks]]
+kind = "verification"
+id = "bun-checks"
+mise_task = "ci:bun-checks"
+runner = "linux-x64"
+timeout_minutes = 5
+[workflow.tasks.source]
+mise_config = "mise.toml"
+working_directory = "."

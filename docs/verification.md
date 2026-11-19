@@ -60,3 +60,11 @@ The [central verification record][native-evidence] records aggregate evidence an
 limits.
 
 [native-evidence]: https://github.com/tailrocks/tailrocks-skills/blob/main/docs/verification.md
+
+### Package integrity correction, 2026-11-20
+
+The shared validator now uses bounded parsing for keys, fences, and link targets.
+Malformed-input scaling checks and existing resource rejection cases passed.
+The package commits and ships its Bun 1.4.4 dependency lockfile.
+Frozen offline verification passed without changes or dependency lifecycle scripts.
+The skill instructions and native registrar behavior remain as measured above.

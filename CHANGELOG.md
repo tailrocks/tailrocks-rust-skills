@@ -2,6 +2,8 @@
 
 ## 0.30.0 - 2026-11-20
 
+- Replace backtracking in package validation with bounded parsing.
+- Commit and ship the resolved dependency graph with pinned Bun 1.4.4.
 - Documented pinned native installs across the Tailrocks hosts, including
   OpenCode V2, Amp, Antigravity, omp, and pi.
 - Added shared model guidance, portable skill metadata, and native package
