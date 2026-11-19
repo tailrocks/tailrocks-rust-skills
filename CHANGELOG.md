@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.30.2 - 2026-11-20
+
+- Refresh the shared validator for user-invoked policy packages and the
+  retirement of the standalone Vitalik Mode package.
+
 ## 0.30.1 - 2026-11-20
 
 - Enforce portable description characters and the shared 500-line skill limit.
