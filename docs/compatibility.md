@@ -1,6 +1,6 @@
 # Compatibility and verification
 
-`tailrocks-rust-skills` version `0.30.1` publishes 16 skills from
+`tailrocks-rust-skills` version `0.30.2` publishes 16 skills from
 one `skills/<id>/SKILL.md` tree. Each skill keeps its references, scripts,
 and assets in the installed package.
 
