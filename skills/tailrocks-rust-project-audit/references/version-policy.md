@@ -9,7 +9,7 @@ explicitly required and isolate it behind a documented upgrade trigger.
 
 The collection baseline pins live only in the project-setup templates:
 
-- [`rust-toolchain.toml`](../../tailrocks-rust-project-setup/assets/rust-toolchain.toml)
+- [`rust-toolchain.toml`](../../tailrocks-rust-project-setup/assets/rust-toolchain.toml.template)
   owns the Rust channel.
 - [`Cargo.toml`](../../tailrocks-rust-project-setup/assets/Cargo.toml) owns
   `workspace.package.rust-version` and every

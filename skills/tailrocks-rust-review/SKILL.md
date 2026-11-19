@@ -2,11 +2,7 @@
 name: tailrocks-rust-review
 description: >-
   Use only when the user explicitly requests this skill. Review Rust source, APIs, unsafe code, tests, and performance evidence read-only. Report verified findings. Never edit. Use tailrocks-rust-best-practices for new behavior and tailrocks-rust-refactor for approved restructuring.
-argument-hint: "<Rust review target or diff>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # Rust Review
@@ -22,6 +18,9 @@ skill to write behavior or to restructure code. New behavior belongs to
 `tailrocks-rust-refactor`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. This skill is read-only by default.
 

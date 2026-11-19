@@ -2,12 +2,7 @@
 name: tailrocks-grpc-best-practices
 description: >-
   Apply cross-service gRPC policy when in-scope work evolves proto or Buf contracts, tonic/prost services, status mapping, deadlines, streaming, health, or wire tests. Use tailrocks-grpc-review for findings. This skill is not for public APIs. Those are GraphQL.
-argument-hint: "<cross-service gRPC contract evolution>"
-disable-model-invocation: false
 license: Apache-2.0
-user-invocable: true
-when_to_use: >-
-  User evolves a cross-service gRPC contract in authorized work.
 ---
 
 # gRPC Best Practices
@@ -26,6 +21,9 @@ or read-only findings. Public APIs belong to
 `tailrocks-grpc-review`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. Selection supplies policy only.
 Mutation authority comes from the active task.

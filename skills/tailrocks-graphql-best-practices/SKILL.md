@@ -2,12 +2,7 @@
 name: tailrocks-graphql-best-practices
 description: >-
   Apply public GraphQL API policy when in-scope work evolves schema, Juniper resolvers, SDL, pagination, or generated clients. Use tailrocks-graphql-review for read-only findings. This skill is not for cross-service communication. That is gRPC.
-argument-hint: "<public GraphQL API evolution>"
-disable-model-invocation: false
 license: Apache-2.0
-user-invocable: true
-when_to_use: >-
-  User evolves the public GraphQL API in authorized work.
 ---
 
 # GraphQL Best Practices
@@ -25,6 +20,9 @@ to `tailrocks-grpc-best-practices`. Read-only findings belong to
 `tailrocks-graphql-review`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. Selection supplies policy only.
 Mutation authority comes from the active task.

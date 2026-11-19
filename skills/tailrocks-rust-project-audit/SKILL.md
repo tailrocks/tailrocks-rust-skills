@@ -2,11 +2,7 @@
 name: tailrocks-rust-project-audit
 description: >-
   Use only when the user explicitly requests this skill. Audit an existing Rust workspace against the strict project baseline and report exact gaps without changing files or installing tools. Use tailrocks-rust-project-remediate only when the user approves fixes.
-argument-hint: "<project path or audit scope>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # Rust Project Audit
@@ -22,6 +18,9 @@ skill to fix gaps. Approved fixes belong to
 `tailrocks-rust-project-remediate`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. This skill is read-only.
 

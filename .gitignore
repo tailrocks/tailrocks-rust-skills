@@ -4,3 +4,7 @@ tmp/
 *.log
 window-id
 ax-drive
+node_modules/
+__pycache__/
+*.pyc
+*.tgz

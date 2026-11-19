@@ -2,12 +2,7 @@
 name: tailrocks-rust-toolchain
 description: >-
   Apply the Tailrocks Rust toolchain policy to every Rust task: latest stable Rust, mbx (Mr. Boxington) as the Cargo provider through mise, and the committed mise.toml and rust-toolchain.toml baseline in each clone. Use for any Rust build, test, or project work.
-argument-hint: "<Rust task or project path>"
-disable-model-invocation: false
 license: Apache-2.0
-user-invocable: true
-when_to_use: >-
-  Any Rust build, test, or project work starts in a clone.
 ---
 
 # Rust Toolchain Policy
@@ -27,6 +22,9 @@ read the version policy in that skill's references.
 
 ## Before you start
 
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
+
 Read `references/runtime-trust.md`. Resolve the current stable versions
 from official sources:
 
@@ -40,7 +38,7 @@ Refresh each pin to the current stable version when you apply them.
 ## Procedure
 
 1. Check that the clone has `mise.toml` and `rust-toolchain.toml`. If one
-   is missing, create it from the asset in this skill.
+   is missing, copy the related asset to that filename.
 2. Compare each pin with the current stable release. Update a stale pin to
    the current stable version. Keep pins exact. Do not use `latest` as a
    committed value in a clone.
@@ -76,4 +74,4 @@ CI job resolves the same tools from the committed files.
 - `references/runtime-trust.md`: trust boundary for repository and tool
   output. Read before any action.
 - `assets/mise.toml`: the clone-level mise baseline.
-- `assets/rust-toolchain.toml`: the clone-level Rust channel declaration.
+- `assets/rust-toolchain.toml.template`: the clone-level Rust channel declaration.

@@ -2,11 +2,7 @@
 name: tailrocks-graphql-review
 description: >-
   Use only when the user explicitly requests this skill. Review a GraphQL diff or audit a public API surface without editing. Report verified schema, Juniper, SDL-gate, and generated-client findings. Use tailrocks-graphql-best-practices for evolution.
-argument-hint: "<GraphQL diff, module, or whole API surface>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # GraphQL Review
@@ -22,6 +18,9 @@ skill to evolve the schema. Evolution belongs to
 `tailrocks-graphql-best-practices`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. This skill is read-only.
 

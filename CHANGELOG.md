@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.30.0 - 2026-11-20
+
+- Documented pinned native installs across the Tailrocks hosts, including
+  OpenCode V2, Amp, Antigravity, omp, and pi.
+- Added shared model guidance, portable skill metadata, and native package
+  validation.
+- Aligned generated CI on Velnor Actions 0.1.80 with offline link and anchor
+  checks.
+- Marked bundled Rust toolchain examples as templates. They still install as
+  `rust-toolchain.toml` in a target clone.
+
 ## 0.29.0 - 2026-10-22
 
 - Added `tailrocks-rust-toolchain`, a model-selectable skill. It applies
