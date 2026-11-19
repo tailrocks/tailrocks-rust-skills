@@ -2,11 +2,7 @@
 name: tailrocks-tui-design-audit
 description: >-
   Use only when the user explicitly requests this skill. Audit a ratatui gallery, golden-frame package, or shipped terminal screen against its blessed contract. Read-only. It never designs, fixes, blesses, writes goldens, commits, or changes taste policy.
-argument-hint: "<gallery package or shipped terminal screens> [--deep] [--batch]"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # TUI Design Audit
@@ -24,6 +20,9 @@ policy. New layout, copy, or style desires belong to
 `tailrocks-tui-design` for user re-blessing.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. This skill is read-only. Never edit
 files, create a gallery, bless a frame, run `--write`, replace a

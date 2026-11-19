@@ -2,12 +2,7 @@
 name: tailrocks-axum-best-practices
 description: >-
   Apply Axum policy when in-scope work builds or changes HTTP adapters, routers, handlers, extractors, Tower layers, lifecycle, or transport tests. Use tailrocks-axum-review for findings and tailrocks-axum-refactor when HTTP behavior stays unchanged.
-argument-hint: "<Axum adapter behavior to build or change>"
-disable-model-invocation: false
 license: Apache-2.0
-user-invocable: true
-when_to_use: >-
-  User builds or changes Axum HTTP adapters in authorized work.
 ---
 
 # Axum Best Practices
@@ -25,6 +20,9 @@ behavior-preserving restructuring. Domain Rust belongs to
 `tailrocks-axum-refactor`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. Selection supplies policy only.
 Mutation authority comes from the active task.

@@ -2,11 +2,7 @@
 name: tailrocks-rust-project-remediate
 description: >-
   Use only when the user explicitly requests this skill. Remediate user-approved gaps in an existing Rust workspace baseline while keeping every intermediate state buildable. Use tailrocks-rust-project-audit to discover or report gaps. This skill requires explicit approved scope.
-argument-hint: "<approved gap IDs or exact remediation scope>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # Rust Project Remediation
@@ -23,6 +19,9 @@ skill to discover gaps. Gap discovery belongs to
 scope.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. Require exact approved gaps or an
 equivalent explicit remediation scope.

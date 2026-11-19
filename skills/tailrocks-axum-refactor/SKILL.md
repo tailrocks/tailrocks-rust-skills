@@ -2,11 +2,7 @@
 name: tailrocks-axum-refactor
 description: >-
   Use only when the user explicitly requests this skill. Restructure Axum adapters or Tower composition while preserving HTTP behavior. Require an independent oracle. Use tailrocks-axum-best-practices when transport behavior changes.
-argument-hint: "<Axum refactor scope and preserved HTTP behavior>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # Axum Refactor
@@ -24,6 +20,9 @@ Behavior changes belong to `tailrocks-axum-best-practices`. Findings-only
 work belongs to `tailrocks-axum-review`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. Require exact mutation scope and
 preserved HTTP behavior.

@@ -4,12 +4,7 @@ description: >-
   Apply terminal visual-design policy when in-scope work touches ratatui
   screens, terminal UX, fixture galleries, or golden frames.
   Selection alone never authorizes blessing, golden freeze, capture, or mutation.
-argument-hint: "design <feature or screens>"
-disable-model-invocation: false
 license: Apache-2.0
-user-invocable: true
-when_to_use: >-
-  User designs ratatui terminal screens in authorized work.
 ---
 
 # TUI Design
@@ -35,6 +30,9 @@ fixture galleries, or golden frames. Do not use this skill for read-only
 judgment. Read-only judgment belongs to `tailrocks-tui-design-audit`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. This skill owns design, bless, and
 freeze. Its golden test is the freeze.

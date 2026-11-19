@@ -1,0 +1,6 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "tailrocks-rust-skills",
+  "version": "0.30.0",
+  "description": "Strict Rust engineering workflows covering Axum, GraphQL, gRPC, TUI design, project baselines, review, refactoring, and remediation."
+}

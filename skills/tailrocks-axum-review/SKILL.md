@@ -2,11 +2,7 @@
 name: tailrocks-axum-review
 description: >-
   Use only when the user explicitly requests this skill. Review Axum HTTP adapters, extractors, Tower policy, lifecycle, and transport tests without editing. Use tailrocks-axum-best-practices for behavior changes and tailrocks-axum-refactor for approved restructuring.
-argument-hint: "<Axum review target or diff>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # Axum Review
@@ -25,6 +21,9 @@ changes, or restructuring. General Rust correctness belongs to
 `tailrocks-axum-refactor`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. This skill is read-only.
 

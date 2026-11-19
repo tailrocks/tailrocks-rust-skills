@@ -1,0 +1,38 @@
+{
+  "name": "tailrocks-rust-skills",
+  "version": "0.30.0",
+  "description": "Strict Rust engineering workflows covering Axum, GraphQL, gRPC, TUI design, project baselines, review, refactoring, and remediation.",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./adapters/opencode/index.js"
+  },
+  "files": [
+    "skills",
+    "adapters",
+    "index.js",
+    "plugin.json",
+    ".claude-plugin",
+    ".kimi-plugin",
+    ".antigravity-plugin",
+    "docs",
+    "README.md",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "scripts",
+    "bun.lock"
+  ],
+  "license": "Apache-2.0",
+  "repository": "https://github.com/tailrocks/tailrocks-rust-skills",
+  "dependencies": {
+    "@opencode/plugin": "2.3.2",
+    "yaml": "2.9.1"
+  },
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "packageManager": "bun@1.4.4"
+}

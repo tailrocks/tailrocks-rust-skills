@@ -1,10 +1,10 @@
 # Rust skills guides
 
-This package holds 15 skills. The skills cover strict Rust engineering:
+This package holds 16 skills. The skills cover strict Rust engineering:
 project baselines, correctness, Axum HTTP services, public GraphQL APIs,
 cross-service gRPC, and terminal UI design.
 
-Five skills are model-selectable. Ten skills are user-only and need an
+Six skills are model-selectable. Ten skills are user-only and need an
 explicit human command:
 
 - `tailrocks-rust-review` reviews Rust read-only.
@@ -20,18 +20,21 @@ explicit human command:
 
 ## Guides
 
-- `installation.md` installs the package on eight coding agents.
-- `usage.md` shows how to select each skill and what each skill
-  returns.
-- `compatibility.md` records the test result of each client route.
-- `maintenance.md` lists the checks, the policy version, and the
-  release procedure.
-- `troubleshooting.md` fixes common install and selection failures.
+- [Installation](installation.md) gives the native host routes.
+- [Usage](usage.md) shows how to select a skill and use its arguments.
+- [Runtime requirements](runtime.md) lists the tools and packaged resources.
+- [Package structure](architecture.md) explains file ownership.
+- [Model choices](models.md) explains role selection and effort.
+- [Compatibility](compatibility.md) records host behavior and limits.
+- [Verification](verification.md) lists package checks and observed evidence.
+- [Maintenance](maintenance.md) gives generator and release procedures.
+- [Troubleshooting](troubleshooting.md) helps diagnose installation or use.
 
 ## Skills
 
 | Skill | Task |
 | --- | --- |
+| `tailrocks-rust-toolchain` | Apply the Rust toolchain policy. |
 | `tailrocks-rust-best-practices` | Write correct Rust behavior. |
 | `tailrocks-rust-review` | Review Rust read-only. User-only. |
 | `tailrocks-rust-refactor` | Restructure Rust safely. User-only. |
@@ -53,6 +56,4 @@ Each skill body lives in its own directory under `skills/`. Read
 
 ## Requirements
 
-Rust work needs the pinned toolchain plus the mise tools. GraphQL client
-codegen needs Bun. Proto gates need Buf. Read-only audits run no
-formatter writes and install no tools.
+See [runtime requirements](runtime.md) for the tools and files the skills use.

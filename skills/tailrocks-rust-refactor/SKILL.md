@@ -2,11 +2,7 @@
 name: tailrocks-rust-refactor
 description: >-
   Use only when the user explicitly requests this skill. Restructure Rust code while preserving observable behavior and public contracts. Require a preservation oracle and approved scope. Use tailrocks-rust-best-practices when behavior changes and tailrocks-rust-review for read-only findings.
-argument-hint: "<Rust refactor target and preserved behavior>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # Rust Refactor
@@ -23,6 +19,9 @@ skill to add behavior or to report findings. New behavior belongs to
 `tailrocks-rust-review`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. Require explicit mutation scope and a
 contract of observable behavior that must remain unchanged.

@@ -2,12 +2,7 @@
 name: tailrocks-rust-best-practices
 description: >-
   Apply Rust correctness contracts when in-scope work writes Rust behavior. Covers ownership, failure, unsafe, tests, and performance. Use tailrocks-rust-review for findings and tailrocks-rust-refactor for behavior-preserving restructuring.
-argument-hint: "<Rust writing task or target>"
-disable-model-invocation: false
 license: Apache-2.0
-user-invocable: true
-when_to_use: >-
-  User adds or changes Rust behavior in authorized work.
 ---
 
 # Rust Best Practices
@@ -24,6 +19,9 @@ Findings belong to `tailrocks-rust-review`. Behavior-preserving
 restructuring belongs to `tailrocks-rust-refactor`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. Stronger compatible local conventions
 win over this skill. Selection supplies policy only. Mutation authority

@@ -2,11 +2,7 @@
 name: tailrocks-grpc-review
 description: >-
   Use only when the user explicitly requests this skill. Review a gRPC diff or audit a cross-service surface without editing. Report verified proto, Buf, tonic/prost, status, deadline, operations, and wire-test findings. Use tailrocks-grpc-best-practices for evolution.
-argument-hint: "<gRPC diff, module, or whole service surface>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # gRPC Review
@@ -23,6 +19,9 @@ skill to evolve contracts. Evolution belongs to
 unrequested GraphQL migration.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. This skill is read-only.
 

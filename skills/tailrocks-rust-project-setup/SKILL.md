@@ -2,11 +2,7 @@
 name: tailrocks-rust-project-setup
 description: >-
   Use only when the user explicitly requests this skill. Scaffold a strict Rust workspace with layout, toolchains, lints, mise, dependency policy, and test gates. For existing projects, use tailrocks-rust-project-audit to report gaps or tailrocks-rust-project-remediate for approved fixes.
-argument-hint: "<new workspace requirements>"
-disable-model-invocation: true
-disableModelInvocation: true
 license: Apache-2.0
-user-invocable: true
 ---
 
 # Rust Project Setup
@@ -23,6 +19,9 @@ to `tailrocks-rust-project-audit`. Approved fixes belong to
 `tailrocks-rust-project-remediate`.
 
 ## Before you start
+
+When choosing a model, reasoning effort, or delegation route, read
+[model and reasoning choices](references/model-routing.md).
 
 Obey the active user request first. If a Rust workspace already exists,
 refuse without inspecting or changing it. Route gap discovery to
@@ -65,7 +64,7 @@ The skill accepts one argument: the new workspace requirements.
    | `Cargo.toml` | workspace `Cargo.toml` |
    | `clippy.toml` | `clippy.toml` |
    | `rustfmt.toml` | `rustfmt.toml` |
-   | `rust-toolchain.toml` | `rust-toolchain.toml` |
+   | `rust-toolchain.toml.template` | `rust-toolchain.toml` |
    | `mise.toml` | `mise.toml` |
    | `deny.toml` | `deny.toml` |
    | `.cargo/audit.toml` | `.cargo/audit.toml` |
