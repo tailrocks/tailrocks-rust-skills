@@ -1,6 +1,6 @@
 # Installation
 
-`tailrocks-rust-skills` version `0.30.2` contains 16 skills.
+`tailrocks-rust-skills` version `0.30.3` contains 16 skills.
 The package source is [tailrocks/tailrocks-rust-skills][package].
 The [Tailrocks catalog][catalog] pins one upstream commit per package.
 
